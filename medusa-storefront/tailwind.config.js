@@ -34,6 +34,58 @@ module.exports = {
           80: "#1F2937",
           90: "#111827",
         },
+        gatherers: {
+          orange: {
+            DEFAULT: "#E07A2E",
+            light: "#F39C5A",
+            dark: "#C86A1E",
+          },
+          cream: {
+            DEFAULT: "#F5EBE0",
+            light: "#FAF5F0",
+            dark: "#E8DCC8",
+          },
+          brown: {
+            DEFAULT: "#6B4423",
+            light: "#8B6240",
+            dark: "#4A3116",
+          },
+          green: {
+            DEFAULT: "#8B9A7C",
+            light: "#A5B599",
+            dark: "#6B7A5A",
+          },
+        },
+        orgin: {
+          green: {
+            DEFAULT: "#2D5F3D",
+            light: "#3D7F4D",
+            lighter: "#8FAA96",
+            dark: "#1F4129",
+          },
+          earth: {
+            DEFAULT: "#E8E0D5",
+            cream: "#F5F2ED",
+            brown: "#5C4A3A",
+            tan: "#D4C4B0",
+          },
+        },
+        nybs: {
+          red: {
+            DEFAULT: "#C8102E",
+            light: "#E01E3C",
+            dark: "#A00D25",
+          },
+          black: {
+            DEFAULT: "#000000",
+            ink: "#1A1A1A",
+          },
+          newsprint: {
+            DEFAULT: "#E8E8E8",
+            light: "#F5F5F5",
+            dark: "#D0D0D0",
+          },
+        },
       },
       borderRadius: {
         none: "0px",
@@ -69,6 +121,7 @@ module.exports = {
           "Ubuntu",
           "sans-serif",
         ],
+        bangers: ["var(--font-bangers)", "cursive"],
       },
       keyframes: {
         ring: {

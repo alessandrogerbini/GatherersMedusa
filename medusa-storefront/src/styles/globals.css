@@ -2,6 +2,23 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@layer base {
+  :root {
+    --color-brand-orange: #E07A2E;
+    --color-brand-orange-light: #F39C5A;
+    --color-brand-orange-dark: #C86A1E;
+    --color-brand-cream: #F5EBE0;
+    --color-brand-cream-light: #FAF5F0;
+    --color-brand-cream-dark: #E8DCC8;
+    --color-brand-brown: #6B4423;
+    --color-brand-brown-light: #8B6240;
+    --color-brand-brown-dark: #4A3116;
+    --color-brand-green: #8B9A7C;
+    --color-brand-green-light: #A5B599;
+    --color-brand-green-dark: #6B7A5A;
+  }
+}
+
 @layer utilities {
   /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
@@ -108,5 +125,93 @@
 
   .text-3xl-semi {
     @apply text-[32px] leading-[44px] font-semibold;
+  }
+
+  /* Gatherer's Granola Brand Components */
+  .btn-primary {
+    @apply px-6 py-3 bg-gatherers-orange text-white font-semibold rounded-lg hover:bg-gatherers-orange-dark transition-colors duration-200 ease-in-out;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 border-2 border-gatherers-orange text-gatherers-orange font-semibold rounded-lg hover:bg-gatherers-orange hover:text-white transition-colors duration-200 ease-in-out;
+  }
+
+  .section-container {
+    @apply py-16 md:py-24;
+  }
+
+  .heading-display {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-gatherers-brown;
+  }
+
+  .heading-section {
+    @apply text-3xl md:text-4xl font-bold text-gatherers-brown mb-6;
+  }
+
+  .text-body {
+    @apply text-base md:text-lg text-gray-700 leading-relaxed;
+  }
+
+  /* Orgin Organics Brand Components */
+  .btn-orgin-primary {
+    @apply px-6 py-3 bg-orgin-green text-white font-semibold rounded-lg hover:bg-orgin-green-dark transition-colors duration-200 ease-in-out;
+  }
+
+  .btn-orgin-secondary {
+    @apply px-6 py-3 border-2 border-orgin-green text-orgin-green font-semibold rounded-lg hover:bg-orgin-green hover:text-white transition-colors duration-200 ease-in-out;
+  }
+
+  .botanical-bg {
+    @apply bg-gradient-to-br from-orgin-earth to-orgin-earth-cream;
+  }
+
+  .orgin-heading-display {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-orgin-green-dark;
+    font-family: var(--font-playfair);
+  }
+
+  .orgin-heading-section {
+    @apply text-3xl md:text-4xl font-bold text-orgin-green-dark mb-6;
+    font-family: var(--font-playfair);
+  }
+
+  .orgin-text-body {
+    @apply text-base md:text-lg text-orgin-earth-brown leading-relaxed;
+    font-family: var(--font-bree);
+  }
+
+  /* NYBS Brand Components */
+  .newsprint-bg {
+    background-image: url('/images/brand/nybs/Newsprint paper.png');
+    background-repeat: repeat;
+    background-size: 500px;
+  }
+
+  .btn-nybs-primary {
+    @apply px-6 py-3 bg-nybs-red text-white font-bold rounded-sm hover:bg-nybs-red-dark transition-colors duration-200 ease-in-out uppercase tracking-wide;
+  }
+
+  .btn-nybs-secondary {
+    @apply px-6 py-3 border-2 border-nybs-black text-nybs-black font-bold rounded-sm hover:bg-nybs-black hover:text-white transition-colors duration-200 ease-in-out uppercase tracking-wide;
+  }
+
+  .tabloid-banner {
+    @apply bg-nybs-red text-white font-bold py-2 px-4 border-y-4 border-black;
+  }
+
+  .nybs-heading-display {
+    @apply text-4xl md:text-5xl lg:text-7xl font-black text-nybs-black uppercase tracking-tight font-bangers;
+  }
+
+  .nybs-heading-section {
+    @apply text-3xl md:text-4xl lg:text-5xl font-black text-nybs-black uppercase mb-6 font-bangers;
+  }
+
+  .nybs-text-body {
+    @apply text-base md:text-lg text-nybs-black-ink leading-relaxed;
+  }
+
+  .newsprint-card {
+    @apply bg-nybs-newsprint border-2 border-nybs-black shadow-md;
   }
 }

@@ -1,9 +1,9 @@
 import { listCategories } from "@lib/data/categories"
 import { listCollections } from "@lib/data/collections"
 import { Text, clx } from "@medusajs/ui"
+import Image from "next/image"
 
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
-import MedusaCTA from "@modules/layout/components/medusa-cta"
 
 export default async function Footer() {
   const { collections } = await listCollections({
@@ -12,144 +12,227 @@ export default async function Footer() {
   const productCategories = await listCategories()
 
   return (
-    <footer className="border-t border-ui-border-base w-full">
+    <footer className="bg-gatherers-cream border-t border-gatherers-cream-dark w-full">
       <div className="content-container flex flex-col w-full">
-        <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between py-40">
-          <div>
+        <div className="flex flex-col gap-y-8 py-12 md:py-16">
+          {/* Top Section: Logo & Tagline */}
+          <div className="flex flex-col items-center md:items-start gap-4 pb-8 border-b border-gatherers-cream-dark">
             <LocalizedClientLink
               href="/"
-              className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
+              className="flex items-center gap-3 hover:opacity-80 transition-opacity"
             >
-              Medusa Store
+              <Image
+                src="/images/brand/Chipmunk logo 500 x 500 px.png"
+                alt="Gatherer's Granola"
+                width={60}
+                height={60}
+                className="w-12 h-12"
+              />
+              <span className="text-2xl font-bold text-gatherers-brown">
+                Gatherer&apos;s Granola
+              </span>
             </LocalizedClientLink>
+            <p className="text-base text-gatherers-brown-light italic text-center md:text-left">
+              Family Recipes. Hand Stirred.
+            </p>
           </div>
-          <div className="text-small-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">
+
+          {/* Main Footer Content */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+            {/* Brands Section */}
+            <div className="flex flex-col gap-y-3">
+              <span className="text-base font-semibold text-gatherers-brown">
+                Our Brands
+              </span>
+              <ul className="flex flex-col gap-2">
+                <li>
+                  <LocalizedClientLink
+                    className="text-sm text-gatherers-brown-light hover:text-gatherers-orange transition-colors"
+                    href="/"
+                  >
+                    Gatherer&apos;s Granola
+                  </LocalizedClientLink>
+                </li>
+                <li>
+                  <LocalizedClientLink
+                    className="text-sm text-orgin-green hover:text-orgin-green-light transition-colors"
+                    href="/orgin"
+                  >
+                    Orgin Organics
+                  </LocalizedClientLink>
+                </li>
+                <li>
+                  <LocalizedClientLink
+                    className="text-sm font-bold text-nybs-red hover:text-nybs-red-dark transition-colors uppercase"
+                    href="/nybs"
+                  >
+                    NYBS
+                  </LocalizedClientLink>
+                </li>
+                <li>
+                  <LocalizedClientLink
+                    className="text-sm text-gatherers-brown-light hover:text-gatherers-orange transition-colors"
+                    href="/store"
+                  >
+                    Shop All Products
+                  </LocalizedClientLink>
+                </li>
+              </ul>
+            </div>
+
+            {/* Shop Section */}
+            <div className="flex flex-col gap-y-3">
+              <span className="text-base font-semibold text-gatherers-brown">
+                Collections
+              </span>
+              <ul className="flex flex-col gap-2">
+                {collections && collections.length > 0 && (
+                  <>
+                    {collections?.slice(0, 4).map((c) => (
+                      <li key={c.id}>
+                        <LocalizedClientLink
+                          className="text-sm text-gatherers-brown-light hover:text-gatherers-orange transition-colors"
+                          href={`/collections/${c.handle}`}
+                        >
+                          {c.title}
+                        </LocalizedClientLink>
+                      </li>
+                    ))}
+                  </>
+                )}
+              </ul>
+            </div>
+
+            {/* Categories Section */}
             {productCategories && productCategories?.length > 0 && (
-              <div className="flex flex-col gap-y-2">
-                <span className="txt-small-plus txt-ui-fg-base">
+              <div className="flex flex-col gap-y-3">
+                <span className="text-base font-semibold text-gatherers-brown">
                   Categories
                 </span>
-                <ul
-                  className="grid grid-cols-1 gap-2"
-                  data-testid="footer-categories"
-                >
-                  {productCategories?.slice(0, 6).map((c) => {
+                <ul className="flex flex-col gap-2">
+                  {productCategories?.slice(0, 4).map((c) => {
                     if (c.parent_category) {
-                      return
+                      return null
                     }
 
-                    const children =
-                      c.category_children?.map((child) => ({
-                        name: child.name,
-                        handle: child.handle,
-                        id: child.id,
-                      })) || null
-
                     return (
-                      <li
-                        className="flex flex-col gap-2 text-ui-fg-subtle txt-small"
-                        key={c.id}
-                      >
+                      <li key={c.id}>
                         <LocalizedClientLink
-                          className={clx(
-                            "hover:text-ui-fg-base",
-                            children && "txt-small-plus"
-                          )}
+                          className="text-sm text-gatherers-brown-light hover:text-gatherers-orange transition-colors"
                           href={`/categories/${c.handle}`}
-                          data-testid="category-link"
                         >
                           {c.name}
                         </LocalizedClientLink>
-                        {children && (
-                          <ul className="grid grid-cols-1 ml-3 gap-2">
-                            {children &&
-                              children.map((child) => (
-                                <li key={child.id}>
-                                  <LocalizedClientLink
-                                    className="hover:text-ui-fg-base"
-                                    href={`/categories/${child.handle}`}
-                                    data-testid="category-link"
-                                  >
-                                    {child.name}
-                                  </LocalizedClientLink>
-                                </li>
-                              ))}
-                          </ul>
-                        )}
                       </li>
                     )
                   })}
                 </ul>
               </div>
             )}
-            {collections && collections.length > 0 && (
-              <div className="flex flex-col gap-y-2">
-                <span className="txt-small-plus txt-ui-fg-base">
-                  Collections
-                </span>
-                <ul
-                  className={clx(
-                    "grid grid-cols-1 gap-2 text-ui-fg-subtle txt-small",
-                    {
-                      "grid-cols-2": (collections?.length || 0) > 3,
-                    }
-                  )}
-                >
-                  {collections?.slice(0, 6).map((c) => (
-                    <li key={c.id}>
-                      <LocalizedClientLink
-                        className="hover:text-ui-fg-base"
-                        href={`/collections/${c.handle}`}
-                      >
-                        {c.title}
-                      </LocalizedClientLink>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-            <div className="flex flex-col gap-y-2">
-              <span className="txt-small-plus txt-ui-fg-base">Medusa</span>
-              <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
+
+            {/* Company Section */}
+            <div className="flex flex-col gap-y-3">
+              <span className="text-base font-semibold text-gatherers-brown">
+                Company
+              </span>
+              <ul className="flex flex-col gap-2">
                 <li>
-                  <a
-                    href="https://github.com/medusajs"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-ui-fg-base"
+                  <LocalizedClientLink
+                    className="text-sm text-gatherers-brown-light hover:text-gatherers-orange transition-colors"
+                    href="/about"
                   >
-                    GitHub
-                  </a>
+                    About Gatherer&apos;s
+                  </LocalizedClientLink>
                 </li>
                 <li>
-                  <a
-                    href="https://docs.medusajs.com"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-ui-fg-base"
+                  <LocalizedClientLink
+                    className="text-sm text-orgin-green hover:text-orgin-green-light transition-colors"
+                    href="/orgin/about"
                   >
-                    Documentation
-                  </a>
+                    About Orgin
+                  </LocalizedClientLink>
                 </li>
                 <li>
-                  <a
-                    href="https://github.com/medusajs/nextjs-starter-medusa"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-ui-fg-base"
+                  <LocalizedClientLink
+                    className="text-sm font-bold text-nybs-red hover:text-nybs-red-dark transition-colors"
+                    href="/nybs/about"
                   >
-                    Source code
-                  </a>
+                    About NYBS
+                  </LocalizedClientLink>
+                </li>
+                <li>
+                  <LocalizedClientLink
+                    className="text-sm text-gatherers-brown-light hover:text-gatherers-orange transition-colors"
+                    href="/contact"
+                  >
+                    Contact
+                  </LocalizedClientLink>
+                </li>
+                <li>
+                  <LocalizedClientLink
+                    className="text-sm text-gatherers-brown-light hover:text-gatherers-orange transition-colors"
+                    href="/terms"
+                  >
+                    Terms of Use
+                  </LocalizedClientLink>
+                </li>
+                <li>
+                  <LocalizedClientLink
+                    className="text-sm text-gatherers-brown-light hover:text-gatherers-orange transition-colors"
+                    href="/privacy"
+                  >
+                    Privacy Policy
+                  </LocalizedClientLink>
+                </li>
+              </ul>
+            </div>
+
+            {/* Account Section */}
+            <div className="flex flex-col gap-y-3">
+              <span className="text-base font-semibold text-gatherers-brown">
+                Account
+              </span>
+              <ul className="flex flex-col gap-2">
+                <li>
+                  <LocalizedClientLink
+                    className="text-sm text-gatherers-brown-light hover:text-gatherers-orange transition-colors"
+                    href="/account"
+                  >
+                    My Account
+                  </LocalizedClientLink>
+                </li>
+                <li>
+                  <LocalizedClientLink
+                    className="text-sm text-gatherers-brown-light hover:text-gatherers-orange transition-colors"
+                    href="/account/orders"
+                  >
+                    Orders
+                  </LocalizedClientLink>
+                </li>
+                <li>
+                  <LocalizedClientLink
+                    className="text-sm text-gatherers-brown-light hover:text-gatherers-orange transition-colors"
+                    href="/cart"
+                  >
+                    Cart
+                  </LocalizedClientLink>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        <div className="flex w-full mb-16 justify-between text-ui-fg-muted">
-          <Text className="txt-compact-small">
-            © {new Date().getFullYear()} Medusa Store. All rights reserved.
+
+        {/* Bottom Section: Copyright & Social */}
+        <div className="flex flex-col md:flex-row w-full py-6 justify-between items-center border-t border-gatherers-cream-dark gap-4">
+          <Text className="text-sm text-gatherers-brown-light">
+            © {new Date().getFullYear()} Gatherer&apos;s Granola. All rights reserved.
           </Text>
-          <MedusaCTA />
+          <div className="flex gap-4">
+            {/* Add social media links here when available */}
+            <Text className="text-sm text-gatherers-brown-light">
+              Handcrafted with ❤️
+            </Text>
+          </div>
         </div>
       </div>
     </footer>
