@@ -229,8 +229,12 @@ export default async function seedGatherersProducts({ container }: ExecArgs) {
         },
         prices: [
           {
-            amount: 549, // $5.49 in cents
+            amount: 5.49, // $5.49 USD
             currency_code: "usd",
+          },
+          {
+            amount: 5.49, // €5.49 EUR
+            currency_code: "eur",
           },
         ],
       },

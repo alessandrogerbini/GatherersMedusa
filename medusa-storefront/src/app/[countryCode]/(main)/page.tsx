@@ -30,8 +30,16 @@ export default async function Home(props: {
     fields: "id, handle, title",
   })
 
-  if (!collections || !region) {
-    return null
+  if (!region) {
+    // Region not found - this shouldn't happen but handle gracefully
+    return (
+      <div className="flex items-center justify-center min-h-[50vh]">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-gatherers-brown mb-4">Loading...</h1>
+          <p className="text-gatherers-brown-light">Please refresh the page</p>
+        </div>
+      </div>
+    )
   }
 
   return (
