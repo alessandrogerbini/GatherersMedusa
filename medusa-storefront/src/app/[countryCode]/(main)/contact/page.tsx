@@ -73,11 +73,16 @@ export default async function ContactPage() {
                 <h3 className="text-xl font-bold text-gatherers-brown mb-3">
                   Do you offer wholesale pricing?
                 </h3>
-                <p className="text-gatherers-brown-light">
+                <p className="text-gatherers-brown-light mb-3">
                   Yes! We work with retailers, cafes, and other businesses. 
-                  Please contact us at wholesale@gatherersgranola.com for more information 
-                  about our wholesale program and pricing.
+                  Create a wholesale account to access special pricing and benefits.
                 </p>
+                <a
+                  href="/wholesale/register"
+                  className="inline-block text-blue-600 hover:text-blue-800 font-semibold underline"
+                >
+                  Apply for Wholesale Account →
+                </a>
               </div>
 
               <div className="bg-white rounded-lg p-6 shadow-md">

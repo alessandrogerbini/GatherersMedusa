@@ -12,7 +12,7 @@ const NYBSNewsletterSection = () => {
     setStatus("loading")
 
     try {
-      const response = await fetch("/api/mailchimp", {
+      const response = await fetch("/api/store/newsletter", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -24,7 +24,7 @@ const NYBSNewsletterSection = () => {
 
       if (response.ok) {
         setStatus("success")
-        setMessage("You're subscribed! Check your inbox for snack news.")
+        setMessage(data.message || "You're subscribed! Check your inbox for snack news.")
         setEmail("")
       } else {
         setStatus("error")

@@ -1,0 +1,49 @@
+/* Custom Admin Styling Fixes */
+
+/* Fix for product description preview - ensure text is readable */
+[data-testid="product-description"],
+.product-description,
+.description-preview,
+div[class*="description"] {
+  color: #1f2937 !important; /* Dark gray text */
+}
+
+/* Ensure all text in product forms is readable */
+textarea,
+input[type="text"],
+input[type="email"],
+.ui-input,
+.ui-textarea {
+  color: #1f2937 !important;
+}
+
+/* Fix for any white-on-white text issues */
+.ui-bg-base {
+  color: #1f2937 !important;
+}
+
+/* Ensure preview areas have good contrast */
+.preview-section,
+[class*="preview"] {
+  color: #374151 !important;
+  background-color: #f9fafb !important;
+}
+
+/* Fix for description fields specifically */
+div[data-field="description"] {
+  color: #1f2937 !important;
+}
+
+/* Ensure readability in all container sections */
+section[class*="product"],
+div[class*="product-details"] {
+  color: #1f2937;
+}
+
+/* Override any conflicting styles */
+* {
+  color-scheme: light;
+}
+
+
+

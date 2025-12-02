@@ -39,14 +39,25 @@ const ContactForm = () => {
     setStatus("loading")
     setMessage("")
 
-    // Simulate form submission (you can replace this with actual API call)
     try {
-      // TODO: Replace with actual contact form submission endpoint
-      await new Promise((resolve) => setTimeout(resolve, 1500))
-      
-      setStatus("success")
-      setMessage("Thank you for your message! We'll get back to you soon.")
-      setFormData({ name: "", email: "", subject: "", message: "" })
+      const response = await fetch("/api/store/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        setStatus("success")
+        setMessage(data.message || "Thank you for your message! We'll get back to you soon.")
+        setFormData({ name: "", email: "", subject: "", message: "" })
+      } else {
+        setStatus("error")
+        setMessage(data.error || "Something went wrong. Please try again or email us directly.")
+      }
     } catch (error) {
       setStatus("error")
       setMessage("Something went wrong. Please try again or email us directly.")

@@ -1,3 +1,5 @@
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
+
 const ContactInfo = () => {
   return (
     <div className="space-y-8">
@@ -6,77 +8,25 @@ const ContactInfo = () => {
           Get in Touch
         </h3>
         <p className="text-body mb-6">
-          Have a question, feedback, or wholesale inquiry? We&apos;d love to hear from you! 
-          Fill out the form or reach us through any of the methods below.
+          Have a question or feedback? We&apos;d love to hear from you! 
+          Fill out the form and we&apos;ll get back to you as soon as possible.
         </p>
-      </div>
-
-      <div className="space-y-6">
-        {/* Email */}
-        <div className="flex items-start gap-4">
-          <div className="flex-shrink-0 w-12 h-12 bg-gatherers-orange rounded-lg flex items-center justify-center">
-            <span className="text-2xl text-white">✉️</span>
-          </div>
-          <div>
-            <h4 className="font-semibold text-gatherers-brown mb-1">Email Us</h4>
-            <a
-              href="mailto:hello@gatherersgranola.com"
-              className="text-gatherers-orange hover:text-gatherers-orange-dark transition-colors"
-            >
-              hello@gatherersgranola.com
-            </a>
-          </div>
-        </div>
-
-        {/* Phone */}
-        <div className="flex items-start gap-4">
-          <div className="flex-shrink-0 w-12 h-12 bg-gatherers-green rounded-lg flex items-center justify-center">
-            <span className="text-2xl text-white">📞</span>
-          </div>
-          <div>
-            <h4 className="font-semibold text-gatherers-brown mb-1">Call Us</h4>
-            <a
-              href="tel:+1234567890"
-              className="text-gatherers-orange hover:text-gatherers-orange-dark transition-colors"
-            >
-              (123) 456-7890
-            </a>
-            <p className="text-sm text-gatherers-brown-light mt-1">
-              Mon-Fri: 9am - 5pm EST
-            </p>
-          </div>
-        </div>
-
-        {/* Location */}
-        <div className="flex items-start gap-4">
-          <div className="flex-shrink-0 w-12 h-12 bg-gatherers-brown rounded-lg flex items-center justify-center">
-            <span className="text-2xl text-white">📍</span>
-          </div>
-          <div>
-            <h4 className="font-semibold text-gatherers-brown mb-1">Visit Us</h4>
-            <p className="text-gatherers-brown-light">
-              [Your Address]<br />
-              [City, State ZIP]<br />
-              United States
-            </p>
-          </div>
-        </div>
       </div>
 
       {/* Wholesale Inquiry */}
-      <div className="mt-8 p-6 bg-gatherers-cream rounded-lg border-2 border-gatherers-orange/20">
-        <h4 className="text-lg font-bold text-gatherers-brown mb-2 flex items-center gap-2">
+      <div className="p-6 bg-blue-50 rounded-lg border-2 border-blue-200">
+        <h4 className="text-lg font-bold text-blue-900 mb-2 flex items-center gap-2">
           <span>🏪</span> Wholesale Inquiries
         </h4>
-        <p className="text-sm text-gatherers-brown-light mb-3">
-          Interested in carrying Gatherer&apos;s Granola in your store? We&apos;d love to partner with you!
+        <p className="text-sm text-blue-800 mb-4">
+          Buying for a business? Create a wholesale account to access special pricing and benefits!
         </p>
-        <a
-          href="mailto:wholesale@gatherersgranola.com"
-          className="text-gatherers-orange hover:text-gatherers-orange-dark transition-colors font-semibold"
+        <LocalizedClientLink
+          href="/wholesale/register"
+          className="inline-block px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors font-medium text-sm"
         >
-          wholesale@gatherersgranola.com
-        </a>
+          Create Wholesale Account
+        </LocalizedClientLink>
       </div>
 
       {/* Social Media */}

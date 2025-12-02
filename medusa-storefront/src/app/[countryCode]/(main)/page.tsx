@@ -5,7 +5,9 @@ import Hero from "@modules/home/components/hero"
 import BrandStory from "@modules/home/components/brand-story"
 import ValuesSection from "@modules/home/components/values-section"
 import Testimonials from "@modules/home/components/testimonials"
+import SocialProof from "@modules/home/components/social-proof"
 import NewsletterSection from "@modules/home/components/newsletter-section"
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import { listCollections } from "@lib/data/collections"
 import { getRegion } from "@lib/data/regions"
 
@@ -35,6 +37,7 @@ export default async function Home(props: {
   return (
     <>
       <Hero />
+      <SocialProof />
       <BrandStory />
       <div className="py-16 bg-white">
         <div className="content-container">
@@ -43,6 +46,13 @@ export default async function Home(props: {
             <p className="text-body max-w-2xl mx-auto mt-4">
               Explore our collection of handcrafted granola varieties, each made with love and the finest ingredients.
             </p>
+            <div className="mt-6">
+              <LocalizedClientLink href="/store">
+                <button className="btn-primary">
+                  Shop All Products
+                </button>
+              </LocalizedClientLink>
+            </div>
           </div>
           <ul className="flex flex-col gap-x-6">
             <FeaturedProducts collections={collections} region={region} />

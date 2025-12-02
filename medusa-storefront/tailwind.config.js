@@ -112,7 +112,7 @@ module.exports = {
       },
       fontFamily: {
         sans: [
-          "Inter",
+          "var(--font-dm-sans)",
           "-apple-system",
           "BlinkMacSystemFont",
           "Segoe UI",
@@ -121,7 +121,10 @@ module.exports = {
           "Ubuntu",
           "sans-serif",
         ],
+        "dm-sans": ["var(--font-dm-sans)", "sans-serif"],
+        fraunces: ["var(--font-fraunces)", "serif"],
         bangers: ["var(--font-bangers)", "cursive"],
+        "ibm-plex-condensed": ["var(--font-ibm-plex-condensed)", "sans-serif"],
       },
       keyframes: {
         ring: {

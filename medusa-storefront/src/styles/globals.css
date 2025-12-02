@@ -17,6 +17,16 @@
     --color-brand-green-light: #A5B599;
     --color-brand-green-dark: #6B7A5A;
   }
+
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Focus styles for accessibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-gatherers-orange ring-offset-2;
+  }
 }
 
 @layer utilities {
@@ -129,11 +139,17 @@
 
   /* Gatherer's Granola Brand Components */
   .btn-primary {
-    @apply px-6 py-3 bg-gatherers-orange text-white font-semibold rounded-lg hover:bg-gatherers-orange-dark transition-colors duration-200 ease-in-out;
+    @apply px-6 py-3 bg-gatherers-orange text-white font-semibold rounded-lg 
+           hover:bg-gatherers-orange-dark hover:shadow-lg hover:-translate-y-0.5
+           active:translate-y-0 active:shadow-md
+           transition-all duration-200 ease-out font-dm-sans;
   }
 
   .btn-secondary {
-    @apply px-6 py-3 border-2 border-gatherers-orange text-gatherers-orange font-semibold rounded-lg hover:bg-gatherers-orange hover:text-white transition-colors duration-200 ease-in-out;
+    @apply px-6 py-3 border-2 border-gatherers-orange text-gatherers-orange font-semibold rounded-lg 
+           hover:bg-gatherers-orange hover:text-white hover:shadow-lg hover:-translate-y-0.5
+           active:translate-y-0 active:shadow-md
+           transition-all duration-200 ease-out font-dm-sans;
   }
 
   .section-container {
@@ -141,24 +157,37 @@
   }
 
   .heading-display {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-gatherers-brown;
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-gatherers-brown font-fraunces;
   }
 
   .heading-section {
-    @apply text-3xl md:text-4xl font-bold text-gatherers-brown mb-6;
+    @apply text-3xl md:text-4xl font-bold text-gatherers-brown mb-6 font-fraunces;
   }
 
   .text-body {
-    @apply text-base md:text-lg text-gray-700 leading-relaxed;
+    @apply text-base md:text-lg text-gray-700 leading-relaxed font-dm-sans;
+  }
+
+  /* Interactive card styles */
+  .card-interactive {
+    @apply bg-white rounded-xl shadow-md 
+           hover:shadow-xl hover:-translate-y-1
+           transition-all duration-300 ease-out;
   }
 
   /* Orgin Organics Brand Components */
   .btn-orgin-primary {
-    @apply px-6 py-3 bg-orgin-green text-white font-semibold rounded-lg hover:bg-orgin-green-dark transition-colors duration-200 ease-in-out;
+    @apply px-6 py-3 bg-orgin-green text-white font-semibold rounded-lg 
+           hover:bg-orgin-green-dark hover:shadow-lg hover:-translate-y-0.5
+           active:translate-y-0 active:shadow-md
+           transition-all duration-200 ease-out;
   }
 
   .btn-orgin-secondary {
-    @apply px-6 py-3 border-2 border-orgin-green text-orgin-green font-semibold rounded-lg hover:bg-orgin-green hover:text-white transition-colors duration-200 ease-in-out;
+    @apply px-6 py-3 border-2 border-orgin-green text-orgin-green font-semibold rounded-lg 
+           hover:bg-orgin-green hover:text-white hover:shadow-lg hover:-translate-y-0.5
+           active:translate-y-0 active:shadow-md
+           transition-all duration-200 ease-out;
   }
 
   .botanical-bg {
@@ -188,11 +217,17 @@
   }
 
   .btn-nybs-primary {
-    @apply px-6 py-3 bg-nybs-red text-white font-bold rounded-sm hover:bg-nybs-red-dark transition-colors duration-200 ease-in-out uppercase tracking-wide;
+    @apply px-6 py-3 bg-nybs-red text-white font-bold rounded-sm 
+           hover:bg-nybs-red-dark hover:shadow-lg hover:-translate-y-0.5
+           active:translate-y-0 active:shadow-md
+           transition-all duration-200 ease-out uppercase tracking-wide;
   }
 
   .btn-nybs-secondary {
-    @apply px-6 py-3 border-2 border-nybs-black text-nybs-black font-bold rounded-sm hover:bg-nybs-black hover:text-white transition-colors duration-200 ease-in-out uppercase tracking-wide;
+    @apply px-6 py-3 border-2 border-nybs-black text-nybs-black font-bold rounded-sm 
+           hover:bg-nybs-black hover:text-white hover:shadow-lg hover:-translate-y-0.5
+           active:translate-y-0 active:shadow-md
+           transition-all duration-200 ease-out uppercase tracking-wide;
   }
 
   .tabloid-banner {

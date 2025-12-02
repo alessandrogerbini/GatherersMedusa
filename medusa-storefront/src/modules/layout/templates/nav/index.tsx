@@ -25,65 +25,78 @@ export default async function Nav() {
           <div className="flex items-center h-full">
             <LocalizedClientLink
               href="/"
-              className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+              className="flex items-center gap-3 hover:opacity-80 transition-opacity"
               data-testid="nav-store-link"
             >
               <Image
                 src="/images/brand/Chipmunk logo 500 x 500 px.png"
-                alt="Gatherer's Granola"
-                width={50}
-                height={50}
-                className="w-10 h-10 small:w-12 small:h-12"
+                alt="Gatherer's Granola Chipmunk"
+                width={56}
+                height={56}
+                className="h-12 w-12 small:h-14 small:w-14"
+                priority
               />
-              <span className="hidden md:block text-xl font-bold text-gatherers-brown">
-                Gatherer&apos;s Granola
-              </span>
+              <Image
+                src="/images/brand/Full color gg logo without cc icon large.png"
+                alt="Gatherer's Granola"
+                width={200}
+                height={60}
+                className="h-14 w-auto small:h-16"
+                priority
+              />
             </LocalizedClientLink>
           </div>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden small:flex items-center gap-x-8 h-full absolute left-1/2 transform -translate-x-1/2">
+          <div className="hidden small:flex items-center gap-x-8 h-full absolute left-1/2 transform -translate-x-1/2 font-ibm-plex-condensed">
             <LocalizedClientLink
-              className="text-base font-medium text-gatherers-brown hover:text-gatherers-orange transition-colors"
+              className="text-xl font-normal text-gatherers-brown hover:text-gatherers-orange transition-colors"
               href="/store"
-              data-testid="nav-shop-link"
+              data-testid="nav-granola-link"
             >
-              Shop
+              Granola
             </LocalizedClientLink>
             <LocalizedClientLink
-              className="text-base font-medium text-orgin-green hover:text-orgin-green-light transition-colors"
+              className="text-xl font-normal text-gatherers-brown hover:text-gatherers-orange transition-colors"
               href="/orgin"
-              data-testid="nav-orgin-link"
+              data-testid="nav-organic-link"
             >
-              Orgin Organics
+              Organic Products
             </LocalizedClientLink>
             <LocalizedClientLink
-              className="text-base font-bold text-nybs-red hover:text-nybs-red-dark transition-colors uppercase tracking-wide"
+              className="text-xl font-normal text-gatherers-brown hover:text-gatherers-orange transition-colors"
               href="/nybs"
-              data-testid="nav-nybs-link"
+              data-testid="nav-nuts-link"
             >
-              NYBS
+              Nuts
             </LocalizedClientLink>
             <LocalizedClientLink
-              className="text-base font-medium text-gatherers-brown hover:text-gatherers-orange transition-colors"
+              className="text-xl font-normal text-gatherers-brown hover:text-gatherers-orange transition-colors"
               href="/about"
               data-testid="nav-about-link"
             >
               About
             </LocalizedClientLink>
             <LocalizedClientLink
-              className="text-base font-medium text-gatherers-brown hover:text-gatherers-orange transition-colors"
+              className="text-xl font-normal text-gatherers-brown hover:text-gatherers-orange transition-colors"
               href="/contact"
               data-testid="nav-contact-link"
             >
               Contact
             </LocalizedClientLink>
+            <LocalizedClientLink
+              className="text-xl font-normal text-gatherers-brown hover:text-gatherers-orange transition-colors"
+              href="/wholesale"
+              data-testid="nav-wholesale-link"
+            >
+              Wholesale
+            </LocalizedClientLink>
           </div>
           {/* Account & Cart */}
-          <div className="flex items-center gap-x-4 small:gap-x-6 h-full flex-1 basis-0 justify-end">
+          <div className="flex items-center gap-x-4 small:gap-x-6 h-full flex-1 basis-0 justify-end font-ibm-plex-condensed">
             <div className="hidden small:flex items-center gap-x-6 h-full">
               <LocalizedClientLink
-                className="text-base font-medium text-gatherers-brown hover:text-gatherers-orange transition-colors"
+                className="text-xl font-normal text-gatherers-brown hover:text-gatherers-orange transition-colors"
                 href="/account"
                 data-testid="nav-account-link"
               >

@@ -77,6 +77,22 @@ const AccountNav = ({
                 </li>
                 <li>
                   <LocalizedClientLink
+                    href="/account/wholesale"
+                    className="flex items-center justify-between py-4 border-b border-gray-200 px-8"
+                    data-testid="wholesale-link"
+                  >
+                    <div className="flex items-center gap-x-2">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z" />
+                        <path fillRule="evenodd" d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" clipRule="evenodd" />
+                      </svg>
+                      <span>Wholesale</span>
+                    </div>
+                    <ChevronDown className="transform -rotate-90" />
+                  </LocalizedClientLink>
+                </li>
+                <li>
+                  <LocalizedClientLink
                     href="/account/orders"
                     className="flex items-center justify-between py-4 border-b border-gray-200 px-8"
                     data-testid="orders-link"
@@ -139,6 +155,15 @@ const AccountNav = ({
                   data-testid="addresses-link"
                 >
                   Addresses
+                </AccountNavLink>
+              </li>
+              <li>
+                <AccountNavLink
+                  href="/account/wholesale"
+                  route={route!}
+                  data-testid="wholesale-link"
+                >
+                  Wholesale
                 </AccountNavLink>
               </li>
               <li>
