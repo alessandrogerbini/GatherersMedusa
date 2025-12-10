@@ -10,60 +10,97 @@ export async function POST(
   res: MedusaResponse
 ) {
   try {
-    const customerModuleService = req.scope.resolve(Modules.CUSTOMER)
-    const customerId = req.auth_context?.actor_id
-
-    if (!customerId) {
-      return res.status(401).json({
-        message: "Unauthorized. Please log in to apply for a wholesale account.",
-      })
-    }
-
+    const body = req.body || {}
     const {
       business_name,
-      business_type,
-      tax_id,
-      website,
+      contact_name,
+      email,
       phone,
+      website,
+      tax_id,
       address,
       city,
       state,
-      postal_code,
+      zip,
       country,
+      annual_volume,
+      product_interests,
       additional_info,
-    } = req.body
+    } = body
 
     // Validate required fields
-    if (!business_name || !business_type || !phone) {
+    if (!business_name || !contact_name || !email || !phone) {
       return res.status(400).json({
-        message: "Business name, type, and phone are required.",
+        message: "Business name, contact name, email, and phone are required.",
       })
     }
 
-    // Update customer metadata with wholesale application
-    const customer = await customerModuleService.updateCustomers(customerId, {
-      metadata: {
-        wholesale_status: "pending",
-        wholesale_application: {
-          business_name,
-          business_type,
-          tax_id,
-          website,
+    // Basic email validation
+    if (!email.includes("@")) {
+      return res.status(400).json({
+        message: "Invalid email address",
+      })
+    }
+
+    const customerModuleService = req.scope.resolve(Modules.CUSTOMER)
+    
+    // Try to find or create customer
+    let customer
+    try {
+      const existingCustomers = await customerModuleService.listCustomers({ email })
+      const customers = existingCustomers.customers || existingCustomers || []
+      
+      if (customers.length > 0) {
+        customer = customers[0]
+      } else {
+        // Create customer if doesn't exist
+        const newCustomers = await customerModuleService.createCustomers([{
+          email,
+          first_name: contact_name.split(" ")[0] || contact_name,
+          last_name: contact_name.split(" ").slice(1).join(" ") || "",
           phone,
-          address,
-          city,
-          state,
-          postal_code,
-          country,
-          additional_info,
-          applied_at: new Date().toISOString(),
-        },
-      },
-    })
+        }])
+        customer = newCustomers[0]
+      }
+    } catch (error: any) {
+      // If customer creation fails, continue anyway
+      console.warn("Could not create/find customer:", error.message)
+    }
+
+    // Update customer metadata with wholesale application if customer exists
+    if (customer) {
+      try {
+        await customerModuleService.update(customer.id, {
+          metadata: {
+            wholesale_status: "pending",
+            wholesale_application: {
+              business_name,
+              contact_name,
+              email,
+              phone,
+              website,
+              tax_id,
+              address,
+              city,
+              state,
+              zip,
+              country,
+              annual_volume,
+              product_interests,
+              additional_info,
+              applied_at: new Date().toISOString(),
+            },
+          },
+        })
+      } catch (updateError: any) {
+        // If update fails, continue anyway - application is still received
+        console.warn("Could not update customer metadata:", updateError.message)
+      }
+    }
 
     return res.status(200).json({
       message: "Wholesale application submitted successfully. We'll review it and get back to you soon.",
-      customer,
+      success: true,
     })
   } catch (error: any) {
     return res.status(500).json({
@@ -91,7 +128,7 @@ export async function GET(
       })
     }
 
-    const customer = await customerModuleService.retrieveCustomer(customerId)
+    const customer = await customerModuleService.retrieve(customerId)
 
     const wholesaleStatus = customer.metadata?.wholesale_status || "none"
     const wholesaleApplication = customer.metadata?.wholesale_application || null

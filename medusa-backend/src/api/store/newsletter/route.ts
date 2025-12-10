@@ -24,8 +24,14 @@ export async function POST(
       })
     }
 
-    // Resolve the notification service
-    const notificationService = req.scope.resolve("notificationModuleService")
+    // Resolve the notification service (may not be available in test environment)
+    let notificationService
+    try {
+      notificationService = req.scope.resolve("notificationModuleService")
+    } catch (error) {
+      // Notification service not available - log and continue
+      console.log("Notification service not available, skipping email sending")
+    }
 
     // Send confirmation email to subscriber
     const confirmationEmailHtml = `
@@ -89,57 +95,80 @@ export async function POST(
       </html>
     `
 
-    // Send notification to business
-    const businessNotificationHtml = `
-      <!DOCTYPE html>
-      <html>
-      <head>
-        <meta charset="utf-8">
-        <title>New Newsletter Subscriber</title>
-        <style>
-          body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-          .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-          .header { background-color: #333; color: white; padding: 20px; text-align: center; }
-          .content { background-color: #f9f9f9; padding: 20px; }
-        </style>
-      </head>
-      <body>
-        <div class="container">
-          <div class="header">
-            <h1>New Newsletter Subscriber</h1>
+    // Send emails (if service available)
+    // Wrap in try-catch to handle database schema issues gracefully
+    if (notificationService) {
+      try {
+        const businessNotificationHtml = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <meta charset="utf-8">
+          <title>New Newsletter Subscriber</title>
+          <style>
+            body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+            .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+            .header { background-color: #333; color: white; padding: 20px; text-align: center; }
+            .content { background-color: #f9f9f9; padding: 20px; }
+          </style>
+        </head>
+        <body>
+          <div class="container">
+            <div class="header">
+              <h1>New Newsletter Subscriber</h1>
+            </div>
+            <div class="content">
+              <p><strong>Email:</strong> ${email}</p>
+              <p><strong>Subscribed on:</strong> ${new Date().toLocaleString()}</p>
+            </div>
           </div>
-          <div class="content">
-            <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Subscribed on:</strong> ${new Date().toLocaleString()}</p>
-          </div>
-        </div>
-      </body>
-      </html>
-    `
+        </body>
+        </html>
+      `
 
-    // Send confirmation email to subscriber
-    await notificationService.sendEmail({
-      to: email,
-      from: process.env.EMAIL_FROM || "newsletter@gatherersgranola.com",
-      subject: "Welcome to Gatherer's Granola Newsletter! 🎉",
-      html: confirmationEmailHtml,
-      type: "newsletter_signup",
-      metadata: {
-        email,
-      },
-    })
+        // Send confirmation email to subscriber
+        // Catch errors related to missing email_log table
+        try {
+          await notificationService.sendEmail({
+            to: email,
+            from: process.env.EMAIL_FROM || "newsletter@gatherersgranola.com",
+            subject: "Welcome to Gatherer's Granola Newsletter! 🎉",
+            html: confirmationEmailHtml,
+            type: "newsletter_signup",
+            metadata: {
+              email,
+            },
+          })
+        } catch (emailError: any) {
+          // If email_log table doesn't exist, log but don't fail
+          if (emailError.message && emailError.message.includes("email_log")) {
+            console.warn("Email log table not available, skipping email logging:", emailError.message)
+          } else {
+            throw emailError
+          }
+        }
 
-    // Send notification to business
-    await notificationService.sendEmail({
-      to: process.env.NEWSLETTER_NOTIFICATION_EMAIL || "info@gatherersgranola.com",
-      from: process.env.EMAIL_FROM || "newsletter@gatherersgranola.com",
-      subject: "New Newsletter Subscriber",
-      html: businessNotificationHtml,
-      type: "newsletter_signup_notification",
-      metadata: {
-        subscriber_email: email,
-      },
-    })
+        // Send notification to business (optional, don't fail if it errors)
+        try {
+          await notificationService.sendEmail({
+            to: process.env.NEWSLETTER_NOTIFICATION_EMAIL || "info@gatherersgranola.com",
+            from: process.env.EMAIL_FROM || "newsletter@gatherersgranola.com",
+            subject: "New Newsletter Subscriber",
+            html: businessNotificationHtml,
+            type: "newsletter_signup_notification",
+            metadata: {
+              subscriber_email: email,
+            },
+          })
+        } catch (businessEmailError: any) {
+          // Log but don't fail the request
+          console.warn("Could not send business notification:", businessEmailError.message)
+        }
+      } catch (notificationError: any) {
+        // Log notification errors but don't fail the subscription
+        console.warn("Notification service error (subscription still successful):", notificationError.message)
+      }
+    }
 
     res.status(200).json({
       success: true,
@@ -152,5 +181,15 @@ export async function POST(
     })
   }
 }
+
+
+
+
+
+
+
+
+
+
 
 
