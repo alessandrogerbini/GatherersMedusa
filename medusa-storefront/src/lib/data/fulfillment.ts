@@ -23,11 +23,13 @@ export const listCartShippingMethods = async (cartId: string) => {
         },
         headers,
         next,
-        cache: "force-cache",
+        // Don't cache when shipping address might have changed
+        cache: "no-store",
       }
     )
     .then(({ shipping_options }) => shipping_options)
-    .catch(() => {
+    .catch((error) => {
+      console.error("Error fetching shipping options:", error)
       return null
     })
 }

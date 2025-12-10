@@ -26,6 +26,8 @@ export const paymentInfoMap: Record<
     title: "PayPal",
     icon: <PayPal />,
   },
+  // ⚠️ TEST/DUMMY PROVIDER: Remove or comment out before production launch
+  // TODO: Remove pp_system_default before going live
   pp_system_default: {
     title: "Manual Payment",
     icon: <CreditCard />,

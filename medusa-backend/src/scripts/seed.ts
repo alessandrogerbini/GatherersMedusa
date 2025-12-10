@@ -117,6 +117,8 @@ export default async function seedDemoData({ container }: ExecArgs) {
           name: "Europe",
           currency_code: "eur",
           countries,
+          // ⚠️ TEST/DUMMY PROVIDER: pp_system_default is a manual payment provider for testing only
+          // TODO: Replace with production payment provider (e.g., "pp_stripe_stripe") before launch
           payment_providers: ["pp_system_default"],
         },
       ],
@@ -167,6 +169,8 @@ export default async function seedDemoData({ container }: ExecArgs) {
       stock_location_id: stockLocation.id,
     },
     [Modules.FULFILLMENT]: {
+      // ⚠️ TEST/DUMMY PROVIDER: manual_manual is a manual fulfillment provider for testing only
+      // TODO: Replace with production fulfillment provider before launch
       fulfillment_provider_id: "manual_manual",
     },
   });
@@ -246,6 +250,8 @@ export default async function seedDemoData({ container }: ExecArgs) {
       {
         name: "Standard Shipping",
         price_type: "flat",
+        // ⚠️ TEST/DUMMY PROVIDER: manual_manual is for testing only
+        // TODO: Replace with production fulfillment provider before launch
         provider_id: "manual_manual",
         service_zone_id: fulfillmentSet.service_zones[0].id,
         shipping_profile_id: shippingProfile.id,
@@ -284,6 +290,8 @@ export default async function seedDemoData({ container }: ExecArgs) {
       {
         name: "Express Shipping",
         price_type: "flat",
+        // ⚠️ TEST/DUMMY PROVIDER: manual_manual is for testing only
+        // TODO: Replace with production fulfillment provider before launch
         provider_id: "manual_manual",
         service_zone_id: fulfillmentSet.service_zones[0].id,
         shipping_profile_id: shippingProfile.id,

@@ -98,13 +98,19 @@ const Shipping: React.FC<ShippingProps> = ({
           setCalculatedPricesMap(pricesMap)
           setIsLoadingPrices(false)
         })
+      } else {
+        // No calculated prices to load, set loading to false
+        setIsLoadingPrices(false)
       }
+    } else {
+      // No shipping methods available, set loading to false
+      setIsLoadingPrices(false)
     }
 
     if (_pickupMethods?.find((m) => m.id === shippingMethodId)) {
       setShowPickupOptions(PICKUP_OPTION_ON)
     }
-  }, [availableShippingMethods])
+  }, [availableShippingMethods, cart.id, cart.shipping_address])
 
   const handleEdit = () => {
     router.push(pathname + "?step=delivery", { scroll: false })
@@ -193,6 +199,17 @@ const Shipping: React.FC<ShippingProps> = ({
               </span>
             </div>
             <div data-testid="delivery-options-container">
+              {!_shippingMethods?.length && !hasPickupOptions && (
+                <div className="pb-8 md:pt-0 pt-2">
+                  <div className="rounded-rounded bg-ui-bg-subtle border border-ui-border-base p-4">
+                    <Text className="text-ui-fg-subtle txt-small">
+                      {!cart.shipping_address
+                        ? "Please add a shipping address to see shipping options."
+                        : "No shipping options available for your location. Please contact support."}
+                    </Text>
+                  </div>
+                </div>
+              )}
               <div className="pb-8 md:pt-0 pt-2">
                 {hasPickupOptions && (
                   <RadioGroup
@@ -373,7 +390,7 @@ const Shipping: React.FC<ShippingProps> = ({
               className="mt"
               onClick={handleSubmit}
               isLoading={isLoading}
-              disabled={!cart.shipping_methods?.[0]}
+              disabled={!cart.shipping_methods?.[0] || isLoading}
               data-testid="submit-delivery-option-button"
             >
               Continue to payment

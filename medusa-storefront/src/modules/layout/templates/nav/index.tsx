@@ -51,7 +51,7 @@ export default async function Nav() {
           <div className="hidden small:flex items-center gap-x-8 h-full absolute left-1/2 transform -translate-x-1/2 font-ibm-plex-condensed">
             <LocalizedClientLink
               className="text-xl font-normal text-gatherers-brown hover:text-gatherers-orange transition-colors"
-              href="/store"
+              href="/collections/granola"
               data-testid="nav-granola-link"
             >
               Granola
