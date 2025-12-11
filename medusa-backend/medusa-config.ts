@@ -10,6 +10,15 @@ module.exports = defineConfig({
         ssl: process.env.NODE_ENV === 'production' ? {
           rejectUnauthorized: false,
         } : false,
+        // Connection pool settings for Render
+        pool: {
+          min: 0,
+          max: 10,
+          idleTimeoutMillis: 30000,
+          acquireTimeoutMillis: 60000, // Increase timeout for Render network
+        },
+        // Connection timeout
+        connectionTimeoutMillis: 60000, // 60 seconds
       },
     },
     http: {
