@@ -12,6 +12,8 @@ pnpm-debug.log*
 .env.test.local
 .env.production.local
 *.env
+.env.backup
+*.env.backup
 
 # Build directories
 dist/
