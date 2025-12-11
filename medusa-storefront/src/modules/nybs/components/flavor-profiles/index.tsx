@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
 
 interface Flavor {
   id: number
@@ -73,7 +74,7 @@ const FlavorProfiles = () => {
   const [selectedFlavor, setSelectedFlavor] = useState<Flavor>(flavors[0])
 
   return (
-    <section className="section-container bg-white">
+    <section className="section-container bg-white" aria-labelledby="nybs-flavors-heading">
       <div className="content-container">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -82,7 +83,7 @@ const FlavorProfiles = () => {
               Feature Stories
             </span>
           </div>
-          <h2 className="nybs-heading-section mb-4">
+          <h2 id="nybs-flavors-heading" className="nybs-heading-section mb-4">
             FLAVOR PROFILES:
             <br />
             THE INSIDE SCOOP
@@ -236,9 +237,11 @@ const FlavorProfiles = () => {
             <p className="text-lg mb-6">
               Every flavor tells a New York story. Which one is yours?
             </p>
-            <button className="bg-nybs-red text-white font-bold px-8 py-3 uppercase hover:bg-white hover:text-nybs-red transition-colors border-2 border-white">
-              Shop All Flavors
-            </button>
+            <LocalizedClientLink href="/collections/NYBS">
+              <button className="bg-nybs-red text-white font-bold px-8 py-3 uppercase hover:bg-white hover:text-nybs-red transition-colors border-2 border-white">
+                Shop All Flavors
+              </button>
+            </LocalizedClientLink>
           </div>
         </div>
       </div>

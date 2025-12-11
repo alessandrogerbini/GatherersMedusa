@@ -3,7 +3,7 @@ import LocalizedClientLink from "@modules/common/components/localized-client-lin
 
 const NYBSHero = () => {
   return (
-    <div className="relative min-h-[80vh] w-full newsprint-bg">
+    <header className="relative min-h-[80vh] w-full newsprint-bg" role="banner">
       {/* Tabloid Banner Header */}
       <div className="tabloid-banner text-center">
         <p className="text-lg md:text-2xl italic tracking-wider">NEW YORK&apos;S BEST SNACKS™</p>
@@ -46,7 +46,7 @@ const NYBSHero = () => {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <LocalizedClientLink href="/store">
+              <LocalizedClientLink href="/collections/NYBS">
                 <button className="btn-nybs-primary text-lg px-8 py-4">
                   Shop Now
                 </button>
@@ -91,10 +91,12 @@ const NYBSHero = () => {
                   <div className="border-4 border-nybs-black bg-white p-4">
                     <Image
                       src="/images/brand/nybs/Website Letterhead.png"
-                      alt="NYBS Product"
+                      alt="NYBS Featured Product - New York's Best Snacks"
                       width={400}
                       height={400}
                       className="w-full h-auto"
+                      loading="lazy"
+                      sizes="(max-width: 1024px) 0vw, 400px"
                     />
                   </div>
                   <p className="text-sm font-bold italic">
@@ -131,7 +133,7 @@ const NYBSHero = () => {
           </div>
         </div>
       </div>
-    </div>
+    </header>
   )
 }
 

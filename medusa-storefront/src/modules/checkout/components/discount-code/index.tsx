@@ -47,7 +47,13 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
     try {
       await applyPromotions(codes)
     } catch (e: any) {
-      setErrorMessage(e.message)
+      // Handle error messages - show "Invalid code" for invalid codes or unknown errors
+      const errorMsg = e.message || "An unknown error occurred."
+      if (errorMsg === "An unknown error occurred." || !errorMsg) {
+        setErrorMessage("Invalid code")
+      } else {
+        setErrorMessage(errorMsg)
+      }
     }
 
     if (input) {

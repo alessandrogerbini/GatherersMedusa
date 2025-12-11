@@ -1,0 +1,853 @@
+﻿node.exe : (node:27444) ExperimentalWarning: VM Modules is an experimental feature and might change at 
+any time
+At line:1 char:1
++ & "G:\FastGrams program files\Node js/node.exe" "G:\FastGrams program ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ((node:27444) Ex...nge at any time:String) [], RemoteExceptio 
+   n
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"level":"info","message":"Disabling admin as we run integration tests","timestamp":"2025-12-10 13:35:26"}
+{"level":"info","message":"redisUrl not found. A fake redis instance will be used.","timestamp":"2025-12-10 13:35:26"}
+{"level":"info","message":"Creating database medusa-t3go8-integration-1","timestamp":"2025-12-10 13:35:26"}
+{"level":"info","message":"Migrating database with core migrations and links medusa-t3go8-integration-1","timestamp":"2025-12-10 13:35:26"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"MODULE: stock_location","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240307161216","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240307161216","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241210073813","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241210073813","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250106142624","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250106142624","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250120110820","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250120110820","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"MODULE: inventory","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240307132720","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240307132720","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240719123015","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240719123015","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241213063611","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241213063611","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"MODULE: product","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  ΓùÅ Migrating InitialSetup20240401153642","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  Γ£ö Migrated InitialSetup20240401153642","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240601111544","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240601111544","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  ΓùÅ Migrating Migration202408271511","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  Γ£ö Migrated Migration202408271511","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241122120331","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241122120331","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241125090957","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241125090957","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250411073236","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250411073236","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250516081326","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250516081326","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250910154539","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250910154539","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250911092221","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250911092221","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"MODULE: pricing","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20230929122253","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  Γ£ö Migrated Migration20230929122253","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240322094407","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240322094407","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240322113359","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240322113359","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240322120125","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240322120125","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240626133555","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240626133555","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240704094505","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240704094505","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241127114534","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241127114534","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241127223829","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241127223829","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241128055359","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241128055359","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241212190401","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241212190401","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250408145122","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250408145122","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250409122219","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250409122219","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20251009110625","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  Γ£ö Migrated Migration20251009110625","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"MODULE: promotion","timestamp":"2025-12-10 13:35:28"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240227120221","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240227120221","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240617102917","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240617102917","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240624153824","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240624153824","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241211061114","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241211061114","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250113094144","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250113094144","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250120110700","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250120110700","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250226130616","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250226130616","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250508081510","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250508081510","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250828075407","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250828075407","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250909083125","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250909083125","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250916120552","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250916120552","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250917143818","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250917143818","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250919122137","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250919122137","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20251006000000","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20251006000000","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"MODULE: customer","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240124154000","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240124154000","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240524123112","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240524123112","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240602110946","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240602110946","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241211074630","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241211074630","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"MODULE: sales_channel","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240115152146","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240115152146","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"MODULE: cart","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240222170223","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240222170223","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240831125857","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240831125857","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241106085918","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241106085918","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241205095237","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241205095237","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241216183049","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241216183049","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241218091938","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241218091938","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250120115059","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250120115059","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250212131240","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250212131240","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250326151602","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250326151602","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250508081553","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250508081553","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"MODULE: region","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240205173216","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240205173216","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240624200006","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240624200006","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250120110744","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250120110744","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"MODULE: api_key","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating InitialSetup20240221144943","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated InitialSetup20240221144943","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240604080145","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240604080145","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241205122700","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241205122700","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20251015123842","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20251015123842","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"MODULE: store","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating InitialSetup20240227075933","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated InitialSetup20240227075933","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240621145944","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240621145944","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241206083313","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241206083313","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"MODULE: tax","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240227090331","timestamp":"2025-12-10 13:35:29"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240227090331","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240710135844","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240710135844","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240924114005","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240924114005","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241212052837","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241212052837","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"MODULE: currency","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating InitialSetup20240228133303","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated InitialSetup20240228133303","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240624082354","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240624082354","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"MODULE: payment","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240225134525","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240225134525","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240806072619","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240806072619","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241211151053","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241211151053","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250115160517","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250115160517","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250120110552","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250120110552","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250123122334","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250123122334","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250206105639","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250206105639","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250207132723","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250207132723","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250625084134","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250625084134","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250924135437","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250924135437","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250929124701","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250929124701","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"MODULE: order","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240219102530","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240219102530","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240604100512","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240604100512","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240715102100","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240715102100","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240715174100","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240715174100","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240716081800","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240716081800","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240801085921","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240801085921","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240821164505","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240821164505","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240821170920","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240821170920","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240827133639","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240827133639","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240902195921","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240902195921","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240913092514","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240913092514","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240930122627","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240930122627","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241014142943","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241014142943","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241106085223","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241106085223","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241129124827","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241129124827","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241217162224","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241217162224","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250326151554","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250326151554","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250522181137","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250522181137","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250702095353","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250702095353","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250704120229","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250704120229","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250910130000","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250910130000","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"MODULE: settings","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250717162007","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250717162007","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"MODULE: auth","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240205025928","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240205025928","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240529080336","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240529080336","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241202100304","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241202100304","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"MODULE: auth","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"Skipped. Database is up-to-date for module.","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"MODULE: auth","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"Skipped. Database is up-to-date for module.","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"MODULE: user","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240214033943","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240214033943","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240703095850","timestamp":"2025-12-10 13:35:30"}
+  console.info
+    Note: If the index "IDX_user_email" fails to create, then delete any existing users with duplicate emails before retrying the migration.
+
+      at Migration20240703095850.up (node_modules/@medusajs/user/src/migrations/Migration20240703095850.ts:11:13)
+
+{"level":"info","message":"  Γ£ö Migrated Migration20240703095850","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241202103352","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241202103352","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"MODULE: fulfillment","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240311145700_InitialSetupMigration","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240311145700_InitialSetupMigration","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240821170957","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240821170957","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240917161003","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240917161003","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241217110416","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241217110416","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250113122235","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250113122235","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250120115002","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250120115002","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250822130931","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250822130931","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250825132614","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250825132614","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"MODULE: fulfillment","timestamp":"2025-12-10 13:35:30"}
+{"level":"info","message":"Skipped. Database is up-to-date for module.","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"MODULE: fulfillment","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"Skipped. Database is up-to-date for module.","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"MODULE: notification","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240509083918_InitialSetupMigration","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240509083918_InitialSetupMigration","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240628075401","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240628075401","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240830094712","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240830094712","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250120110514","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250120110514","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"MODULE: notification","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"Skipped. Database is up-to-date for module.","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"MODULE: notification","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"Skipped. Database is up-to-date for module.","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"MODULE: cache","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"Skipped. Database is up-to-date for module.","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"MODULE: event_bus","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"Skipped. Database is up-to-date for module.","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"MODULE: workflows","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20231228143900","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"  Γ£ö Migrated Migration20231228143900","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241206101446","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241206101446","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250128174331","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250128174331","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250505092459","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250505092459","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250819104213","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250819104213","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250819110924","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250819110924","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250908080305","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250908080305","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"MODULE: locking","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"Skipped. Database is up-to-date for module.","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"MODULE: file","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"Skipped. Database is up-to-date for module.","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"MODULE: file","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"Skipped. Database is up-to-date for module.","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"MODULE: file","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"Skipped. Database is up-to-date for module.","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"MODULE: notificationModuleService","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"Skipped. Database is up-to-date for module.","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"MODULE: newClientPromotionsService","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"Skipped. Database is up-to-date for module.","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"No link to load from G:\\FastGrams program files\\GG Medusa V2 website\\medusa-backend\\node_modules\\@medusajs\\draft-order\\.medusa\\server\\src\\links. skipped.","timestamp":"2025-12-10 13:35:31"}
+{"level":"info","message":"Sync links: \"create\" cart_payment_collection","timestamp":"2025-12-10 13:35:33"}
+{"level":"info","message":"Sync links: \"create\" cart_promotion","timestamp":"2025-12-10 13:35:33"}
+{"level":"info","message":"Sync links: \"create\" location_fulfillment_provider","timestamp":"2025-12-10 13:35:33"}
+{"level":"info","message":"Sync links: \"create\" location_fulfillment_set","timestamp":"2025-12-10 13:35:33"}
+{"level":"info","message":"Sync links: \"create\" order_cart","timestamp":"2025-12-10 13:35:33"}
+{"level":"info","message":"Sync links: \"create\" order_fulfillment","timestamp":"2025-12-10 13:35:33"}
+{"level":"info","message":"Sync links: \"create\" order_payment_collection","timestamp":"2025-12-10 13:35:33"}
+{"level":"info","message":"Sync links: \"create\" order_promotion","timestamp":"2025-12-10 13:35:33"}
+{"level":"info","message":"Sync links: \"create\" return_fulfillment","timestamp":"2025-12-10 13:35:33"}
+{"level":"info","message":"Sync links: \"create\" product_sales_channel","timestamp":"2025-12-10 13:35:33"}
+{"level":"info","message":"Sync links: \"create\" product_variant_inventory_item","timestamp":"2025-12-10 13:35:33"}
+{"level":"info","message":"Sync links: \"create\" product_variant_price_set","timestamp":"2025-12-10 13:35:33"}
+{"level":"info","message":"Sync links: \"create\" publishable_api_key_sales_channel","timestamp":"2025-12-10 13:35:33"}
+{"level":"info","message":"Sync links: \"create\" region_payment_provider","timestamp":"2025-12-10 13:35:33"}
+{"level":"info","message":"Sync links: \"create\" sales_channel_stock_location","timestamp":"2025-12-10 13:35:33"}
+{"level":"info","message":"Sync links: \"create\" shipping_option_price_set","timestamp":"2025-12-10 13:35:33"}
+{"level":"info","message":"Sync links: \"create\" product_shipping_profile","timestamp":"2025-12-10 13:35:33"}
+{"level":"info","message":"Sync links: \"create\" customer_account_holder","timestamp":"2025-12-10 13:35:33"}
+{"level":"warn","message":"Local Event Bus installed. This is not recommended for production.","timestamp":"2025-12-10 13:35:33"}
+{"level":"info","message":"Locking module: Using \"in-memory\" as default.","timestamp":"2025-12-10 13:35:33"}
+{"level":"info","message":"redisUrl not found. A fake redis instance will be used.","timestamp":"2025-12-10 13:35:33"}
+{"level":"info","message":"No link to load from G:\\FastGrams program files\\GG Medusa V2 website\\medusa-backend\\node_modules\\@medusajs\\draft-order\\.medusa\\server\\src\\links. skipped.","timestamp":"2025-12-10 13:35:33"}
+{"level":"info","message":"No workflow to load from G:\\FastGrams program files\\GG Medusa V2 website\\medusa-backend\\node_modules\\@medusajs\\draft-order\\.medusa\\server\\src\\workflows. skipped.","timestamp":"2025-12-10 13:35:33"}
+{"level":"info","message":"No subscriber to load from G:\\FastGrams program files\\GG Medusa V2 website\\medusa-backend\\node_modules\\@medusajs\\draft-order\\.medusa\\server\\src\\subscribers. skipped.","timestamp":"2025-12-10 13:35:33"}
+{"level":"info","message":"No job to load from G:\\FastGrams program files\\GG Medusa V2 website\\medusa-backend\\node_modules\\@medusajs\\medusa\\dist\\jobs. skipped.","timestamp":"2025-12-10 13:35:34"}
+{"level":"info","message":"No job to load from G:\\FastGrams program files\\GG Medusa V2 website\\medusa-backend\\node_modules\\@medusajs\\draft-order\\.medusa\\server\\src\\jobs. skipped.","timestamp":"2025-12-10 13:35:34"}
+  console.warn
+    Could not verify API key link (this is okay): apiKeyModuleService.retrieve is not a function
+
+    [0m [90m 434 |[39m       [90m// If API_KEY module doesn't exist or method doesn't work, that's okay[39m
+     [90m 435 |[39m       [90m// The link workflow should have worked[39m
+    [31m[1m>[22m[39m[90m 436 |[39m       console[33m.[39mwarn([32m"Could not verify API key link (this is okay):"[39m[33m,[39m verifyError[33m?[39m[33m.[39mmessage [33m||[39m verifyError)
+     [90m     |[39m               [31m[1m^[22m[39m
+     [90m 437 |[39m     }
+     [90m 438 |[39m     
+     [90m 439 |[39m     console[33m.[39mlog([32m`Γ£ô API Key created: ${apiKeyToken.substring(0, 30)}...`[39m)[0m
+
+      at warn (integration-tests/helpers/seed-test-data.ts:436:15)
+      at getPublishableApiKey (integration-tests/helpers/test-utils.ts:263:22)
+      at Object.<anonymous> (integration-tests/http/products.spec.ts:16:30)
+
+  console.log
+    Γ£ô API Key created: pk_322482753164fc086d0ed1d6f66...
+
+      at log (integration-tests/helpers/seed-test-data.ts:439:13)
+
+  console.log
+    Γ£ô Sales Channel ID: sc_01KC4RR6DWDGV48HH7P076N1N5
+
+      at log (integration-tests/helpers/seed-test-data.ts:440:13)
+
+  console.log
+    Γ£ô API Key linked to sales channel
+
+      at log (integration-tests/helpers/seed-test-data.ts:441:13)
+
+  console.log
+    Testing API key authentication using authenticate method...
+
+      at log (integration-tests/helpers/test-api-key-validation.ts:15:13)
+
+  console.log
+    API Key Token: pk_322482753164fc086d0ed1d6f66...
+
+      at log (integration-tests/helpers/test-api-key-validation.ts:16:13)
+
+  console.log
+    Γ£ô authenticate method found, attempting authentication...
+
+      at log (integration-tests/helpers/test-api-key-validation.ts:22:15)
+
+  console.error
+    Γ¥î Authentication failed - authenticate returned falsy value
+
+    [0m [90m 42 |[39m           [36mreturn[39m authResult
+     [90m 43 |[39m         } [36melse[39m {
+    [31m[1m>[22m[39m[90m 44 |[39m           console[33m.[39merror([32m"Γ¥î Authentication failed - authenticate returned falsy value"[39m)
+     [90m    |[39m                   [31m[1m^[22m[39m
+     [90m 45 |[39m           [36mreturn[39m [36mnull[39m
+     [90m 46 |[39m         }
+     [90m 47 |[39m       } [36mcatch[39m (authError[33m:[39m any) {[0m
+
+      at error (integration-tests/helpers/test-api-key-validation.ts:44:19)
+      at seedTestData (integration-tests/helpers/seed-test-data.ts:446:32)
+      at getPublishableApiKey (integration-tests/helpers/test-utils.ts:263:22)
+      at Object.<anonymous> (integration-tests/http/products.spec.ts:16:30)
+
+  console.warn
+    ΓÜá∩╕Å API key validation test returned null
+
+    [0m [90m 448 |[39m         console[33m.[39mlog([32m"Γ£ô API key validation test passed"[39m)
+     [90m 449 |[39m       } [36melse[39m {
+    [31m[1m>[22m[39m[90m 450 |[39m         console[33m.[39mwarn([32m"ΓÜá∩╕Å API key validation test returned null"[39m)
+     [90m     |[39m                 [31m[1m^[22m[39m
+     [90m 451 |[39m       }
+     [90m 452 |[39m     } [36mcatch[39m (validationError[33m:[39m any) {
+     [90m 453 |[39m       console[33m.[39mwarn([32m"Could not test API key validation (this is okay):"[39m[33m,[39m validationError[33m.[39mmessage)[0m
+
+      at warn (integration-tests/helpers/seed-test-data.ts:450:17)
+      at getPublishableApiKey (integration-tests/helpers/test-utils.ts:263:22)
+      at Object.<anonymous> (integration-tests/http/products.spec.ts:16:30)
+
+  console.warn
+    Could not verify product-sales channel link: productModuleService.retrieve is not a function
+
+    [0m [90m 480 |[39m       }
+     [90m 481 |[39m     } [36mcatch[39m (productCheckError[33m:[39m any) {
+    [31m[1m>[22m[39m[90m 482 |[39m       console[33m.[39mwarn([32m"Could not verify product-sales channel link:"[39m[33m,[39m productCheckError[33m.[39mmessage)
+     [90m     |[39m               [31m[1m^[22m[39m
+     [90m 483 |[39m     }
+     [90m 484 |[39m
+     [90m 485 |[39m     [36mreturn[39m {[0m
+
+      at warn (integration-tests/helpers/seed-test-data.ts:482:15)
+      at getPublishableApiKey (integration-tests/helpers/test-utils.ts:263:22)
+      at Object.<anonymous> (integration-tests/http/products.spec.ts:16:30)
+
+  console.log
+    Γ£ô Using Medusa JS SDK for API requests (automatic publishable key handling)
+
+      at log (integration-tests/helpers/test-utils.ts:50:15)
+
+  console.log
+      Base URL: http://localhost:57362
+
+      at log (integration-tests/helpers/test-utils.ts:51:15)
+
+  console.log
+      Publishable Key: pk_322482753164fc086d0ed1d6f66...
+
+      at log (integration-tests/helpers/test-utils.ts:52:15)
+
+{"level":"warn","message":"Local Event Bus installed. This is not recommended for production.","timestamp":"2025-12-10 13:35:37"}
+{"level":"info","message":"Locking module: Using \"in-memory\" as default.","timestamp":"2025-12-10 13:35:37"}
+{"level":"info","message":"A valid publishable key is required to proceed with the request","timestamp":"2025-12-10 13:35:37"}
+  console.log
+    SDK Error for GET: {
+      url: '/store/products',
+      status: 400,
+      statusText: 'Bad Request',
+      message: 'A valid publishable key is required to proceed with the request',
+      errorType: 'FetchError',
+      errorKeys: [ 'statusText', 'status' ],
+      errorString: 'Error: A valid publishable key is required to proceed with the request',
+      errorJSON: '{\n  "statusText": "Bad Request",\n  "status": 400\n}'
+    }
+
+      at Object.log (integration-tests/helpers/create-sdk-client.ts:65:19)
+
+{"level":"warn","message":"Local Event Bus installed. This is not recommended for production.","timestamp":"2025-12-10 13:35:38"}
+{"level":"info","message":"Locking module: Using \"in-memory\" as default.","timestamp":"2025-12-10 13:35:38"}
+{"level":"info","message":"A valid publishable key is required to proceed with the request","timestamp":"2025-12-10 13:35:38"}
+  console.log
+    SDK Error for GET: {
+      url: '/store/collections',
+      status: 400,
+      statusText: 'Bad Request',
+      message: 'A valid publishable key is required to proceed with the request',
+      errorType: 'FetchError',
+      errorKeys: [ 'statusText', 'status' ],
+      errorString: 'Error: A valid publishable key is required to proceed with the request',
+      errorJSON: '{\n  "statusText": "Bad Request",\n  "status": 400\n}'
+    }
+
+      at Object.log (integration-tests/helpers/create-sdk-client.ts:65:19)
+
+{"level":"warn","message":"Local Event Bus installed. This is not recommended for production.","timestamp":"2025-12-10 13:35:38"}
+{"level":"info","message":"Locking module: Using \"in-memory\" as default.","timestamp":"2025-12-10 13:35:38"}
+{"level":"info","message":"A valid publishable key is required to proceed with the request","timestamp":"2025-12-10 13:35:38"}
+  console.log
+    SDK Error for GET: {
+      url: '/store/products',
+      status: 400,
+      statusText: 'Bad Request',
+      message: 'A valid publishable key is required to proceed with the request',
+      errorType: 'FetchError',
+      errorKeys: [ 'statusText', 'status' ],
+      errorString: 'Error: A valid publishable key is required to proceed with the request',
+      errorJSON: '{\n  "statusText": "Bad Request",\n  "status": 400\n}'
+    }
+
+      at Object.log (integration-tests/helpers/create-sdk-client.ts:65:19)
+
+{"level":"warn","message":"Local Event Bus installed. This is not recommended for production.","timestamp":"2025-12-10 13:35:38"}
+{"level":"info","message":"Locking module: Using \"in-memory\" as default.","timestamp":"2025-12-10 13:35:38"}
+{"level":"info","message":"A valid publishable key is required to proceed with the request","timestamp":"2025-12-10 13:35:38"}
+  console.log
+    SDK Error for GET: {
+      url: '/store/products',
+      status: 400,
+      statusText: 'Bad Request',
+      message: 'A valid publishable key is required to proceed with the request',
+      errorType: 'FetchError',
+      errorKeys: [ 'statusText', 'status' ],
+      errorString: 'Error: A valid publishable key is required to proceed with the request',
+      errorJSON: '{\n  "statusText": "Bad Request",\n  "status": 400\n}'
+    }
+
+      at Object.log (integration-tests/helpers/create-sdk-client.ts:65:19)
+
+{"level":"warn","message":"Local Event Bus installed. This is not recommended for production.","timestamp":"2025-12-10 13:35:39"}
+{"level":"info","message":"Locking module: Using \"in-memory\" as default.","timestamp":"2025-12-10 13:35:39"}
+{"level":"info","message":"A valid publishable key is required to proceed with the request","timestamp":"2025-12-10 13:35:39"}
+  console.log
+    SDK Error for GET: {
+      url: '/store/products/non-existent-id',
+      status: 400,
+      statusText: 'Bad Request',
+      message: 'A valid publishable key is required to proceed with the request',
+      errorType: 'FetchError',
+      errorKeys: [ 'statusText', 'status' ],
+      errorString: 'Error: A valid publishable key is required to proceed with the request',
+      errorJSON: '{\n  "statusText": "Bad Request",\n  "status": 400\n}'
+    }
+
+      at Object.log (integration-tests/helpers/create-sdk-client.ts:65:19)
+
+{"level":"warn","message":"Local Event Bus installed. This is not recommended for production.","timestamp":"2025-12-10 13:35:39"}
+{"level":"info","message":"Locking module: Using \"in-memory\" as default.","timestamp":"2025-12-10 13:35:39"}
+{"level":"info","message":"A valid publishable key is required to proceed with the request","timestamp":"2025-12-10 13:35:39"}
+  console.log
+    SDK Error for GET: {
+      url: '/store/products',
+      status: 400,
+      statusText: 'Bad Request',
+      message: 'A valid publishable key is required to proceed with the request',
+      errorType: 'FetchError',
+      errorKeys: [ 'statusText', 'status' ],
+      errorString: 'Error: A valid publishable key is required to proceed with the request',
+      errorJSON: '{\n  "statusText": "Bad Request",\n  "status": 400\n}'
+    }
+
+      at Object.log (integration-tests/helpers/create-sdk-client.ts:65:19)
+
+{"level":"warn","message":"Local Event Bus installed. This is not recommended for production.","timestamp":"2025-12-10 13:35:39"}
+{"level":"info","message":"Locking module: Using \"in-memory\" as default.","timestamp":"2025-12-10 13:35:39"}
+{"level":"warn","message":"Local Event Bus installed. This is not recommended for production.","timestamp":"2025-12-10 13:35:40"}
+{"level":"info","message":"Locking module: Using \"in-memory\" as default.","timestamp":"2025-12-10 13:35:40"}
+{"level":"info","message":"A valid publishable key is required to proceed with the request","timestamp":"2025-12-10 13:35:40"}
+  console.log
+    SDK Error for GET: {
+      url: '/store/collections',
+      status: 400,
+      statusText: 'Bad Request',
+      message: 'A valid publishable key is required to proceed with the request',
+      errorType: 'FetchError',
+      errorKeys: [ 'statusText', 'status' ],
+      errorString: 'Error: A valid publishable key is required to proceed with the request',
+      errorJSON: '{\n  "statusText": "Bad Request",\n  "status": 400\n}'
+    }
+
+      at Object.log (integration-tests/helpers/create-sdk-client.ts:65:19)
+
+{"level":"warn","message":"Local Event Bus installed. This is not recommended for production.","timestamp":"2025-12-10 13:35:40"}
+{"level":"info","message":"Locking module: Using \"in-memory\" as default.","timestamp":"2025-12-10 13:35:40"}
+{"level":"info","message":"A valid publishable key is required to proceed with the request","timestamp":"2025-12-10 13:35:40"}
+  console.log
+    SDK Error for GET: {
+      url: '/store/collections',
+      status: 400,
+      statusText: 'Bad Request',
+      message: 'A valid publishable key is required to proceed with the request',
+      errorType: 'FetchError',
+      errorKeys: [ 'statusText', 'status' ],
+      errorString: 'Error: A valid publishable key is required to proceed with the request',
+      errorJSON: '{\n  "statusText": "Bad Request",\n  "status": 400\n}'
+    }
+
+      at Object.log (integration-tests/helpers/create-sdk-client.ts:65:19)
+
+FAIL integration-tests/http/products.spec.ts (16.115 s)
+    Products API
+      GET /store/products
+        ΓêÜ should list all products (223 ms)
+        ├ù should support pagination (522 ms)
+        ΓêÜ should filter products by collection (420 ms)
+        ├ù should support search query (284 ms)
+      GET /store/products/:id
+        ├ù should get a single product by ID (461 ms)
+        ├ù should return 404 for non-existent product (282 ms)
+      Product Variants
+        ├ù should list product variants (312 ms)
+        ΓêÜ should get variant details with pricing (276 ms)
+      Product Collections
+        ├ù should list all collections (279 ms)
+        ├ù should get collection by handle (275 ms)
+
+  ΓùÅ  ΓÇ║ Products API ΓÇ║ GET /store/products ΓÇ║ should support pagination
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 200
+    Received: 400
+
+    [0m [90m 53 |[39m             }[33m,[39m
+     [90m 54 |[39m           })
+    [31m[1m>[22m[39m[90m 55 |[39m           
+expect(response[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)
+     [90m    |[39m                                   [31m[1m^[22m[39m
+     [90m 56 |[39m           expect(response[33m.[39mdata[33m.[39mproducts[33m.[39mlength)[33m.[
+39mtoBeLessThanOrEqual([35m5[39m)
+     [90m 57 |[39m         })
+     [90m 58 |[39m[0m
+
+      at Object.toBe (integration-tests/http/products.spec.ts:55:35)
+
+  ΓùÅ  ΓÇ║ Products API ΓÇ║ GET /store/products ΓÇ║ should support search query
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 200
+    Received: 400
+
+    [0m [90m 81 |[39m             }[33m,[39m
+     [90m 82 |[39m           })
+    [31m[1m>[22m[39m[90m 83 |[39m           
+expect(response[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)
+     [90m    |[39m                                   [31m[1m^[22m[39m
+     [90m 84 |[39m           
+expect(response[33m.[39mdata)[33m.[39mtoHaveProperty([32m"products"[39m)
+     [90m 85 |[39m         })
+     [90m 86 |[39m       })[0m
+
+      at Object.toBe (integration-tests/http/products.spec.ts:83:35)
+
+  ΓùÅ  ΓÇ║ Products API ΓÇ║ GET /store/products/:id ΓÇ║ should get a single product by ID
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 200
+    Received: 400
+
+    [0m [90m  95 |[39m             }[33m,[39m
+     [90m  96 |[39m           })
+    [31m[1m>[22m[39m[90m  97 |[39m           
+expect(listResponse[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)
+     [90m     |[39m                                       [31m[1m^[22m[39m
+     [90m  98 |[39m           
+     [90m  99 |[39m           [36mif[39m 
+(listResponse[33m.[39mdata[33m.[39mproducts[33m.[39mlength [33m>[39m [35m0[39m) {
+     [90m 100 |[39m             productId [33m=[39m 
+listResponse[33m.[39mdata[33m.[39mproducts[[35m0[39m][33m.[39mid[0m
+
+      at Object.toBe (integration-tests/http/products.spec.ts:97:39)
+
+  ΓùÅ  ΓÇ║ Products API ΓÇ║ GET /store/products/:id ΓÇ║ should return 404 for non-existent product
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 404
+    Received: 400
+
+    [0m [90m 114 |[39m         it([32m"should return 404 for non-existent product"[39m[33m,[39m 
+[36masync[39m () [33m=>[39m {
+     [90m 115 |[39m           [36mconst[39m response [33m=[39m [36mawait[39m 
+storeApi[33m.[39m[36mget[39m([32m"/store/products/non-existent-id"[39m)
+    [31m[1m>[22m[39m[90m 116 |[39m           
+expect(response[33m.[39mstatus)[33m.[39mtoBe([35m404[39m)
+     [90m     |[39m                                   [31m[1m^[22m[39m
+     [90m 117 |[39m         })
+     [90m 118 |[39m       })
+     [90m 119 |[39m[0m
+
+      at Object.toBe (integration-tests/http/products.spec.ts:116:35)
+
+  ΓùÅ  ΓÇ║ Products API ΓÇ║ Product Variants ΓÇ║ should list product variants
+
+    TypeError: Cannot read properties of undefined (reading 'length')
+
+    [0m [90m 126 |[39m             }[33m,[39m
+     [90m 127 |[39m           })
+    [31m[1m>[22m[39m[90m 128 |[39m           [36mif[39m 
+(listResponse[33m.[39mdata[33m.[39mproducts[33m.[39mlength [33m>[39m [35m0[39m) {
+     [90m     |[39m                                          [31m[1m^[22m[39m
+     [90m 129 |[39m             [36mconst[39m product [33m=[39m 
+listResponse[33m.[39mdata[33m.[39mproducts[[35m0[39m]
+     [90m 130 |[39m             expect(product[33m.[39mvariants)[33m.[39mtoBeDefined()
+     [90m 131 |[39m             
+expect([33mArray[39m[33m.[39misArray(product[33m.[39mvariants))[33m.[39mtoBe([36mtrue[39m)[0m
+
+      at Object.length (integration-tests/http/products.spec.ts:128:42)
+
+  ΓùÅ  ΓÇ║ Products API ΓÇ║ Product Collections ΓÇ║ should list all collections
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 200
+    Received: 400
+
+    [0m [90m 156 |[39m           [90m// Collections endpoint doesn't accept region_id parameter[39m
+     [90m 157 |[39m           [36mconst[39m response [33m=[39m [36mawait[39m 
+storeApi[33m.[39m[36mget[39m([32m`/store/collections`[39m)
+    [31m[1m>[22m[39m[90m 158 |[39m           
+expect(response[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)
+     [90m     |[39m                                   [31m[1m^[22m[39m
+     [90m 159 |[39m           
+expect(response[33m.[39mdata)[33m.[39mtoHaveProperty([32m"collections"[39m)
+     [90m 160 |[39m           expect([33mArray[39m[33m.[39misArray(response[33m.[39mdata[33m.[39
+mcollections))[33m.[39mtoBe([36mtrue[39m)
+     [90m 161 |[39m         })[0m
+
+      at Object.toBe (integration-tests/http/products.spec.ts:158:35)
+
+  ΓùÅ  ΓÇ║ Products API ΓÇ║ Product Collections ΓÇ║ should get collection by handle
+
+    TypeError: Cannot read properties of undefined (reading 'length')
+
+    [0m [90m 163 |[39m         it([32m"should get collection by handle"[39m[33m,[39m 
+[36masync[39m () [33m=>[39m {
+     [90m 164 |[39m           [36mconst[39m collectionsResponse [33m=[39m [36mawait[39m 
+storeApi[33m.[39m[36mget[39m([32m"/store/collections"[39m)
+    [31m[1m>[22m[39m[90m 165 |[39m           [36mif[39m 
+(collectionsResponse[33m.[39mdata[33m.[39mcollections[33m.[39mlength [33m>[39m [35m0[39m) {
+     [90m     |[39m                                                    [31m[1m^[22m[39m
+     [90m 166 |[39m             [36mconst[39m handle [33m=[39m 
+collectionsResponse[33m.[39mdata[33m.[39mcollections[[35m0[39m][33m.[39mhandle
+     [90m 167 |[39m             [36mconst[39m response [33m=[39m [36mawait[39m 
+storeApi[33m.[39m[36mget[39m([32m`/store/collections/${handle}`[39m)
+     [90m 168 |[39m             expect(response[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[0m
+
+      at Object.length (integration-tests/http/products.spec.ts:165:52)
+
+Test Suites: 1 failed, 1 total
+Tests:       7 failed, 3 passed, 10 total
+Snapshots:   0 total
+Time:        16.178 s
+Ran all test suites matching /products.spec.ts/i.
+Force exiting Jest: Have you considered using `--detectOpenHandles` to detect async operations that kept 
+running after all tests finished?

@@ -1,33 +1,140 @@
 import { Metadata } from "next"
 import { retrieveCustomer } from "@lib/data/customer"
 import { getWholesaleStatus } from "@lib/data/wholesale"
+import { getBaseURL } from "@lib/util/env"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import WholesaleApplicationForm from "@modules/account/components/wholesale-application-form"
 
 export const metadata: Metadata = {
-  title: "Wholesale - Gatherer's Granola",
+  title: "Wholesale Program | Bulk Granola Orders | Gatherer's Granola",
   description:
-    "Join our wholesale program and access special pricing for your business. Apply today or sign in to your wholesale account.",
+    "Join Gatherer's Granola wholesale program for businesses. Get special wholesale pricing on organic granola, bulk ordering options, and dedicated support. Perfect for cafes, restaurants, retailers, and health food stores. Apply today!",
+  keywords: [
+    "wholesale granola",
+    "bulk granola",
+    "wholesale pricing",
+    "business granola",
+    "cafe granola supplier",
+    "restaurant granola",
+    "retailer granola",
+    "organic granola wholesale",
+    "health food store granola",
+    "gatherer's granola wholesale",
+  ],
+  openGraph: {
+    title: "Wholesale Program | Gatherer's Granola",
+    description:
+      "Join our wholesale program and access special pricing for your business. Perfect for cafes, restaurants, retailers, and health food stores.",
+    type: "website",
+    url: "/wholesale",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wholesale Program | Gatherer's Granola",
+    description:
+      "Join our wholesale program and access special pricing for your business. Perfect for cafes, restaurants, retailers, and health food stores.",
+  },
+  alternates: {
+    canonical: "/wholesale",
+  },
 }
 
 export default async function WholesalePage() {
   const customer = await retrieveCustomer().catch(() => null)
   const wholesaleStatus = customer ? await getWholesaleStatus() : null
 
+  const baseURL = getBaseURL()
+  const pageUrl = `${baseURL}/wholesale`
+
+  // Structured Data (JSON-LD) for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Wholesale Program - Gatherer's Granola",
+    description:
+      "Join Gatherer's Granola wholesale program for businesses. Get special wholesale pricing on organic granola, bulk ordering options, and dedicated support.",
+    url: pageUrl,
+    mainEntity: {
+      "@type": "Service",
+      serviceType: "Wholesale Distribution",
+      provider: {
+        "@type": "Organization",
+        name: "Gatherer's Granola",
+        url: baseURL,
+      },
+      areaServed: {
+        "@type": "Country",
+        name: "United States",
+      },
+      offers: {
+        "@type": "Offer",
+        description: "Wholesale pricing for businesses",
+        eligibleCustomerType: [
+          "Cafés and Coffee Shops",
+          "Restaurants and Hotels",
+          "Specialty Food Retailers",
+          "Health Food Stores",
+          "Gift Shops and Tourist Locations",
+          "Corporate Catering Services",
+        ],
+      },
+    },
+  }
+
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Who can apply for wholesale pricing?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Our wholesale program is perfect for cafés and coffee shops, restaurants and hotels, specialty food retailers, health food stores, gift shops and tourist locations, and corporate catering services.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What benefits do wholesale customers receive?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Wholesale customers receive special wholesale pricing on all products, convenient bulk ordering options, priority support, and flexible payment terms for qualified businesses.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How do I apply for wholesale pricing?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "You can create a wholesale account and apply for special pricing by visiting our wholesale registration page. New customers can create an account with their business information, while existing customers can sign in to apply.",
+        },
+      },
+    ],
+  }
+
   // If not logged in, show sign in prompt and info
   if (!customer) {
     return (
-      <div className="content-container py-12">
-        <div className="max-w-4xl mx-auto">
-          {/* Hero Section */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gatherers-brown mb-4">
-              Wholesale Program
-            </h1>
-            <p className="text-xl text-gatherers-brown-light">
-              Partner with Gatherer&apos;s Granola for your business
-            </p>
-          </div>
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+        />
+        <div className="content-container py-12">
+          <div className="max-w-4xl mx-auto">
+            {/* Hero Section */}
+            <header className="text-center mb-12">
+              <h1 className="text-4xl font-bold text-gatherers-brown mb-4">
+                Wholesale Program
+              </h1>
+              <p className="text-xl text-gatherers-brown-light">
+                Partner with Gatherer&apos;s Granola for your business
+              </p>
+            </header>
 
           {/* Account Actions */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -65,8 +172,11 @@ export default async function WholesalePage() {
           </div>
 
           {/* Benefits Section */}
-          <div className="mb-12">
-            <h2 className="text-2xl font-semibold text-gatherers-brown mb-6">
+          <section className="mb-12" aria-labelledby="wholesale-benefits">
+            <h2
+              id="wholesale-benefits"
+              className="text-2xl font-semibold text-gatherers-brown mb-6"
+            >
               Wholesale Benefits
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -165,11 +275,17 @@ export default async function WholesalePage() {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* Who Should Apply */}
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-8 mb-8">
-            <h2 className="text-2xl font-semibold text-blue-900 mb-4">
+          <section
+            className="bg-blue-50 border border-blue-200 rounded-lg p-8 mb-8"
+            aria-labelledby="who-should-apply"
+          >
+            <h2
+              id="who-should-apply"
+              className="text-2xl font-semibold text-blue-900 mb-4"
+            >
               Who Should Apply?
             </h2>
             <p className="text-blue-800 mb-4">
@@ -183,56 +299,74 @@ export default async function WholesalePage() {
               <li>Gift Shops and Tourist Locations</li>
               <li>Corporate Catering Services</li>
             </ul>
-          </div>
+          </section>
 
           {/* CTA */}
-          <div className="text-center bg-gatherers-brown text-white rounded-lg p-8">
-            <h2 className="text-2xl font-semibold mb-4">Ready to Get Started?</h2>
+          <section
+            className="text-center bg-gatherers-brown text-white rounded-lg p-8"
+            aria-labelledby="cta-heading"
+          >
+            <h2 id="cta-heading" className="text-2xl font-semibold mb-4">
+              Ready to Get Started?
+            </h2>
             <p className="mb-6 text-gatherers-cream">
               Create a wholesale account to begin your application
             </p>
             <LocalizedClientLink
               href="/wholesale/register"
               className="inline-block px-8 py-3 bg-gatherers-orange text-white rounded-md hover:bg-white hover:text-gatherers-brown transition-colors font-medium"
+              aria-label="Create a wholesale account to apply for special pricing"
             >
               Create Wholesale Account
             </LocalizedClientLink>
-          </div>
+          </section>
         </div>
       </div>
+      </>
     )
   }
 
   // If logged in but no wholesale status or status is "none", show application form
   if (!wholesaleStatus || wholesaleStatus.wholesale_status === "none") {
     return (
-      <div className="content-container py-12">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-gatherers-brown mb-4">
-              Apply for Wholesale Access
-            </h1>
-            <p className="text-lg text-gatherers-brown-light">
-              Welcome, {customer.first_name}! Complete the form below to apply for
-              wholesale pricing.
-            </p>
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+        <div className="content-container py-12">
+          <div className="max-w-3xl mx-auto">
+            <header className="text-center mb-8">
+              <h1 className="text-4xl font-bold text-gatherers-brown mb-4">
+                Apply for Wholesale Access
+              </h1>
+              <p className="text-lg text-gatherers-brown-light">
+                Welcome, {customer.first_name}! Complete the form below to apply for
+                wholesale pricing.
+              </p>
+            </header>
+            <WholesaleApplicationForm />
           </div>
-          <WholesaleApplicationForm />
         </div>
-      </div>
+      </>
     )
   }
 
   // If pending, show pending status
   if (wholesaleStatus.wholesale_status === "pending") {
     return (
-      <div className="content-container py-12">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-gatherers-brown mb-4">
-              Wholesale Application
-            </h1>
-          </div>
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+        <div className="content-container py-12">
+          <div className="max-w-3xl mx-auto">
+            <header className="text-center mb-8">
+              <h1 className="text-4xl font-bold text-gatherers-brown mb-4">
+                Wholesale Application
+              </h1>
+            </header>
           <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-8">
             <h2 className="text-2xl font-semibold text-yellow-900 mb-4">
               Application Under Review
@@ -275,19 +409,25 @@ export default async function WholesalePage() {
           </div>
         </div>
       </div>
+      </>
     )
   }
 
   // If approved, show success and shop link
   if (wholesaleStatus.wholesale_status === "approved") {
     return (
-      <div className="content-container py-12">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-gatherers-brown mb-4">
-              Wholesale Account
-            </h1>
-          </div>
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+        <div className="content-container py-12">
+          <div className="max-w-3xl mx-auto">
+            <header className="text-center mb-8">
+              <h1 className="text-4xl font-bold text-gatherers-brown mb-4">
+                Wholesale Account
+              </h1>
+            </header>
           <div className="bg-green-50 border border-green-200 rounded-lg p-8">
             <div className="text-center mb-6">
               <svg
@@ -340,19 +480,25 @@ export default async function WholesalePage() {
           </div>
         </div>
       </div>
+      </>
     )
   }
 
   // If rejected
   if (wholesaleStatus.wholesale_status === "rejected") {
     return (
-      <div className="content-container py-12">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-gatherers-brown mb-4">
-              Wholesale Application
-            </h1>
-          </div>
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+        <div className="content-container py-12">
+          <div className="max-w-3xl mx-auto">
+            <header className="text-center mb-8">
+              <h1 className="text-4xl font-bold text-gatherers-brown mb-4">
+                Wholesale Application
+              </h1>
+            </header>
           <div className="bg-red-50 border border-red-200 rounded-lg p-8">
             <h2 className="text-2xl font-semibold text-red-900 mb-4">
               Application Status
@@ -382,6 +528,7 @@ export default async function WholesalePage() {
           </div>
         </div>
       </div>
+      </>
     )
   }
 

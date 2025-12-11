@@ -17,6 +17,9 @@ type Props = {
 
 export const PRODUCT_LIMIT = 12
 
+export const dynamicParams = true // Allow dynamic routes for collections added after build
+export const dynamic = "force-dynamic" // Force dynamic rendering for collections
+
 export async function generateStaticParams() {
   const { collections } = await listCollections({
     fields: "*products",
@@ -71,9 +74,7 @@ export default async function CollectionPage(props: Props) {
   const params = await props.params
   const { sortBy, page } = searchParams
 
-  const collection = await getCollectionByHandle(params.handle).then(
-    (collection: StoreCollection) => collection
-  )
+  const collection = await getCollectionByHandle(params.handle)
 
   if (!collection) {
     notFound()

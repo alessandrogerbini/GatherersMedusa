@@ -14,18 +14,23 @@ const WholesaleApplicationsWidget = () => {
   const fetchApplications = async () => {
     try {
       setLoading(true)
-      const response = await fetch("/admin/wholesale/applications", {
+      setError(null)
+      const response = await fetch("/admin/wholesale", {
         credentials: "include",
       })
       
       if (!response.ok) {
-        throw new Error("Failed to fetch applications")
+        const errorData = await response.json().catch(() => ({}))
+        throw new Error(errorData.message || "Failed to fetch applications")
       }
 
       const data = await response.json()
       setApplications(data.applications || [])
     } catch (err: any) {
+      console.error("Error fetching wholesale applications:", err)
       setError(err.message)
+      // Set empty array on error so the widget doesn't break the page
+      setApplications([])
     } finally {
       setLoading(false)
     }

@@ -1,3 +1,5 @@
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
+
 const NYCSpirit = () => {
   const attitudes = [
     {
@@ -46,7 +48,7 @@ const NYCSpirit = () => {
   ]
 
   return (
-    <section className="section-container newsprint-bg">
+    <section className="section-container newsprint-bg" aria-labelledby="nybs-spirit-heading">
       <div className="content-container">
         {/* Main Headline */}
         <div className="text-center mb-12">
@@ -55,7 +57,7 @@ const NYCSpirit = () => {
               Opinion Editorial
             </span>
           </div>
-          <h2 className="nybs-heading-section mb-4">
+          <h2 id="nybs-spirit-heading" className="nybs-heading-section mb-4">
             THE NYC DIFFERENCE:
             <br />
             IT&apos;S AN ATTITUDE
@@ -101,11 +103,12 @@ const NYCSpirit = () => {
                   It&apos;s simple: we&apos;re from New York. We grew up with the best food in the 
                   world right outside our door. We know what good tastes like because we&apos;ve 
                   been spoiled by bagels, pizza, and deli sandwiches that would make your hometown 
-                  cry.
+                  cry. That&apos;s not arrogance—that&apos;s just facts.
                 </p>
                 <p className="nybs-text-body">
                   So when we say our snacks are the best? We&apos;re not bragging. We&apos;re just 
-                  stating facts. (Okay, maybe we&apos;re bragging a little. It&apos;s the New York way.)
+                  stating facts. (Okay, maybe we&apos;re bragging a little. It&apos;s the New York way. 
+                  And honestly? You&apos;ll thank us after you try them.)
                 </p>
               </div>
 
@@ -116,11 +119,11 @@ const NYCSpirit = () => {
                 <p className="nybs-text-body mb-4">
                   It&apos;s not actually a secret – it&apos;s attitude. That unmistakable New York 
                   confidence that comes from living in the greatest city on earth. We put that same 
-                  energy into every flavor.
+                  energy into every flavor, and it shows in every bite.
                 </p>
                 <p className="nybs-text-body">
                   Bold? Yes. Extra? Absolutely. Apologetic about it? Not a chance. Try our snacks 
-                  and you&apos;ll taste what we mean.
+                  and you&apos;ll taste what we mean—and you&apos;ll understand why we&apos;re so confident.
                 </p>
               </div>
             </div>
@@ -208,9 +211,11 @@ const NYCSpirit = () => {
             <p className="text-lg font-bold mb-6 text-nybs-black-ink">
               Join the 8 million+ who already know: NYBS hits different.
             </p>
-            <button className="btn-nybs-primary text-lg px-10 py-4">
-              Shop NYBS Now
-            </button>
+            <LocalizedClientLink href="/collections/NYBS">
+              <button className="btn-nybs-primary text-lg px-10 py-4">
+                Shop NYBS Now
+              </button>
+            </LocalizedClientLink>
           </div>
         </div>
       </div>

@@ -2,16 +2,155 @@ import { Metadata } from "next"
 import Image from "next/image"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import NYBSNewsletterSection from "@modules/nybs/components/newsletter-signup"
+import { getBaseURL } from "@lib/util/env"
 
-export const metadata: Metadata = {
-  title: "About NYBS - Our NYC Story | New York's Best Snacks",
-  description:
-    "Learn about NYBS, the snack brand born in the heart of New York City. Bold flavors, authentic attitude, and 100% NYC pride.",
+type Props = {
+  params: Promise<{ countryCode: string }>
 }
 
-export default async function NYBSAboutPage() {
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const params = await props.params
+  const baseUrl = getBaseURL()
+  const url = `${baseUrl}/${params.countryCode}/nybs/about`
+  
+  return {
+    title: "About NYBS - Our NYC Story | New York's Best Snacks | Brand History",
+    description:
+      "Learn about NYBS, the snack brand born in the heart of New York City. Discover our mission, values, and the NYC attitude behind every bag. Bold flavors, authentic attitude, and 100% NYC pride. Made by New Yorkers, for everyone.",
+    keywords: [
+      "NYBS story",
+      "NYBS about",
+      "New York's Best Snacks history",
+      "NYC snack brand",
+      "NYBS mission",
+      "NYBS values",
+      "New York snack company",
+      "NYC food brand",
+      "Manhattan snacks",
+      "Brooklyn snacks",
+      "NYC pride",
+      "New York attitude",
+      "five boroughs",
+      "NYBS team",
+      "NYC natives"
+    ],
+    authors: [{ name: "NYBS - New York's Best Snacks" }],
+    creator: "NYBS",
+    publisher: "NYBS - New York's Best Snacks",
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
+    metadataBase: new URL(baseUrl),
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title: "About NYBS - Our NYC Story | New York's Best Snacks",
+      description:
+        "Learn about NYBS, the snack brand born in the heart of New York City. Bold flavors, authentic attitude, and 100% NYC pride. Made by New Yorkers, for everyone.",
+      url: url,
+      siteName: "NYBS - New York's Best Snacks",
+      images: [
+        {
+          url: `${baseUrl}/images/brand/nybs/NYBS header.png`,
+          width: 1200,
+          height: 300,
+          alt: "NYBS - New York's Best Snacks Logo",
+        },
+      ],
+      locale: "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "About NYBS - Our NYC Story | New York's Best Snacks",
+      description:
+        "Learn about NYBS, the snack brand born in the heart of New York City. Bold flavors, authentic attitude, and 100% NYC pride.",
+      images: [`${baseUrl}/images/brand/nybs/NYBS header.png`],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+  }
+}
+
+export default async function NYBSAboutPage(props: Props) {
+  const params = await props.params
+  const baseUrl = getBaseURL()
+  const url = `${baseUrl}/${params.countryCode}/nybs/about`
+
+  // Structured Data - AboutPage
+  const aboutPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About NYBS - New York's Best Snacks",
+    "description": "Learn about NYBS, the snack brand born in the heart of New York City. Bold flavors, authentic attitude, and 100% NYC pride.",
+    "url": url,
+    "inLanguage": "en-US",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "NYBS - New York's Best Snacks",
+      "alternateName": "NYBS",
+      "description": "Bold, unapologetic snacks straight from NYC. Made by New Yorkers, for everyone.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "New York City",
+        "addressRegion": "NY",
+        "addressCountry": "US"
+      },
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "New York City",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "New York City",
+          "addressRegion": "NY",
+          "addressCountry": "US"
+        }
+      }
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": `${baseUrl}/${params.countryCode}`
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "NYBS",
+          "item": `${baseUrl}/${params.countryCode}/nybs`
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "About",
+          "item": url
+        }
+      ]
+    }
+  }
+
   return (
     <>
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }}
+      />
       {/* Hero Section */}
       <section className="newsprint-bg py-16 md:py-24">
         <div className="content-container">
@@ -24,10 +163,12 @@ export default async function NYBSAboutPage() {
               <div className="text-center mb-8">
                 <Image
                   src="/images/brand/nybs/NYBS header.png"
-                  alt="NYBS"
+                  alt="NYBS - New York's Best Snacks Logo"
                   width={600}
                   height={150}
                   className="w-full max-w-xl mx-auto mb-6"
+                  priority
+                  sizes="(max-width: 768px) 100vw, 600px"
                 />
                 <div className="border-y-4 border-nybs-black py-4">
                   <h1 className="nybs-heading-section">
@@ -70,26 +211,29 @@ export default async function NYBSAboutPage() {
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="border-l-4 border-nybs-red pl-6">
                   <h3 className="font-black uppercase text-2xl mb-4">Authentic Flavor</h3>
-                  <p className="nybs-text-body mb-4">
-                    Every NYBS flavor is inspired by real New York City foods and experiences. We&apos;re not 
-                    making this up for marketing – these are the tastes we actually eat and love.
-                  </p>
-                  <p className="nybs-text-body">
-                    From Everything Bagel to Pizza Party, each snack captures something essential about 
-                    NYC food culture. No gimmicks, no fake flavors, just the real deal.
-                  </p>
+                <p className="nybs-text-body mb-4">
+                  Every NYBS flavor is inspired by real New York City foods and experiences. We&apos;re not 
+                  making this up for marketing – these are the tastes we actually eat and love. 
+                  Authenticity isn&apos;t optional; it&apos;s everything.
+                </p>
+                <p className="nybs-text-body">
+                  From Everything Bagel to Pizza Party, each snack captures something essential about 
+                  NYC food culture. No gimmicks, no fake flavors, just the real deal—the way New Yorkers 
+                  actually experience food.
+                </p>
                 </div>
 
                 <div className="border-l-4 border-nybs-red pl-6">
                   <h3 className="font-black uppercase text-2xl mb-4">Real Attitude</h3>
-                  <p className="nybs-text-body mb-4">
-                    We&apos;re New Yorkers. We&apos;re confident, direct, and we know what we bring to the table. 
-                    That same energy goes into every bag.
-                  </p>
-                  <p className="nybs-text-body">
-                    We don&apos;t apologize for being bold. We don&apos;t tone it down for anyone. If you want 
-                    subtle, there&apos;s plenty of other options. If you want NYC? You found it.
-                  </p>
+                <p className="nybs-text-body mb-4">
+                  We&apos;re New Yorkers. We&apos;re confident, direct, and we know what we bring to the table. 
+                  That same energy goes into every bag—and you&apos;ll taste it in every bite.
+                </p>
+                <p className="nybs-text-body">
+                  We don&apos;t apologize for being bold. We don&apos;t tone it down for anyone. If you want 
+                  subtle, there&apos;s plenty of other options. If you want NYC? You found it. And once you 
+                  try it, you&apos;ll never go back to boring.
+                </p>
                 </div>
               </div>
             </div>

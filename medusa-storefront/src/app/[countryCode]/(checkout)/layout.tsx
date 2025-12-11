@@ -1,12 +1,16 @@
+import { retrieveCart } from "@lib/data/cart"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import ChevronDown from "@modules/common/icons/chevron-down"
 import MedusaCTA from "@modules/layout/components/medusa-cta"
+import CompanyLogos from "@modules/checkout/components/company-logos"
 
-export default function CheckoutLayout({
+export default async function CheckoutLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const cart = await retrieveCart()
+
   return (
     <div className="w-full bg-white relative small:min-h-screen">
       <div className="h-16 bg-white border-b ">
@@ -24,13 +28,19 @@ export default function CheckoutLayout({
               Back
             </span>
           </LocalizedClientLink>
-          <LocalizedClientLink
-            href="/"
-            className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
-            data-testid="store-link"
-          >
-            Gatherer's
-          </LocalizedClientLink>
+          <div className="flex items-center justify-center flex-1">
+            {cart ? (
+              <CompanyLogos cart={cart} />
+            ) : (
+              <LocalizedClientLink
+                href="/"
+                className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
+                data-testid="store-link"
+              >
+                Gatherer's
+              </LocalizedClientLink>
+            )}
+          </div>
           <div className="flex-1 basis-0" />
         </nav>
       </div>

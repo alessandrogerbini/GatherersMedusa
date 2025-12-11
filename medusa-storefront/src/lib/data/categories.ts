@@ -20,7 +20,7 @@ export const listCategories = async (query?: Record<string, any>) => {
           ...query,
         },
         next,
-        cache: "force-cache",
+        cache: "no-store", // Allow new categories to appear
       }
     )
     .then(({ product_categories }) => product_categories)
@@ -42,7 +42,7 @@ export const getCategoryByHandle = async (categoryHandle: string[]) => {
           handle,
         },
         next,
-        cache: "force-cache",
+        cache: "no-store", // Disable caching to allow new categories
       }
     )
     .then(({ product_categories }) => product_categories[0])

@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
 
 const FlavorProfiles = () => {
   const [activeFlavor, setActiveFlavor] = useState(0)
@@ -128,9 +129,11 @@ const FlavorProfiles = () => {
               </div>
 
               <div className="text-center mt-8">
-                <button className="px-8 py-3 bg-white text-orgin-green font-bold rounded-lg hover:bg-orgin-earth-cream transition-colors shadow-lg">
-                  Try This Flavor
-                </button>
+                <LocalizedClientLink href="/orgin/store">
+                  <button className="px-8 py-3 bg-white text-orgin-green font-bold rounded-lg hover:bg-orgin-earth-cream transition-colors shadow-lg">
+                    Try This Flavor
+                  </button>
+                </LocalizedClientLink>
               </div>
             </div>
           </div>

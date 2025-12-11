@@ -1,6 +1,6 @@
 import { listCategories } from "@lib/data/categories"
 import { listCollections } from "@lib/data/collections"
-import { Text } from "@medusajs/ui"
+import { Text, clx } from "@medusajs/ui"
 import Image from "next/image"
 
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
@@ -28,23 +28,23 @@ export default async function Footer() {
                 height={60}
                 className="w-12 h-12"
               />
-              <span className="text-2xl font-bold text-gatherers-brown font-fraunces">
+              <span className="text-2xl font-bold text-gatherers-brown">
                 Gatherer&apos;s Granola
               </span>
             </LocalizedClientLink>
-            <p className="text-base text-gatherers-brown-light italic text-center md:text-left font-dm-sans">
+            <p className="text-base text-gatherers-brown-light italic text-center md:text-left">
               Family Recipes. Hand Stirred.
             </p>
           </div>
 
-          {/* Main Footer Content - Simplified to 4 columns */}
+          {/* Main Footer Content */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             {/* Brands Section */}
             <div className="flex flex-col gap-y-3">
-              <span className="text-base font-semibold text-gatherers-brown font-fraunces">
+              <span className="text-base font-semibold text-gatherers-brown">
                 Our Brands
               </span>
-              <ul className="flex flex-col gap-2 font-dm-sans">
+              <ul className="flex flex-col gap-2">
                 <li>
                   <LocalizedClientLink
                     className="text-sm text-gatherers-brown-light hover:text-gatherers-orange transition-colors"
@@ -77,15 +77,23 @@ export default async function Footer() {
                     Shop All Products
                   </LocalizedClientLink>
                 </li>
+                <li>
+                  <LocalizedClientLink
+                    className="text-sm text-blue-600 hover:text-blue-800 transition-colors font-medium"
+                    href="/wholesale"
+                  >
+                    Wholesale Program
+                  </LocalizedClientLink>
+                </li>
               </ul>
             </div>
 
             {/* Shop Section */}
             <div className="flex flex-col gap-y-3">
-              <span className="text-base font-semibold text-gatherers-brown font-fraunces">
-                Shop
+              <span className="text-base font-semibold text-gatherers-brown">
+                Collections
               </span>
-              <ul className="flex flex-col gap-2 font-dm-sans">
+              <ul className="flex flex-col gap-2">
                 {collections && collections.length > 0 && (
                   <>
                     {collections?.slice(0, 4).map((c) => (
@@ -100,34 +108,64 @@ export default async function Footer() {
                     ))}
                   </>
                 )}
-                {productCategories && productCategories?.slice(0, 2).map((c) => {
-                  if (c.parent_category) return null
-                  return (
-                    <li key={c.id}>
-                      <LocalizedClientLink
-                        className="text-sm text-gatherers-brown-light hover:text-gatherers-orange transition-colors"
-                        href={`/categories/${c.handle}`}
-                      >
-                        {c.name}
-                      </LocalizedClientLink>
-                    </li>
-                  )
-                })}
               </ul>
             </div>
 
+            {/* Categories Section */}
+            {productCategories && productCategories?.length > 0 && (
+              <div className="flex flex-col gap-y-3">
+                <span className="text-base font-semibold text-gatherers-brown">
+                  Categories
+                </span>
+                <ul className="flex flex-col gap-2">
+                  {productCategories?.slice(0, 4).map((c) => {
+                    if (c.parent_category) {
+                      return null
+                    }
+
+                    return (
+                      <li key={c.id}>
+                        <LocalizedClientLink
+                          className="text-sm text-gatherers-brown-light hover:text-gatherers-orange transition-colors"
+                          href={`/categories/${c.handle}`}
+                        >
+                          {c.name}
+                        </LocalizedClientLink>
+                      </li>
+                    )
+                  })}
+                </ul>
+              </div>
+            )}
+
             {/* Company Section */}
             <div className="flex flex-col gap-y-3">
-              <span className="text-base font-semibold text-gatherers-brown font-fraunces">
+              <span className="text-base font-semibold text-gatherers-brown">
                 Company
               </span>
-              <ul className="flex flex-col gap-2 font-dm-sans">
+              <ul className="flex flex-col gap-2">
                 <li>
                   <LocalizedClientLink
                     className="text-sm text-gatherers-brown-light hover:text-gatherers-orange transition-colors"
                     href="/about"
                   >
-                    Our Story
+                    About Gatherer&apos;s
+                  </LocalizedClientLink>
+                </li>
+                <li>
+                  <LocalizedClientLink
+                    className="text-sm text-orgin-green hover:text-orgin-green-light transition-colors"
+                    href="/orgin/about"
+                  >
+                    About Orgin
+                  </LocalizedClientLink>
+                </li>
+                <li>
+                  <LocalizedClientLink
+                    className="text-sm font-bold text-nybs-red hover:text-nybs-red-dark transition-colors"
+                    href="/nybs/about"
+                  >
+                    About NYBS
                   </LocalizedClientLink>
                 </li>
                 <li>
@@ -135,15 +173,7 @@ export default async function Footer() {
                     className="text-sm text-gatherers-brown-light hover:text-gatherers-orange transition-colors"
                     href="/contact"
                   >
-                    Contact Us
-                  </LocalizedClientLink>
-                </li>
-                <li>
-                  <LocalizedClientLink
-                    className="text-sm text-gatherers-brown-light hover:text-gatherers-orange transition-colors"
-                    href="/wholesale"
-                  >
-                    Wholesale Program
+                    Contact
                   </LocalizedClientLink>
                 </li>
                 <li>
@@ -165,12 +195,12 @@ export default async function Footer() {
               </ul>
             </div>
 
-            {/* Account & Newsletter Section */}
+            {/* Account Section */}
             <div className="flex flex-col gap-y-3">
-              <span className="text-base font-semibold text-gatherers-brown font-fraunces">
+              <span className="text-base font-semibold text-gatherers-brown">
                 Account
               </span>
-              <ul className="flex flex-col gap-2 font-dm-sans">
+              <ul className="flex flex-col gap-2">
                 <li>
                   <LocalizedClientLink
                     className="text-sm text-gatherers-brown-light hover:text-gatherers-orange transition-colors"
@@ -184,7 +214,7 @@ export default async function Footer() {
                     className="text-sm text-gatherers-brown-light hover:text-gatherers-orange transition-colors"
                     href="/account/orders"
                   >
-                    Order History
+                    Orders
                   </LocalizedClientLink>
                 </li>
                 <li>
@@ -192,15 +222,7 @@ export default async function Footer() {
                     className="text-sm text-gatherers-brown-light hover:text-gatherers-orange transition-colors"
                     href="/cart"
                   >
-                    Shopping Cart
-                  </LocalizedClientLink>
-                </li>
-                <li>
-                  <LocalizedClientLink
-                    className="text-sm text-gatherers-orange hover:text-gatherers-orange-dark transition-colors font-medium"
-                    href="/newsletter"
-                  >
-                    Join Our Newsletter
+                    Cart
                   </LocalizedClientLink>
                 </li>
               </ul>
@@ -208,14 +230,36 @@ export default async function Footer() {
           </div>
         </div>
 
-        {/* Bottom Section: Copyright */}
+        {/* Bottom Section: Copyright & Social */}
         <div className="flex flex-col md:flex-row w-full py-6 justify-between items-center border-t border-gatherers-cream-dark gap-4">
-          <Text className="text-sm text-gatherers-brown-light font-dm-sans">
+          <Text className="text-sm text-gatherers-brown-light">
             © {new Date().getFullYear()} Gatherer&apos;s Granola. All rights reserved.
           </Text>
-          <Text className="text-sm text-gatherers-brown-light font-dm-sans">
-            Handcrafted with care in small batches
-          </Text>
+          <div className="flex gap-4 items-center">
+            <div className="flex gap-3">
+              <a
+                href="https://www.gatherersgranola.com/website/social/facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 bg-gatherers-orange rounded-full flex items-center justify-center text-white hover:bg-gatherers-orange-dark transition-colors"
+                aria-label="Facebook"
+              >
+                <span className="text-sm font-bold">f</span>
+              </a>
+              <a
+                href="https://www.gatherersgranola.com/website/social/instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 bg-gatherers-orange rounded-full flex items-center justify-center text-white hover:bg-gatherers-orange-dark transition-colors"
+                aria-label="Instagram"
+              >
+                <span className="text-sm">📷</span>
+              </a>
+            </div>
+            <Text className="text-sm text-gatherers-brown-light">
+              Handcrafted with ❤️
+            </Text>
+          </div>
         </div>
       </div>
     </footer>

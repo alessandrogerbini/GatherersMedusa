@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  postgres-test:
+    image: postgres:17-alpine
+    container_name: medusa-test-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+      POSTGRES_HOST_AUTH_METHOD: trust  # Allow passwordless connections for testing
+    ports:
+      - "5434:5432"  # Use 5434 to avoid conflicts with local PostgreSQL
+    volumes:
+      - postgres-test-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - medusa-test-network
+
+  test-runner:
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    container_name: medusa-test-runner
+    depends_on:
+      postgres-test:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgres://postgres@172.19.0.2:5432/postgres
+      TEST_TYPE: integration:http
+      NODE_OPTIONS: --experimental-vm-modules --dns-result-order=ipv4first
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+    volumes:
+      - .:/app
+      - /app/node_modules
+    working_dir: /app
+    networks:
+      - medusa-test-network
+    command: npm run test:integration:http
+
+volumes:
+  postgres-test-data:
+
+networks:
+  medusa-test-network:
+    driver: bridge
+    enable_ipv6: false
+

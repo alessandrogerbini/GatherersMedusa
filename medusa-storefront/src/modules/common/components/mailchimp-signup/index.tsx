@@ -109,18 +109,20 @@ const NewsletterSignup = ({
           </Button>
         </div>
 
-        <div className="flex items-start gap-2">
-          <input
-            type="checkbox"
-            id="newsletter-consent"
-            checked={consent}
-            onChange={(e) => setConsent(e.target.checked)}
-            disabled={status === "loading" || status === "success"}
-            className="mt-1 w-4 h-4 text-gatherers-orange border-gatherers-brown-light rounded focus:ring-gatherers-orange disabled:opacity-50"
-          />
+        <div className="flex gap-2">
+          <div className="flex items-center h-4">
+            <input
+              type="checkbox"
+              id="newsletter-consent"
+              checked={consent}
+              onChange={(e) => setConsent(e.target.checked)}
+              disabled={status === "loading" || status === "success"}
+              className="w-4 h-4 text-gatherers-orange border-gatherers-brown-light rounded focus:ring-gatherers-orange disabled:opacity-50"
+            />
+          </div>
           <label
             htmlFor="newsletter-consent"
-            className={`text-gatherers-brown-light ${isCompact ? "text-xs" : "text-sm"}`}
+            className={`text-gatherers-brown-light leading-normal flex items-center ${isCompact ? "text-xs" : "text-sm"}`}
           >
             I agree to receive emails from Gatherer&apos;s Granola. You can unsubscribe at any time.
           </label>

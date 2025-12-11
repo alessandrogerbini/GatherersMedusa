@@ -1,0 +1,1384 @@
+﻿node.exe : (node:25152) ExperimentalWarning: VM Modules is an experimental feature and might 
+change at any time
+At line:1 char:1
++ & "G:\FastGrams program files\Node js/node.exe" "G:\FastGrams program ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ((node:25152) Ex...nge at any time:String) [], R 
+   emoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"level":"info","message":"Disabling admin as we run integration tests","timestamp":"2025-12-09 19:29:20"}
+{"level":"info","message":"redisUrl not found. A fake redis instance will be used.","timestamp":"2025-12-09 19:29:20"}
+{"level":"info","message":"Creating database medusa-wyusvn-integration-1","timestamp":"2025-12-09 19:29:20"}
+{"level":"info","message":"Migrating database with core migrations and links medusa-wyusvn-integration-1","timestamp":"2025-12-09 19:29:21"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"MODULE: stock_location","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240307161216","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240307161216","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241210073813","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241210073813","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250106142624","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250106142624","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250120110820","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250120110820","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"MODULE: inventory","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240307132720","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240307132720","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240719123015","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240719123015","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241213063611","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241213063611","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"MODULE: product","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating InitialSetup20240401153642","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated InitialSetup20240401153642","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240601111544","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240601111544","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration202408271511","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration202408271511","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241122120331","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241122120331","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241125090957","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241125090957","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250411073236","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250411073236","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250516081326","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250516081326","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250910154539","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250910154539","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250911092221","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250911092221","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"MODULE: pricing","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20230929122253","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20230929122253","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240322094407","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240322094407","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240322113359","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240322113359","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240322120125","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240322120125","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240626133555","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240626133555","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240704094505","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240704094505","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241127114534","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241127114534","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241127223829","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241127223829","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241128055359","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241128055359","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241212190401","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241212190401","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250408145122","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250408145122","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250409122219","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250409122219","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20251009110625","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20251009110625","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"MODULE: promotion","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240227120221","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240227120221","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240617102917","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240617102917","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240624153824","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240624153824","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241211061114","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241211061114","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250113094144","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250113094144","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250120110700","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250120110700","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250226130616","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250226130616","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250508081510","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250508081510","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250828075407","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250828075407","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250909083125","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250909083125","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250916120552","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250916120552","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250917143818","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250917143818","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250919122137","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250919122137","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20251006000000","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20251006000000","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"MODULE: customer","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240124154000","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240124154000","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240524123112","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240524123112","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240602110946","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240602110946","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241211074630","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241211074630","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"MODULE: sales_channel","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240115152146","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240115152146","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"MODULE: cart","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240222170223","timestamp":"2025-12-09 19:29:22"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240222170223","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240831125857","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240831125857","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241106085918","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241106085918","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241205095237","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241205095237","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241216183049","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241216183049","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241218091938","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241218091938","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250120115059","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250120115059","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250212131240","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250212131240","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250326151602","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250326151602","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250508081553","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250508081553","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"MODULE: region","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240205173216","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240205173216","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240624200006","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240624200006","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250120110744","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250120110744","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"MODULE: api_key","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating InitialSetup20240221144943","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated InitialSetup20240221144943","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240604080145","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240604080145","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241205122700","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241205122700","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20251015123842","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20251015123842","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"MODULE: store","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating InitialSetup20240227075933","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated InitialSetup20240227075933","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240621145944","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240621145944","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241206083313","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241206083313","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"MODULE: tax","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240227090331","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240227090331","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240710135844","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240710135844","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240924114005","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240924114005","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241212052837","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241212052837","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"MODULE: currency","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating InitialSetup20240228133303","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated InitialSetup20240228133303","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240624082354","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240624082354","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"MODULE: payment","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240225134525","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240225134525","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240806072619","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240806072619","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241211151053","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241211151053","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250115160517","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250115160517","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250120110552","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250120110552","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250123122334","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250123122334","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250206105639","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250206105639","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250207132723","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250207132723","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250625084134","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250625084134","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250924135437","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250924135437","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250929124701","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250929124701","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"MODULE: order","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240219102530","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240219102530","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240604100512","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240604100512","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240715102100","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240715102100","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240715174100","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240715174100","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240716081800","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240716081800","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240801085921","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240801085921","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240821164505","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240821164505","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240821170920","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240821170920","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240827133639","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240827133639","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240902195921","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240902195921","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240913092514","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240913092514","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240930122627","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240930122627","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241014142943","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241014142943","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241106085223","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241106085223","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241129124827","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241129124827","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241217162224","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241217162224","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250326151554","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250326151554","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250522181137","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250522181137","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250702095353","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250702095353","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250704120229","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250704120229","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250910130000","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250910130000","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"MODULE: settings","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250717162007","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250717162007","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"MODULE: auth","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240205025928","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240205025928","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240529080336","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240529080336","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241202100304","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241202100304","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"MODULE: auth","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"Skipped. Database is up-to-date for module.","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"MODULE: auth","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"Skipped. Database is up-to-date for module.","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"MODULE: user","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240214033943","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240214033943","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240703095850","timestamp":"2025-12-09 19:29:23"}
+  console.info
+    Note: If the index "IDX_user_email" fails to create, then delete any existing users with duplicate emails before retrying the migration.
+
+      at Migration20240703095850.up (node_modules/@medusajs/user/src/migrations/Migration20240703095850.ts:11:13)
+
+{"level":"info","message":"  Γ£ö Migrated Migration20240703095850","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241202103352","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241202103352","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"MODULE: fulfillment","timestamp":"2025-12-09 19:29:23"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240311145700_InitialSetupMigration","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240311145700_InitialSetupMigration","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240821170957","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240821170957","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240917161003","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240917161003","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241217110416","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241217110416","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250113122235","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250113122235","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250120115002","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250120115002","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250822130931","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250822130931","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250825132614","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250825132614","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"MODULE: fulfillment","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"Skipped. Database is up-to-date for module.","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"MODULE: fulfillment","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"Skipped. Database is up-to-date for module.","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"MODULE: notification","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240509083918_InitialSetupMigration","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240509083918_InitialSetupMigration","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240628075401","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240628075401","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20240830094712","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  Γ£ö Migrated Migration20240830094712","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250120110514","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250120110514","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"MODULE: notification","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"Skipped. Database is up-to-date for module.","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"MODULE: notification","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"Skipped. Database is up-to-date for module.","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"MODULE: cache","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"Skipped. Database is up-to-date for module.","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"MODULE: event_bus","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"Skipped. Database is up-to-date for module.","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"MODULE: workflows","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20231228143900","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  Γ£ö Migrated Migration20231228143900","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20241206101446","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  Γ£ö Migrated Migration20241206101446","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250128174331","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250128174331","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250505092459","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250505092459","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250819104213","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250819104213","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250819110924","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250819110924","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  ΓùÅ Migrating Migration20250908080305","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"  Γ£ö Migrated Migration20250908080305","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"Completed successfully","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"MODULE: locking","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"Skipped. Database is up-to-date for module.","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"MODULE: file","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"Skipped. Database is up-to-date for module.","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"MODULE: file","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"Skipped. Database is up-to-date for module.","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"MODULE: file","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"Skipped. Database is up-to-date for module.","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"MODULE: notificationModuleService","timestamp":"2025-12-09 19:29:24"}
+{"level":"info","message":"Skipped. Database is up-to-date for module.","timestamp":"2025-12-09 19:29:25"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:25"}
+{"level":"info","message":"","timestamp":"2025-12-09 19:29:25"}
+{"level":"info","message":"MODULE: newClientPromotionsService","timestamp":"2025-12-09 19:29:25"}
+{"level":"info","message":"Skipped. Database is up-to-date for module.","timestamp":"2025-12-09 19:29:25"}
+{"level":"info","message":"No link to load from G:\\FastGrams program files\\GG Medusa V2 website\\medusa-backend\\node_modules\\@medusajs\\draft-order\\.medusa\\server\\src\\links. skipped.","timestamp":"2025-12-09 19:29:25"}
+{"level":"info","message":"Sync links: \"create\" cart_payment_collection","timestamp":"2025-12-09 19:29:25"}
+{"level":"info","message":"Sync links: \"create\" cart_promotion","timestamp":"2025-12-09 19:29:25"}
+{"level":"info","message":"Sync links: \"create\" location_fulfillment_provider","timestamp":"2025-12-09 19:29:25"}
+{"level":"info","message":"Sync links: \"create\" location_fulfillment_set","timestamp":"2025-12-09 19:29:25"}
+{"level":"info","message":"Sync links: \"create\" order_cart","timestamp":"2025-12-09 19:29:25"}
+{"level":"info","message":"Sync links: \"create\" order_fulfillment","timestamp":"2025-12-09 19:29:25"}
+{"level":"info","message":"Sync links: \"create\" order_payment_collection","timestamp":"2025-12-09 19:29:25"}
+{"level":"info","message":"Sync links: \"create\" order_promotion","timestamp":"2025-12-09 19:29:25"}
+{"level":"info","message":"Sync links: \"create\" return_fulfillment","timestamp":"2025-12-09 19:29:25"}
+{"level":"info","message":"Sync links: \"create\" product_sales_channel","timestamp":"2025-12-09 19:29:25"}
+{"level":"info","message":"Sync links: \"create\" product_variant_inventory_item","timestamp":"2025-12-09 19:29:25"}
+{"level":"info","message":"Sync links: \"create\" product_variant_price_set","timestamp":"2025-12-09 19:29:25"}
+{"level":"info","message":"Sync links: \"create\" publishable_api_key_sales_channel","timestamp":"2025-12-09 19:29:25"}
+{"level":"info","message":"Sync links: \"create\" region_payment_provider","timestamp":"2025-12-09 19:29:25"}
+{"level":"info","message":"Sync links: \"create\" sales_channel_stock_location","timestamp":"2025-12-09 19:29:25"}
+{"level":"info","message":"Sync links: \"create\" shipping_option_price_set","timestamp":"2025-12-09 19:29:25"}
+{"level":"info","message":"Sync links: \"create\" product_shipping_profile","timestamp":"2025-12-09 19:29:25"}
+{"level":"info","message":"Sync links: \"create\" customer_account_holder","timestamp":"2025-12-09 19:29:25"}
+{"level":"warn","message":"Local Event Bus installed. This is not recommended for production.","timestamp":"2025-12-09 19:29:26"}
+{"level":"info","message":"Locking module: Using \"in-memory\" as default.","timestamp":"2025-12-09 19:29:26"}
+{"level":"info","message":"redisUrl not found. A fake redis instance will be used.","timestamp":"2025-12-09 19:29:26"}
+{"level":"info","message":"No link to load from G:\\FastGrams program files\\GG Medusa V2 website\\medusa-backend\\node_modules\\@medusajs\\draft-order\\.medusa\\server\\src\\links. skipped.","timestamp":"2025-12-09 19:29:26"}
+{"level":"info","message":"No workflow to load from G:\\FastGrams program files\\GG Medusa V2 website\\medusa-backend\\node_modules\\@medusajs\\draft-order\\.medusa\\server\\src\\workflows. skipped.","timestamp":"2025-12-09 19:29:26"}
+{"level":"info","message":"No subscriber to load from G:\\FastGrams program files\\GG Medusa V2 website\\medusa-backend\\node_modules\\@medusajs\\draft-order\\.medusa\\server\\src\\subscribers. skipped.","timestamp":"2025-12-09 19:29:26"}
+{"level":"info","message":"No job to load from G:\\FastGrams program files\\GG Medusa V2 website\\medusa-backend\\node_modules\\@medusajs\\medusa\\dist\\jobs. skipped.","timestamp":"2025-12-09 19:29:27"}
+{"level":"info","message":"No job to load from G:\\FastGrams program files\\GG Medusa V2 website\\medusa-backend\\node_modules\\@medusajs\\draft-order\\.medusa\\server\\src\\jobs. skipped.","timestamp":"2025-12-09 19:29:27"}
+  console.warn
+    Could not create shipping option: {
+      message: 'Providers (manual_manual) are not enabled for the service location',
+      name: 'Error',
+      stack: 'Error: Providers (manual_manual) are not enabled for the service location\n' +
+        '    at Object.<anonymous> (G:\\FastGrams program files\\GG Medusa V2 website\\medusa-backend\\node_modules\\@medusajs\\core-flows\\src\\fulfillment\\steps\\validate-fulfillment-providers.ts:141:13)\n' +
+        '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+        '    at Object.invoke (G:\\FastGrams program files\\GG Medusa V2 website\\medusa-backend\\node_modules\\@medusajs\\workflows-sdk\\src\\utils\\composer\\helpers\\create-step-handler.ts:91:52)\n' +
+        '    at DistributedTransaction.handler (G:\\FastGrams program files\\GG Medusa V2 website\\medusa-backend\\node_modules\\@medusajs\\orchestration\\src\\workflow\\workflow-manager.ts:214:16)\n' +
+        '    at stepHandler (G:\\FastGrams program files\\GG Medusa V2 website\\medusa-backend\\node_modules\\@medusajs\\orchestration\\src\\transaction\\transaction-orchestrator.ts:1188:14)\n' +
+        '    at async Promise.allSettled (index 0)\n' +
+        '    at promiseAll (G:\\FastGrams program files\\GG Medusa V2 website\\medusa-backend\\node_modules\\@medusajs\\utils\\src\\common\\promise-all.ts:27:18)\n' +
+        '    at TransactionOrchestrator.executeNext (G:\\FastGrams program files\\GG Medusa V2 website\\medusa-backend\\node_modules\\@medusajs\\orchestration\\src\\transaction\\transaction-orchestrator.ts:1027:7)\n' +
+        '    at executeNext (G:\\FastGrams program files\\GG Medusa V2 website\\medusa-backend\\node_modules\\@medusajs\\orchestration\\src\\transaction\\transaction-orchestrator.ts:1433:14)\n' +
+        '    at TransactionOrchestrator.resume (G:\\FastGrams program files\\GG Medusa V2 website\\medusa-backend\\node_modules\\@medusajs\\orchestration\\src\\transaction\\transaction-orchestrator.ts:1448:5)\n' +
+        '    at LocalWorkflow.run (G:\\FastGrams program files\\GG Medusa V2 website\\medusa-backend\\node_modules\\@medusajs\\orchestration\\src\\workflow\\local-workflow.ts:375:5)\n' +
+        '    at originalExecution (G:\\FastGrams program files\\GG Medusa V2 website\\medusa-backend\\node_modules\\@medusajs\\workflows-sdk\\src\\helper\\workflow-export.ts:144:26)\n' +
+        '    at LocalWorkflow.newRun [as run] (G:\\FastGrams program files\\GG Medusa V2 website\\medusa-backend\\node_modules\\@medusajs\\workflows-sdk\\src\\helper\\workflow-export.ts:226:12)\n' +
+        '    at seedTestData (G:\\FastGrams program files\\GG Medusa V2 website\\medusa-backend\\integration-tests\\helpers\\seed-test-data.ts:241:7)\n' +
+        '    at getPublishableApiKey (G:\\FastGrams program files\\GG Medusa V2 website\\medusa-backend\\integration-tests\\helpers\\test-utils.ts:158:22)\n' +
+        '    at Object.<anonymous> (G:\\FastGrams program files\\GG Medusa V2 website\\medusa-backend\\integration-tests\\http\\cart.spec.ts:16:30)\n' +
+        'Γ«æ sat G:\\FastGrams program files\\GG Medusa V2 website\\medusa-backend\\node_modules\\@medusajs\\core-flows\\dist\\fulfillment\\workflows\\create-shipping-options.js: [create-shipping-options-workflow -> validate-fulfillment-providers-step (invoke)]',
+      __isMedusaError: true,
+      type: 'not_allowed',
+      code: undefined,
+      date: 2025-12-10T00:29:28.468Z
+    }
+
+    [0m [90m 253 |[39m     } [36mcatch[39m (error) {
+     [90m 254 |[39m       [90m// Shipping option might already exist, ignore[39m
+    [31m[1m>[22m[39m[90m 255 |[39m       console[33m.[39mwarn([32m"Could not create shipping option:"[39m[33m,[39m error)
+     [90m     |[39m               [31m[1m^[22m[39m
+     [90m 256 |[39m     }
+     [90m 257 |[39m
+     [90m 258 |[39m     [90m// Create publishable API key[39m[0m
+
+      at warn (integration-tests/helpers/seed-test-data.ts:255:15)
+      at getPublishableApiKey (integration-tests/helpers/test-utils.ts:158:22)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:16:30)
+
+  console.log
+    Γ£ô API Key created: pk_e5208720127c7c579fe320bbc6c...
+
+      at log (integration-tests/helpers/seed-test-data.ts:295:13)
+
+  console.log
+    Γ£ô Sales Channel ID: sc_01KC2TKEA9H21NH1MV1C9KX75K
+
+      at log (integration-tests/helpers/seed-test-data.ts:296:13)
+
+  console.log
+    Γ£ô API Key linked to sales channel
+
+      at log (integration-tests/helpers/seed-test-data.ts:297:13)
+
+  console.log
+    === API Object Debug ===
+
+      at log (integration-tests/helpers/test-utils.ts:9:11)
+
+  console.log
+    Type: object
+
+      at log (integration-tests/helpers/test-utils.ts:10:11)
+
+  console.log
+    Has get: true
+
+      at log (integration-tests/helpers/test-utils.ts:11:11)
+
+  console.log
+    Has post: true
+
+      at log (integration-tests/helpers/test-utils.ts:12:11)
+
+  console.log
+    Has defaults: true
+
+      at log (integration-tests/helpers/test-utils.ts:13:11)
+
+  console.log
+    Default headers: {
+      common: { Accept: 'application/json, text/plain, */*' },
+      delete: {},
+      get: {},
+      head: {},
+      post: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      put: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      patch: { 'Content-Type': 'application/x-www-form-urlencoded' }
+    }
+
+      at log (integration-tests/helpers/test-utils.ts:14:11)
+
+  console.log
+    Base URL: http://localhost:54368
+
+      at log (integration-tests/helpers/test-utils.ts:15:11)
+
+  console.log
+    Interceptor: true
+
+      at log (integration-tests/helpers/test-utils.ts:16:11)
+
+  console.log
+    ========================
+
+      at log (integration-tests/helpers/test-utils.ts:17:11)
+
+  console.log
+    [GET] /store/regions
+
+      at log (integration-tests/helpers/test-utils.ts:40:13)
+
+  console.log
+      Key present: true, Key: pk_e5208720127c7c579fe320bbc6c...
+
+      at log (integration-tests/helpers/test-utils.ts:41:13)
+
+  console.log
+    [GET] /store/products
+
+      at log (integration-tests/helpers/test-utils.ts:40:13)
+
+  console.log
+      Key present: true, Key: pk_e5208720127c7c579fe320bbc6c...
+
+      at log (integration-tests/helpers/test-utils.ts:41:13)
+
+  console.log
+    [POST] /store/carts
+
+      at log (integration-tests/helpers/test-utils.ts:40:13)
+
+  console.log
+      Key present: true, Key: pk_e5208720127c7c579fe320bbc6c...
+
+      at log (integration-tests/helpers/test-utils.ts:41:13)
+
+{"level":"warn","message":"Local Event Bus installed. This is not recommended for production.","timestamp":"2025-12-09 19:29:29"}
+{"level":"info","message":"Locking module: Using \"in-memory\" as default.","timestamp":"2025-12-09 19:29:29"}
+  console.log
+    [POST] /store/carts
+
+      at log (integration-tests/helpers/test-utils.ts:40:13)
+
+  console.log
+      Key present: true, Key: pk_e5208720127c7c579fe320bbc6c...
+
+      at log (integration-tests/helpers/test-utils.ts:41:13)
+
+{"level":"info","message":"A valid publishable key is required to proceed with the request","timestamp":"2025-12-09 19:29:29"}
+  console.error
+    
+    Γ¥î [POST] /store/carts
+
+    [0m [90m 46 |[39m       [36mconst[39m status [33m=[39m error[33m.[39mresponse[33m.[39mstatus
+     [90m 47 |[39m       [36mconst[39m data [33m=[39m error[33m.[39mresponse[33m.[39mdata
+    [31m[1m>[22m[39m[90m 48 |[39m       console[33m.[39merror([32m`\nΓ¥î [${method}] ${url}`[39m)
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 49 |[39m       console[33m.[39merror([32m`   Status: ${status}`[39m)
+     [90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {[0m
+
+      at error (integration-tests/helpers/test-utils.ts:48:15)
+      at Object.logError [as post] (integration-tests/helpers/test-utils.ts:112:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:60:30)
+
+  console.error
+       Status: 400
+
+    [0m [90m 47 |[39m       [36mconst[39m data [33m=[39m error[33m.[39mresponse[33m.[39mdata
+     [90m 48 |[39m       console[33m.[39merror([32m`\nΓ¥î [${method}] ${url}`[39m)
+    [31m[1m>[22m[39m[90m 49 |[39m       console[33m.[39merror([32m`   Status: ${status}`[39m)
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {
+     [90m 52 |[39m         console[33m.[39merror([32m`   Message: ${data.message}`[39m)[0m
+
+      at error (integration-tests/helpers/test-utils.ts:49:15)
+      at Object.logError [as post] (integration-tests/helpers/test-utils.ts:112:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:60:30)
+
+  console.error
+       Error Data: {
+      "type": "not_allowed",
+      "message": "A valid publishable key is required to proceed with the request"
+    }
+
+    [0m [90m 48 |[39m       console[33m.[39merror([32m`\nΓ¥î [${method}] ${url}`[39m)
+     [90m 49 |[39m       console[33m.[39merror([32m`   Status: ${status}`[39m)
+    [31m[1m>[22m[39m[90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {
+     [90m 52 |[39m         console[33m.[39merror([32m`   Message: ${data.message}`[39m)
+     [90m 53 |[39m       }[0m
+
+      at error (integration-tests/helpers/test-utils.ts:50:15)
+      at Object.logError [as post] (integration-tests/helpers/test-utils.ts:112:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:60:30)
+
+  console.error
+       Message: A valid publishable key is required to proceed with the request
+
+    [0m [90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {
+    [31m[1m>[22m[39m[90m 52 |[39m         console[33m.[39merror([32m`   Message: ${data.message}`[39m)
+     [90m    |[39m                 [31m[1m^[22m[39m
+     [90m 53 |[39m       }
+     [90m 54 |[39m       [36mif[39m (data[33m?[39m[33m.[39merrors) {
+     [90m 55 |[39m         console[33m.[39merror([32m`   Errors:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m.[39merrors[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))[0m
+
+      at error (integration-tests/helpers/test-utils.ts:52:17)
+      at Object.logError [as post] (integration-tests/helpers/test-utils.ts:112:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:60:30)
+
+{"level":"warn","message":"Local Event Bus installed. This is not recommended for production.","timestamp":"2025-12-09 19:29:29"}
+{"level":"info","message":"Locking module: Using \"in-memory\" as default.","timestamp":"2025-12-09 19:29:29"}
+  console.log
+    [GET] /store/carts/cart_01KC2TKFFV03T8ZMFEB2DAKFX6
+
+      at log (integration-tests/helpers/test-utils.ts:40:13)
+
+  console.log
+      Key present: true, Key: pk_e5208720127c7c579fe320bbc6c...
+
+      at log (integration-tests/helpers/test-utils.ts:41:13)
+
+{"level":"info","message":"A valid publishable key is required to proceed with the request","timestamp":"2025-12-09 19:29:29"}
+  console.error
+    
+    Γ¥î [GET] /store/carts/cart_01KC2TKFFV03T8ZMFEB2DAKFX6
+
+    [0m [90m 46 |[39m       [36mconst[39m status [33m=[39m error[33m.[39mresponse[33m.[39mstatus
+     [90m 47 |[39m       [36mconst[39m data [33m=[39m error[33m.[39mresponse[33m.[39mdata
+    [31m[1m>[22m[39m[90m 48 |[39m       console[33m.[39merror([32m`\nΓ¥î [${method}] ${url}`[39m)
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 49 |[39m       console[33m.[39merror([32m`   Status: ${status}`[39m)
+     [90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {[0m
+
+      at error (integration-tests/helpers/test-utils.ts:48:15)
+      at Object.logError [as get] (integration-tests/helpers/test-utils.ts:89:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:79:30)
+
+  console.error
+       Status: 400
+
+    [0m [90m 47 |[39m       [36mconst[39m data [33m=[39m error[33m.[39mresponse[33m.[39mdata
+     [90m 48 |[39m       console[33m.[39merror([32m`\nΓ¥î [${method}] ${url}`[39m)
+    [31m[1m>[22m[39m[90m 49 |[39m       console[33m.[39merror([32m`   Status: ${status}`[39m)
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {
+     [90m 52 |[39m         console[33m.[39merror([32m`   Message: ${data.message}`[39m)[0m
+
+      at error (integration-tests/helpers/test-utils.ts:49:15)
+      at Object.logError [as get] (integration-tests/helpers/test-utils.ts:89:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:79:30)
+
+  console.error
+       Error Data: {
+      "type": "not_allowed",
+      "message": "A valid publishable key is required to proceed with the request"
+    }
+
+    [0m [90m 48 |[39m       console[33m.[39merror([32m`\nΓ¥î [${method}] ${url}`[39m)
+     [90m 49 |[39m       console[33m.[39merror([32m`   Status: ${status}`[39m)
+    [31m[1m>[22m[39m[90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {
+     [90m 52 |[39m         console[33m.[39merror([32m`   Message: ${data.message}`[39m)
+     [90m 53 |[39m       }[0m
+
+      at error (integration-tests/helpers/test-utils.ts:50:15)
+      at Object.logError [as get] (integration-tests/helpers/test-utils.ts:89:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:79:30)
+
+  console.error
+       Message: A valid publishable key is required to proceed with the request
+
+    [0m [90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {
+    [31m[1m>[22m[39m[90m 52 |[39m         console[33m.[39merror([32m`   Message: ${data.message}`[39m)
+     [90m    |[39m                 [31m[1m^[22m[39m
+     [90m 53 |[39m       }
+     [90m 54 |[39m       [36mif[39m (data[33m?[39m[33m.[39merrors) {
+     [90m 55 |[39m         console[33m.[39merror([32m`   Errors:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m.[39merrors[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))[0m
+
+      at error (integration-tests/helpers/test-utils.ts:52:17)
+      at Object.logError [as get] (integration-tests/helpers/test-utils.ts:89:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:79:30)
+
+{"level":"warn","message":"Local Event Bus installed. This is not recommended for production.","timestamp":"2025-12-09 19:29:29"}
+{"level":"info","message":"Locking module: Using \"in-memory\" as default.","timestamp":"2025-12-09 19:29:29"}
+  console.log
+    [GET] /store/carts/non-existent-id
+
+      at log (integration-tests/helpers/test-utils.ts:40:13)
+
+  console.log
+      Key present: true, Key: pk_e5208720127c7c579fe320bbc6c...
+
+      at log (integration-tests/helpers/test-utils.ts:41:13)
+
+{"level":"info","message":"A valid publishable key is required to proceed with the request","timestamp":"2025-12-09 19:29:30"}
+  console.error
+    
+    Γ¥î [GET] /store/carts/non-existent-id
+
+    [0m [90m 46 |[39m       [36mconst[39m status [33m=[39m error[33m.[39mresponse[33m.[39mstatus
+     [90m 47 |[39m       [36mconst[39m data [33m=[39m error[33m.[39mresponse[33m.[39mdata
+    [31m[1m>[22m[39m[90m 48 |[39m       console[33m.[39merror([32m`\nΓ¥î [${method}] ${url}`[39m)
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 49 |[39m       console[33m.[39merror([32m`   Status: ${status}`[39m)
+     [90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {[0m
+
+      at error (integration-tests/helpers/test-utils.ts:48:15)
+      at Object.logError [as get] (integration-tests/helpers/test-utils.ts:89:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:86:28)
+
+  console.error
+       Status: 400
+
+    [0m [90m 47 |[39m       [36mconst[39m data [33m=[39m error[33m.[39mresponse[33m.[39mdata
+     [90m 48 |[39m       console[33m.[39merror([32m`\nΓ¥î [${method}] ${url}`[39m)
+    [31m[1m>[22m[39m[90m 49 |[39m       console[33m.[39merror([32m`   Status: ${status}`[39m)
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {
+     [90m 52 |[39m         console[33m.[39merror([32m`   Message: ${data.message}`[39m)[0m
+
+      at error (integration-tests/helpers/test-utils.ts:49:15)
+      at Object.logError [as get] (integration-tests/helpers/test-utils.ts:89:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:86:28)
+
+  console.error
+       Error Data: {
+      "type": "not_allowed",
+      "message": "A valid publishable key is required to proceed with the request"
+    }
+
+    [0m [90m 48 |[39m       console[33m.[39merror([32m`\nΓ¥î [${method}] ${url}`[39m)
+     [90m 49 |[39m       console[33m.[39merror([32m`   Status: ${status}`[39m)
+    [31m[1m>[22m[39m[90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {
+     [90m 52 |[39m         console[33m.[39merror([32m`   Message: ${data.message}`[39m)
+     [90m 53 |[39m       }[0m
+
+      at error (integration-tests/helpers/test-utils.ts:50:15)
+      at Object.logError [as get] (integration-tests/helpers/test-utils.ts:89:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:86:28)
+
+  console.error
+       Message: A valid publishable key is required to proceed with the request
+
+    [0m [90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {
+    [31m[1m>[22m[39m[90m 52 |[39m         console[33m.[39merror([32m`   Message: ${data.message}`[39m)
+     [90m    |[39m                 [31m[1m^[22m[39m
+     [90m 53 |[39m       }
+     [90m 54 |[39m       [36mif[39m (data[33m?[39m[33m.[39merrors) {
+     [90m 55 |[39m         console[33m.[39merror([32m`   Errors:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m.[39merrors[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))[0m
+
+      at error (integration-tests/helpers/test-utils.ts:52:17)
+      at Object.logError [as get] (integration-tests/helpers/test-utils.ts:89:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:86:28)
+
+{"level":"warn","message":"Local Event Bus installed. This is not recommended for production.","timestamp":"2025-12-09 19:29:30"}
+{"level":"info","message":"Locking module: Using \"in-memory\" as default.","timestamp":"2025-12-09 19:29:30"}
+  console.log
+    [POST] /store/carts/cart_01KC2TKFFV03T8ZMFEB2DAKFX6/line-items
+
+      at log (integration-tests/helpers/test-utils.ts:40:13)
+
+  console.log
+      Key present: true, Key: pk_e5208720127c7c579fe320bbc6c...
+
+      at log (integration-tests/helpers/test-utils.ts:41:13)
+
+{"level":"info","message":"A valid publishable key is required to proceed with the request","timestamp":"2025-12-09 19:29:30"}
+  console.error
+    
+    Γ¥î [POST] /store/carts/cart_01KC2TKFFV03T8ZMFEB2DAKFX6/line-items
+
+    [0m [90m 46 |[39m       [36mconst[39m status [33m=[39m error[33m.[39mresponse[33m.[39mstatus
+     [90m 47 |[39m       [36mconst[39m data [33m=[39m error[33m.[39mresponse[33m.[39mdata
+    [31m[1m>[22m[39m[90m 48 |[39m       console[33m.[39merror([32m`\nΓ¥î [${method}] ${url}`[39m)
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 49 |[39m       console[33m.[39merror([32m`   Status: ${status}`[39m)
+     [90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {[0m
+
+      at error (integration-tests/helpers/test-utils.ts:48:15)
+      at Object.logError [as post] (integration-tests/helpers/test-utils.ts:112:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:94:30)
+
+  console.error
+       Status: 400
+
+    [0m [90m 47 |[39m       [36mconst[39m data [33m=[39m error[33m.[39mresponse[33m.[39mdata
+     [90m 48 |[39m       console[33m.[39merror([32m`\nΓ¥î [${method}] ${url}`[39m)
+    [31m[1m>[22m[39m[90m 49 |[39m       console[33m.[39merror([32m`   Status: ${status}`[39m)
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {
+     [90m 52 |[39m         console[33m.[39merror([32m`   Message: ${data.message}`[39m)[0m
+
+      at error (integration-tests/helpers/test-utils.ts:49:15)
+      at Object.logError [as post] (integration-tests/helpers/test-utils.ts:112:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:94:30)
+
+  console.error
+       Error Data: {
+      "type": "not_allowed",
+      "message": "A valid publishable key is required to proceed with the request"
+    }
+
+    [0m [90m 48 |[39m       console[33m.[39merror([32m`\nΓ¥î [${method}] ${url}`[39m)
+     [90m 49 |[39m       console[33m.[39merror([32m`   Status: ${status}`[39m)
+    [31m[1m>[22m[39m[90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {
+     [90m 52 |[39m         console[33m.[39merror([32m`   Message: ${data.message}`[39m)
+     [90m 53 |[39m       }[0m
+
+      at error (integration-tests/helpers/test-utils.ts:50:15)
+      at Object.logError [as post] (integration-tests/helpers/test-utils.ts:112:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:94:30)
+
+  console.error
+       Message: A valid publishable key is required to proceed with the request
+
+    [0m [90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {
+    [31m[1m>[22m[39m[90m 52 |[39m         console[33m.[39merror([32m`   Message: ${data.message}`[39m)
+     [90m    |[39m                 [31m[1m^[22m[39m
+     [90m 53 |[39m       }
+     [90m 54 |[39m       [36mif[39m (data[33m?[39m[33m.[39merrors) {
+     [90m 55 |[39m         console[33m.[39merror([32m`   Errors:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m.[39merrors[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))[0m
+
+      at error (integration-tests/helpers/test-utils.ts:52:17)
+      at Object.logError [as post] (integration-tests/helpers/test-utils.ts:112:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:94:30)
+
+{"level":"warn","message":"Local Event Bus installed. This is not recommended for production.","timestamp":"2025-12-09 19:29:30"}
+{"level":"info","message":"Locking module: Using \"in-memory\" as default.","timestamp":"2025-12-09 19:29:30"}
+  console.log
+    [POST] /store/carts/cart_01KC2TKFFV03T8ZMFEB2DAKFX6/line-items
+
+      at log (integration-tests/helpers/test-utils.ts:40:13)
+
+  console.log
+      Key present: true, Key: pk_e5208720127c7c579fe320bbc6c...
+
+      at log (integration-tests/helpers/test-utils.ts:41:13)
+
+{"level":"info","message":"A valid publishable key is required to proceed with the request","timestamp":"2025-12-09 19:29:30"}
+  console.error
+    
+    Γ¥î [POST] /store/carts/cart_01KC2TKFFV03T8ZMFEB2DAKFX6/line-items
+
+    [0m [90m 46 |[39m       [36mconst[39m status [33m=[39m error[33m.[39mresponse[33m.[39mstatus
+     [90m 47 |[39m       [36mconst[39m data [33m=[39m error[33m.[39mresponse[33m.[39mdata
+    [31m[1m>[22m[39m[90m 48 |[39m       console[33m.[39merror([32m`\nΓ¥î [${method}] ${url}`[39m)
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 49 |[39m       console[33m.[39merror([32m`   Status: ${status}`[39m)
+     [90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {[0m
+
+      at error (integration-tests/helpers/test-utils.ts:48:15)
+      at Object.logError [as post] (integration-tests/helpers/test-utils.ts:112:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:106:13)
+
+  console.error
+       Status: 400
+
+    [0m [90m 47 |[39m       [36mconst[39m data [33m=[39m error[33m.[39mresponse[33m.[39mdata
+     [90m 48 |[39m       console[33m.[39merror([32m`\nΓ¥î [${method}] ${url}`[39m)
+    [31m[1m>[22m[39m[90m 49 |[39m       console[33m.[39merror([32m`   Status: ${status}`[39m)
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {
+     [90m 52 |[39m         console[33m.[39merror([32m`   Message: ${data.message}`[39m)[0m
+
+      at error (integration-tests/helpers/test-utils.ts:49:15)
+      at Object.logError [as post] (integration-tests/helpers/test-utils.ts:112:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:106:13)
+
+  console.error
+       Error Data: {
+      "type": "not_allowed",
+      "message": "A valid publishable key is required to proceed with the request"
+    }
+
+    [0m [90m 48 |[39m       console[33m.[39merror([32m`\nΓ¥î [${method}] ${url}`[39m)
+     [90m 49 |[39m       console[33m.[39merror([32m`   Status: ${status}`[39m)
+    [31m[1m>[22m[39m[90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {
+     [90m 52 |[39m         console[33m.[39merror([32m`   Message: ${data.message}`[39m)
+     [90m 53 |[39m       }[0m
+
+      at error (integration-tests/helpers/test-utils.ts:50:15)
+      at Object.logError [as post] (integration-tests/helpers/test-utils.ts:112:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:106:13)
+
+  console.error
+       Message: A valid publishable key is required to proceed with the request
+
+    [0m [90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {
+    [31m[1m>[22m[39m[90m 52 |[39m         console[33m.[39merror([32m`   Message: ${data.message}`[39m)
+     [90m    |[39m                 [31m[1m^[22m[39m
+     [90m 53 |[39m       }
+     [90m 54 |[39m       [36mif[39m (data[33m?[39m[33m.[39merrors) {
+     [90m 55 |[39m         console[33m.[39merror([32m`   Errors:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m.[39merrors[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))[0m
+
+      at error (integration-tests/helpers/test-utils.ts:52:17)
+      at Object.logError [as post] (integration-tests/helpers/test-utils.ts:112:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:106:13)
+
+{"level":"warn","message":"Local Event Bus installed. This is not recommended for production.","timestamp":"2025-12-09 19:29:30"}
+{"level":"info","message":"Locking module: Using \"in-memory\" as default.","timestamp":"2025-12-09 19:29:30"}
+  console.log
+    [POST] /store/carts/cart_01KC2TKFFV03T8ZMFEB2DAKFX6/line-items
+
+      at log (integration-tests/helpers/test-utils.ts:40:13)
+
+  console.log
+      Key present: true, Key: pk_e5208720127c7c579fe320bbc6c...
+
+      at log (integration-tests/helpers/test-utils.ts:41:13)
+
+{"level":"info","message":"A valid publishable key is required to proceed with the request","timestamp":"2025-12-09 19:29:30"}
+  console.error
+    
+    Γ¥î [POST] /store/carts/cart_01KC2TKFFV03T8ZMFEB2DAKFX6/line-items
+
+    [0m [90m 46 |[39m       [36mconst[39m status [33m=[39m error[33m.[39mresponse[33m.[39mstatus
+     [90m 47 |[39m       [36mconst[39m data [33m=[39m error[33m.[39mresponse[33m.[39mdata
+    [31m[1m>[22m[39m[90m 48 |[39m       console[33m.[39merror([32m`\nΓ¥î [${method}] ${url}`[39m)
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 49 |[39m       console[33m.[39merror([32m`   Status: ${status}`[39m)
+     [90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {[0m
+
+      at error (integration-tests/helpers/test-utils.ts:48:15)
+      at Object.logError [as post] (integration-tests/helpers/test-utils.ts:112:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:131:33)
+
+  console.error
+       Status: 400
+
+    [0m [90m 47 |[39m       [36mconst[39m data [33m=[39m error[33m.[39mresponse[33m.[39mdata
+     [90m 48 |[39m       console[33m.[39merror([32m`\nΓ¥î [${method}] ${url}`[39m)
+    [31m[1m>[22m[39m[90m 49 |[39m       console[33m.[39merror([32m`   Status: ${status}`[39m)
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {
+     [90m 52 |[39m         console[33m.[39merror([32m`   Message: ${data.message}`[39m)[0m
+
+      at error (integration-tests/helpers/test-utils.ts:49:15)
+      at Object.logError [as post] (integration-tests/helpers/test-utils.ts:112:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:131:33)
+
+  console.error
+       Error Data: {
+      "type": "not_allowed",
+      "message": "A valid publishable key is required to proceed with the request"
+    }
+
+    [0m [90m 48 |[39m       console[33m.[39merror([32m`\nΓ¥î [${method}] ${url}`[39m)
+     [90m 49 |[39m       console[33m.[39merror([32m`   Status: ${status}`[39m)
+    [31m[1m>[22m[39m[90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {
+     [90m 52 |[39m         console[33m.[39merror([32m`   Message: ${data.message}`[39m)
+     [90m 53 |[39m       }[0m
+
+      at error (integration-tests/helpers/test-utils.ts:50:15)
+      at Object.logError [as post] (integration-tests/helpers/test-utils.ts:112:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:131:33)
+
+  console.error
+       Message: A valid publishable key is required to proceed with the request
+
+    [0m [90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {
+    [31m[1m>[22m[39m[90m 52 |[39m         console[33m.[39merror([32m`   Message: ${data.message}`[39m)
+     [90m    |[39m                 [31m[1m^[22m[39m
+     [90m 53 |[39m       }
+     [90m 54 |[39m       [36mif[39m (data[33m?[39m[33m.[39merrors) {
+     [90m 55 |[39m         console[33m.[39merror([32m`   Errors:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m.[39merrors[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))[0m
+
+      at error (integration-tests/helpers/test-utils.ts:52:17)
+      at Object.logError [as post] (integration-tests/helpers/test-utils.ts:112:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:131:33)
+
+{"level":"warn","message":"Local Event Bus installed. This is not recommended for production.","timestamp":"2025-12-09 19:29:30"}
+{"level":"info","message":"Locking module: Using \"in-memory\" as default.","timestamp":"2025-12-09 19:29:30"}
+  console.log
+    [POST] /store/carts/cart_01KC2TKFFV03T8ZMFEB2DAKFX6/line-items
+
+      at log (integration-tests/helpers/test-utils.ts:40:13)
+
+  console.log
+      Key present: true, Key: pk_e5208720127c7c579fe320bbc6c...
+
+      at log (integration-tests/helpers/test-utils.ts:41:13)
+
+{"level":"info","message":"A valid publishable key is required to proceed with the request","timestamp":"2025-12-09 19:29:30"}
+  console.error
+    
+    Γ¥î [POST] /store/carts/cart_01KC2TKFFV03T8ZMFEB2DAKFX6/line-items
+
+    [0m [90m 46 |[39m       [36mconst[39m status [33m=[39m error[33m.[39mresponse[33m.[39mstatus
+     [90m 47 |[39m       [36mconst[39m data [33m=[39m error[33m.[39mresponse[33m.[39mdata
+    [31m[1m>[22m[39m[90m 48 |[39m       console[33m.[39merror([32m`\nΓ¥î [${method}] ${url}`[39m)
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 49 |[39m       console[33m.[39merror([32m`   Status: ${status}`[39m)
+     [90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {[0m
+
+      at error (integration-tests/helpers/test-utils.ts:48:15)
+      at Object.logError [as post] (integration-tests/helpers/test-utils.ts:112:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:158:33)
+
+  console.error
+       Status: 400
+
+    [0m [90m 47 |[39m       [36mconst[39m data [33m=[39m error[33m.[39mresponse[33m.[39mdata
+     [90m 48 |[39m       console[33m.[39merror([32m`\nΓ¥î [${method}] ${url}`[39m)
+    [31m[1m>[22m[39m[90m 49 |[39m       console[33m.[39merror([32m`   Status: ${status}`[39m)
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {
+     [90m 52 |[39m         console[33m.[39merror([32m`   Message: ${data.message}`[39m)[0m
+
+      at error (integration-tests/helpers/test-utils.ts:49:15)
+      at Object.logError [as post] (integration-tests/helpers/test-utils.ts:112:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:158:33)
+
+  console.error
+       Error Data: {
+      "type": "not_allowed",
+      "message": "A valid publishable key is required to proceed with the request"
+    }
+
+    [0m [90m 48 |[39m       console[33m.[39merror([32m`\nΓ¥î [${method}] ${url}`[39m)
+     [90m 49 |[39m       console[33m.[39merror([32m`   Status: ${status}`[39m)
+    [31m[1m>[22m[39m[90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {
+     [90m 52 |[39m         console[33m.[39merror([32m`   Message: ${data.message}`[39m)
+     [90m 53 |[39m       }[0m
+
+      at error (integration-tests/helpers/test-utils.ts:50:15)
+      at Object.logError [as post] (integration-tests/helpers/test-utils.ts:112:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:158:33)
+
+  console.error
+       Message: A valid publishable key is required to proceed with the request
+
+    [0m [90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {
+    [31m[1m>[22m[39m[90m 52 |[39m         console[33m.[39merror([32m`   Message: ${data.message}`[39m)
+     [90m    |[39m                 [31m[1m^[22m[39m
+     [90m 53 |[39m       }
+     [90m 54 |[39m       [36mif[39m (data[33m?[39m[33m.[39merrors) {
+     [90m 55 |[39m         console[33m.[39merror([32m`   Errors:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m.[39merrors[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))[0m
+
+      at error (integration-tests/helpers/test-utils.ts:52:17)
+      at Object.logError [as post] (integration-tests/helpers/test-utils.ts:112:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:158:33)
+
+{"level":"warn","message":"Local Event Bus installed. This is not recommended for production.","timestamp":"2025-12-09 19:29:31"}
+{"level":"info","message":"Locking module: Using \"in-memory\" as default.","timestamp":"2025-12-09 19:29:31"}
+  console.log
+    [POST] /store/carts/cart_01KC2TKFFV03T8ZMFEB2DAKFX6/promotions
+
+      at log (integration-tests/helpers/test-utils.ts:40:13)
+
+  console.log
+      Key present: true, Key: pk_e5208720127c7c579fe320bbc6c...
+
+      at log (integration-tests/helpers/test-utils.ts:41:13)
+
+{"level":"info","message":"A valid publishable key is required to proceed with the request","timestamp":"2025-12-09 19:29:31"}
+  console.error
+    
+    Γ¥î [POST] /store/carts/cart_01KC2TKFFV03T8ZMFEB2DAKFX6/promotions
+
+    [0m [90m 46 |[39m       [36mconst[39m status [33m=[39m error[33m.[39mresponse[33m.[39mstatus
+     [90m 47 |[39m       [36mconst[39m data [33m=[39m error[33m.[39mresponse[33m.[39mdata
+    [31m[1m>[22m[39m[90m 48 |[39m       console[33m.[39merror([32m`\nΓ¥î [${method}] ${url}`[39m)
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 49 |[39m       console[33m.[39merror([32m`   Status: ${status}`[39m)
+     [90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {[0m
+
+      at error (integration-tests/helpers/test-utils.ts:48:15)
+      at Object.logError [as post] (integration-tests/helpers/test-utils.ts:112:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:180:30)
+
+  console.error
+       Status: 400
+
+    [0m [90m 47 |[39m       [36mconst[39m data [33m=[39m error[33m.[39mresponse[33m.[39mdata
+     [90m 48 |[39m       console[33m.[39merror([32m`\nΓ¥î [${method}] ${url}`[39m)
+    [31m[1m>[22m[39m[90m 49 |[39m       console[33m.[39merror([32m`   Status: ${status}`[39m)
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {
+     [90m 52 |[39m         console[33m.[39merror([32m`   Message: ${data.message}`[39m)[0m
+
+      at error (integration-tests/helpers/test-utils.ts:49:15)
+      at Object.logError [as post] (integration-tests/helpers/test-utils.ts:112:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:180:30)
+
+  console.error
+       Error Data: {
+      "type": "not_allowed",
+      "message": "A valid publishable key is required to proceed with the request"
+    }
+
+    [0m [90m 48 |[39m       console[33m.[39merror([32m`\nΓ¥î [${method}] ${url}`[39m)
+     [90m 49 |[39m       console[33m.[39merror([32m`   Status: ${status}`[39m)
+    [31m[1m>[22m[39m[90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {
+     [90m 52 |[39m         console[33m.[39merror([32m`   Message: ${data.message}`[39m)
+     [90m 53 |[39m       }[0m
+
+      at error (integration-tests/helpers/test-utils.ts:50:15)
+      at Object.logError [as post] (integration-tests/helpers/test-utils.ts:112:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:180:30)
+
+  console.error
+       Message: A valid publishable key is required to proceed with the request
+
+    [0m [90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {
+    [31m[1m>[22m[39m[90m 52 |[39m         console[33m.[39merror([32m`   Message: ${data.message}`[39m)
+     [90m    |[39m                 [31m[1m^[22m[39m
+     [90m 53 |[39m       }
+     [90m 54 |[39m       [36mif[39m (data[33m?[39m[33m.[39merrors) {
+     [90m 55 |[39m         console[33m.[39merror([32m`   Errors:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m.[39merrors[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))[0m
+
+      at error (integration-tests/helpers/test-utils.ts:52:17)
+      at Object.logError [as post] (integration-tests/helpers/test-utils.ts:112:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:180:30)
+
+{"level":"warn","message":"Local Event Bus installed. This is not recommended for production.","timestamp":"2025-12-09 19:29:31"}
+{"level":"info","message":"Locking module: Using \"in-memory\" as default.","timestamp":"2025-12-09 19:29:31"}
+  console.log
+    [GET] /store/carts/cart_01KC2TKFFV03T8ZMFEB2DAKFX6
+
+      at log (integration-tests/helpers/test-utils.ts:40:13)
+
+  console.log
+      Key present: true, Key: pk_e5208720127c7c579fe320bbc6c...
+
+      at log (integration-tests/helpers/test-utils.ts:41:13)
+
+{"level":"info","message":"A valid publishable key is required to proceed with the request","timestamp":"2025-12-09 19:29:31"}
+  console.error
+    
+    Γ¥î [GET] /store/carts/cart_01KC2TKFFV03T8ZMFEB2DAKFX6
+
+    [0m [90m 46 |[39m       [36mconst[39m status [33m=[39m error[33m.[39mresponse[33m.[39mstatus
+     [90m 47 |[39m       [36mconst[39m data [33m=[39m error[33m.[39mresponse[33m.[39mdata
+    [31m[1m>[22m[39m[90m 48 |[39m       console[33m.[39merror([32m`\nΓ¥î [${method}] ${url}`[39m)
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 49 |[39m       console[33m.[39merror([32m`   Status: ${status}`[39m)
+     [90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {[0m
+
+      at error (integration-tests/helpers/test-utils.ts:48:15)
+      at Object.logError [as get] (integration-tests/helpers/test-utils.ts:89:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:192:30)
+
+  console.error
+       Status: 400
+
+    [0m [90m 47 |[39m       [36mconst[39m data [33m=[39m error[33m.[39mresponse[33m.[39mdata
+     [90m 48 |[39m       console[33m.[39merror([32m`\nΓ¥î [${method}] ${url}`[39m)
+    [31m[1m>[22m[39m[90m 49 |[39m       console[33m.[39merror([32m`   Status: ${status}`[39m)
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {
+     [90m 52 |[39m         console[33m.[39merror([32m`   Message: ${data.message}`[39m)[0m
+
+      at error (integration-tests/helpers/test-utils.ts:49:15)
+      at Object.logError [as get] (integration-tests/helpers/test-utils.ts:89:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:192:30)
+
+  console.error
+       Error Data: {
+      "type": "not_allowed",
+      "message": "A valid publishable key is required to proceed with the request"
+    }
+
+    [0m [90m 48 |[39m       console[33m.[39merror([32m`\nΓ¥î [${method}] ${url}`[39m)
+     [90m 49 |[39m       console[33m.[39merror([32m`   Status: ${status}`[39m)
+    [31m[1m>[22m[39m[90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {
+     [90m 52 |[39m         console[33m.[39merror([32m`   Message: ${data.message}`[39m)
+     [90m 53 |[39m       }[0m
+
+      at error (integration-tests/helpers/test-utils.ts:50:15)
+      at Object.logError [as get] (integration-tests/helpers/test-utils.ts:89:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:192:30)
+
+  console.error
+       Message: A valid publishable key is required to proceed with the request
+
+    [0m [90m 50 |[39m       console[33m.[39merror([32m`   Error Data:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))
+     [90m 51 |[39m       [36mif[39m (data[33m?[39m[33m.[39mmessage) {
+    [31m[1m>[22m[39m[90m 52 |[39m         console[33m.[39merror([32m`   Message: ${data.message}`[39m)
+     [90m    |[39m                 [31m[1m^[22m[39m
+     [90m 53 |[39m       }
+     [90m 54 |[39m       [36mif[39m (data[33m?[39m[33m.[39merrors) {
+     [90m 55 |[39m         console[33m.[39merror([32m`   Errors:`[39m[33m,[39m [33mJSON[39m[33m.[39mstringify(data[33m.[39merrors[33m,[39m [36mnull[39m[33m,[39m [35m2[39m))[0m
+
+      at error (integration-tests/helpers/test-utils.ts:52:17)
+      at Object.logError [as get] (integration-tests/helpers/test-utils.ts:89:9)
+      at Object.<anonymous> (integration-tests/http/cart.spec.ts:192:30)
+
+FAIL integration-tests/http/cart.spec.ts (12.581 s)
+    Cart API
+      POST /store/carts
+        ΓêÜ should create a new cart (259 ms)
+        ├ù should create cart with items (311 ms)
+      GET /store/carts/:id
+        ├ù should retrieve cart by ID (334 ms)
+        ├ù should return 404 for non-existent cart (245 ms)
+      POST /store/carts/:id/line-items
+        ├ù should add item to cart (243 ms)
+        ├ù should update quantity when adding same variant (236 ms)
+      POST /store/carts/:id/line-items/:line_id
+        ├ù should update line item quantity (235 ms)
+      DELETE /store/carts/:id/line-items/:line_id
+        ├ù should remove line item from cart (232 ms)
+      POST /store/carts/:id/promotions
+        ├ù should apply promotion code to cart (233 ms)
+      Cart Totals
+        ├ù should calculate cart totals correctly (232 ms)
+
+  ΓùÅ  ΓÇ║ Cart API ΓÇ║ POST /store/carts ΓÇ║ should create cart with items
+
+    Request failed with status code 400
+
+      at createError (node_modules/axios/lib/core/createError.js:16:15)
+      at settle (node_modules/axios/lib/core/settle.js:17:12)
+      at IncomingMessage.handleStreamEnd (node_modules/axios/lib/adapters/http.js:269:11)
+
+  ΓùÅ  ΓÇ║ Cart API ΓÇ║ GET /store/carts/:id ΓÇ║ should retrieve cart by ID
+
+    Request failed with status code 400
+
+      at createError (node_modules/axios/lib/core/createError.js:16:15)
+      at settle (node_modules/axios/lib/core/settle.js:17:12)
+      at IncomingMessage.handleStreamEnd (node_modules/axios/lib/adapters/http.js:269:11)
+
+  ΓùÅ  ΓÇ║ Cart API ΓÇ║ GET /store/carts/:id ΓÇ║ should return 404 for non-existent cart
+
+    Request failed with status code 400
+
+      at createError (node_modules/axios/lib/core/createError.js:16:15)
+      at settle (node_modules/axios/lib/core/settle.js:17:12)
+      at IncomingMessage.handleStreamEnd (node_modules/axios/lib/adapters/http.js:269:11)
+
+  ΓùÅ  ΓÇ║ Cart API ΓÇ║ POST /store/carts/:id/line-items ΓÇ║ should add item to cart
+
+    Request failed with status code 400
+
+      at createError (node_modules/axios/lib/core/createError.js:16:15)
+      at settle (node_modules/axios/lib/core/settle.js:17:12)
+      at IncomingMessage.handleStreamEnd (node_modules/axios/lib/adapters/http.js:269:11)
+
+  ΓùÅ  ΓÇ║ Cart API ΓÇ║ POST /store/carts/:id/line-items ΓÇ║ should update quantity when 
+adding same variant
+
+    Request failed with status code 400
+
+      at createError (node_modules/axios/lib/core/createError.js:16:15)
+      at settle (node_modules/axios/lib/core/settle.js:17:12)
+      at IncomingMessage.handleStreamEnd (node_modules/axios/lib/adapters/http.js:269:11)
+
+  ΓùÅ  ΓÇ║ Cart API ΓÇ║ POST /store/carts/:id/line-items/:line_id ΓÇ║ should update line 
+item quantity
+
+    Request failed with status code 400
+
+      at createError (node_modules/axios/lib/core/createError.js:16:15)
+      at settle (node_modules/axios/lib/core/settle.js:17:12)
+      at IncomingMessage.handleStreamEnd (node_modules/axios/lib/adapters/http.js:269:11)
+
+  ΓùÅ  ΓÇ║ Cart API ΓÇ║ DELETE /store/carts/:id/line-items/:line_id ΓÇ║ should remove line 
+item from cart
+
+    Request failed with status code 400
+
+      at createError (node_modules/axios/lib/core/createError.js:16:15)
+      at settle (node_modules/axios/lib/core/settle.js:17:12)
+      at IncomingMessage.handleStreamEnd (node_modules/axios/lib/adapters/http.js:269:11)
+
+  ΓùÅ  ΓÇ║ Cart API ΓÇ║ POST /store/carts/:id/promotions ΓÇ║ should apply promotion code to 
+cart
+
+    Request failed with status code 400
+
+      at createError (node_modules/axios/lib/core/createError.js:16:15)
+      at settle (node_modules/axios/lib/core/settle.js:17:12)
+      at IncomingMessage.handleStreamEnd (node_modules/axios/lib/adapters/http.js:269:11)
+
+  ΓùÅ  ΓÇ║ Cart API ΓÇ║ Cart Totals ΓÇ║ should calculate cart totals correctly
+
+    Request failed with status code 400
+
+      at createError (node_modules/axios/lib/core/createError.js:16:15)
+      at settle (node_modules/axios/lib/core/settle.js:17:12)
+      at IncomingMessage.handleStreamEnd (node_modules/axios/lib/adapters/http.js:269:11)
+
+Test Suites: 1 failed, 1 total
+Tests:       9 failed, 1 passed, 10 total
+Snapshots:   0 total
+Time:        12.641 s, estimated 13 s
+Ran all test suites matching /cart.spec.ts/i.
+Force exiting Jest: Have you considered using `--detectOpenHandles` to detect async 
+operations that kept running after all tests finished?

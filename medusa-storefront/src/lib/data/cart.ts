@@ -22,7 +22,7 @@ import { getRegion } from "./regions"
  */
 export async function retrieveCart(cartId?: string, fields?: string) {
   const id = cartId || (await getCartId())
-  fields ??= "*items, *region, *items.product, *items.variant, *items.thumbnail, *items.metadata, +items.total, *promotions, +shipping_methods.name"
+  fields ??= "*items, *region, *items.product, *items.product.collection, *items.variant, *items.thumbnail, *items.metadata, +items.total, *promotions, +shipping_methods.name"
 
   if (!id) {
     return null
@@ -263,16 +263,81 @@ export async function applyPromotions(codes: string[]) {
     ...(await getAuthHeaders()),
   }
 
-  return sdk.store.cart
-    .update(cartId, { promo_codes: codes }, {}, headers)
-    .then(async () => {
-      const cartCacheTag = await getCacheTag("carts")
-      revalidateTag(cartCacheTag)
+  // Apply each promotion code individually using the promotions endpoint
+  // The backend expects POST /store/carts/:id/promotions with { code: string }
+  try {
+    for (const code of codes) {
+      if (!code || code.trim() === "") {
+        continue // Skip empty codes
+      }
 
-      const fulfillmentCacheTag = await getCacheTag("fulfillment")
-      revalidateTag(fulfillmentCacheTag)
-    })
-    .catch(medusaError)
+      await sdk.client.fetch(`/store/carts/${cartId}/promotions`, {
+        method: "POST",
+        body: JSON.stringify({ code: code.trim() }),
+        headers: {
+          ...headers,
+          "Content-Type": "application/json",
+        },
+      })
+    }
+
+    // Revalidate cache after applying promotions
+    const cartCacheTag = await getCacheTag("carts")
+    revalidateTag(cartCacheTag)
+
+    const fulfillmentCacheTag = await getCacheTag("fulfillment")
+    revalidateTag(fulfillmentCacheTag)
+  } catch (error: any) {
+    // Provide more helpful error messages
+    if (error.message?.includes("fetch failed") || error.message?.includes("ECONNREFUSED")) {
+      throw new Error(
+        "Unable to connect to the server. Please ensure the Medusa backend is running on " +
+        (process.env.MEDUSA_BACKEND_URL || "http://localhost:9000")
+      )
+    }
+    
+    // Check if error is related to invalid promotion code
+    // The SDK may throw errors with status codes or error messages
+    // Handle different error formats (Response object, error object, etc.)
+    let statusCode: number | undefined
+    let errorMessage: string = ""
+    
+    // Check if error is a Response object
+    if (error instanceof Response) {
+      statusCode = error.status
+      // Try to extract message from response (async, but we'll handle it)
+      errorMessage = error.statusText || ""
+    } else {
+      // Standard error object
+      statusCode = error.status || error.response?.status || error.statusCode
+      errorMessage = error.message || error.response?.data?.message || error.response?.data || error.statusText || ""
+    }
+    
+    // Check for invalid code scenarios (400, 404, or messages indicating invalid code)
+    const isInvalidCode = 
+      statusCode === 400 || 
+      statusCode === 404 ||
+      (typeof errorMessage === "string" && (
+        errorMessage.toLowerCase().includes("not found") ||
+        errorMessage.toLowerCase().includes("invalid") ||
+        errorMessage.toLowerCase().includes("does not exist") ||
+        (errorMessage.toLowerCase().includes("promotion") && errorMessage.toLowerCase().includes("not found"))
+      ))
+    
+    if (isInvalidCode) {
+      throw new Error("Invalid code")
+    }
+    
+    // For other errors, check if it's truly an unknown error or if we have a meaningful message
+    if (!errorMessage || errorMessage === "An unknown error occurred." || (typeof errorMessage === "string" && errorMessage.trim() === "")) {
+      // If we can't determine the specific error, default to "Invalid code" for promotion-related errors
+      // This handles cases where the backend returns a generic error for invalid codes
+      throw new Error("Invalid code")
+    }
+    
+    // Re-throw with original error message for other errors (real errors like 500, network issues, etc.)
+    throw error
+  }
 }
 
 export async function applyGiftCard(code: string) {

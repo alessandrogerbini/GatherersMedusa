@@ -4,7 +4,7 @@ jest.setTimeout(60 * 1000)
 medusaIntegrationTestRunner({
   inApp: true,
   env: {
-    DATABASE_URL: process.env.DATABASE_URL || "postgres://postgres:1401@localhost:5433/medusa-backend-test"
+    DATABASE_URL: process.env.DATABASE_URL || "postgres://postgres@postgres-test:5432/postgres"
   },
   testSuite: ({ api }) => {
     describe("Ping", () => {

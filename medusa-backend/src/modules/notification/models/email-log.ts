@@ -14,3 +14,17 @@ const EmailLog = model.define("email_log", {
 export default EmailLog
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

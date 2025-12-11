@@ -7,6 +7,8 @@ import { StoreRegion } from "@medusajs/types"
 import CategoryTemplate from "@modules/categories/templates"
 import { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 
+export const dynamic = "force-dynamic" // Force dynamic rendering for categories
+
 type Props = {
   params: Promise<{ category: string[]; countryCode: string }>
   searchParams: Promise<{
@@ -14,6 +16,8 @@ type Props = {
     page?: string
   }>
 }
+
+export const dynamicParams = true // Allow dynamic routes for categories added after build
 
 export async function generateStaticParams() {
   const product_categories = await listCategories()

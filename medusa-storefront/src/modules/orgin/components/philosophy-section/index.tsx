@@ -9,7 +9,8 @@ const PhilosophySection = () => {
             <h2 className="orgin-heading-section">Our Philosophy</h2>
             <p className="text-xl text-orgin-earth-brown max-w-3xl mx-auto">
               At Orgin, we believe that organic isn&apos;t just a certification—it&apos;s a commitment 
-              to the earth, to farmers, and to you.
+              to the earth, to farmers, and to you. It&apos;s about food that&apos;s better for your 
+              body, better for the planet, and better tasting, too.
             </p>
           </div>
 
@@ -36,7 +37,8 @@ const PhilosophySection = () => {
                 <p className="orgin-text-body">
                   Every nut we source comes from certified organic farms that prioritize 
                   soil health, biodiversity, and natural growing practices. No synthetic pesticides, 
-                  no artificial fertilizers—just pure, earth-grown goodness.
+                  no artificial fertilizers—just pure, earth-grown goodness that delivers richer 
+                  flavor and better nutrition.
                 </p>
               </div>
 
@@ -46,8 +48,9 @@ const PhilosophySection = () => {
                 </h3>
                 <p className="orgin-text-body">
                   We partner directly with organic farmers who share our vision of sustainable 
-                  agriculture. By supporting regenerative farming practices, we&apos;re not just 
-                  creating delicious snacks—we&apos;re nurturing the planet for future generations.
+                  agriculture. By supporting regenerative farming practices, we&apos;re creating 
+                  delicious snacks that also help restore the earth—so every purchase makes a 
+                  positive impact for generations to come.
                 </p>
               </div>
             </div>

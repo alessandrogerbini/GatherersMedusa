@@ -23,40 +23,61 @@ async function getRegionMap(cacheId: string) {
     !regionMap.keys().next().value ||
     regionMapUpdated < Date.now() - 3600 * 1000
   ) {
-    // Fetch regions from Medusa. We can't use the JS client here because middleware is running on Edge and the client needs a Node environment.
-    const { regions } = await fetch(`${BACKEND_URL}/store/regions`, {
-      headers: {
-        "x-publishable-api-key": PUBLISHABLE_API_KEY!,
-      },
-      next: {
-        revalidate: 3600,
-        tags: [`regions-${cacheId}`],
-      },
-      cache: "force-cache",
-    }).then(async (response) => {
-      const json = await response.json()
+    try {
+      // Fetch regions from Medusa. We can't use the JS client here because middleware is running on Edge and the client needs a Node environment.
+      const response = await fetch(`${BACKEND_URL}/store/regions`, {
+        headers: {
+          "x-publishable-api-key": PUBLISHABLE_API_KEY!,
+        },
+        next: {
+          revalidate: 3600,
+          tags: [`regions-${cacheId}`],
+        },
+        cache: "force-cache",
+      })
 
       if (!response.ok) {
-        throw new Error(json.message)
+        const json = await response.json().catch(() => ({}))
+        throw new Error(json.message || `HTTP ${response.status}: ${response.statusText}`)
       }
 
-      return json
-    })
+      const { regions } = await response.json()
 
-    if (!regions?.length) {
+      if (!regions?.length) {
+        throw new Error(
+          "No regions found. Please set up regions in your Medusa Admin."
+        )
+      }
+
+      // Create a map of country codes to regions.
+      regions.forEach((region: HttpTypes.StoreRegion) => {
+        region.countries?.forEach((c) => {
+          regionMapCache.regionMap.set(c.iso_2 ?? "", region)
+        })
+      })
+
+      regionMapCache.regionMapUpdated = Date.now()
+    } catch (error) {
+      // If fetch fails and we have cached regions, use them
+      if (regionMap.keys().next().value) {
+        if (process.env.NODE_ENV === "development") {
+          console.warn(
+            `Middleware.ts: Failed to fetch regions from backend (${BACKEND_URL}). Using cached regions. Error: ${error instanceof Error ? error.message : String(error)}`
+          )
+        }
+        return regionMapCache.regionMap
+      }
+      
+      // If no cached regions and fetch failed, throw error
+      if (process.env.NODE_ENV === "development") {
+        console.error(
+          `Middleware.ts: Failed to fetch regions from backend (${BACKEND_URL}). Make sure the backend is running. Error: ${error instanceof Error ? error.message : String(error)}`
+        )
+      }
       throw new Error(
-        "No regions found. Please set up regions in your Medusa Admin."
+        `Failed to connect to Medusa backend at ${BACKEND_URL}. Please ensure the backend server is running. ${error instanceof Error ? error.message : String(error)}`
       )
     }
-
-    // Create a map of country codes to regions.
-    regions.forEach((region: HttpTypes.StoreRegion) => {
-      region.countries?.forEach((c) => {
-        regionMapCache.regionMap.set(c.iso_2 ?? "", region)
-      })
-    })
-
-    regionMapCache.regionMapUpdated = Date.now()
   }
 
   return regionMapCache.regionMap
@@ -112,7 +133,24 @@ export async function middleware(request: NextRequest) {
 
   let cacheId = cacheIdCookie?.value || crypto.randomUUID()
 
-  const regionMap = await getRegionMap(cacheId)
+  let regionMap: Map<string, HttpTypes.StoreRegion> | null = null
+  
+  try {
+    regionMap = await getRegionMap(cacheId)
+  } catch (error) {
+    // If we can't get regions, return a helpful error page
+    if (process.env.NODE_ENV === "development") {
+      return new NextResponse(
+        `Medusa Backend Connection Error: ${error instanceof Error ? error.message : String(error)}\n\nPlease ensure:\n1. The Medusa backend is running on ${BACKEND_URL || "http://localhost:9000"}\n2. The MEDUSA_BACKEND_URL environment variable is set correctly\n3. The backend server is accessible`,
+        { 
+          status: 503,
+          headers: { "Content-Type": "text/plain; charset=utf-8" }
+        }
+      )
+    }
+    // In production, try to continue with default region if possible
+    return NextResponse.next()
+  }
 
   const countryCode = regionMap && (await getCountryCode(request, regionMap))
 

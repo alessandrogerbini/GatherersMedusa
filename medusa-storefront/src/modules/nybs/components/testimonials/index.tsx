@@ -45,12 +45,12 @@ const Testimonials = () => {
   ]
 
   return (
-    <section className="section-container bg-white">
+    <section className="section-container bg-white" aria-labelledby="nybs-testimonials-heading">
       <div className="content-container">
         {/* Header */}
         <div className="text-center mb-12">
           <div className="border-y-4 border-nybs-black py-6 mb-4">
-            <h2 className="nybs-heading-section mb-2">
+            <h2 id="nybs-testimonials-heading" className="nybs-heading-section mb-2">
               LETTERS TO
               <br />
               THE EDITOR

@@ -2,19 +2,19 @@ const SourcingSection = () => {
   const sourcingPrinciples = [
     {
       title: "Direct Farm Partnerships",
-      description: "We work directly with certified organic farms, building long-term relationships based on trust, fair pricing, and shared values.",
+      description: "We work directly with certified organic farms, building long-term relationships based on trust, fair pricing, and shared values. This means better quality for you and better livelihoods for farmers.",
     },
     {
       title: "Regenerative Agriculture",
-      description: "Our partner farms use regenerative practices that restore soil health, increase biodiversity, and sequester carbon.",
+      description: "Our partner farms use regenerative practices that restore soil health, increase biodiversity, and sequester carbon—creating snacks that actually help heal the planet.",
     },
     {
       title: "Quality First",
-      description: "Every batch is carefully inspected to ensure only the finest organic nuts make it into our products.",
+      description: "Every batch is carefully inspected to ensure only the finest organic nuts make it into our products. You deserve nothing less than exceptional quality.",
     },
     {
       title: "Transparent Supply Chain",
-      description: "From farm to shelf, we maintain full traceability so you know exactly where your food comes from.",
+      description: "From farm to shelf, we maintain full traceability so you know exactly where your food comes from. Complete transparency, complete trust.",
     },
   ]
 
@@ -26,7 +26,8 @@ const SourcingSection = () => {
             <h2 className="orgin-heading-section">Sourcing & Sustainability</h2>
             <p className="text-xl text-orgin-earth-brown max-w-3xl mx-auto">
               Our commitment to organic goes beyond certification. We&apos;re dedicated to 
-              sustainable practices that benefit farmers, communities, and the planet.
+              sustainable practices that benefit farmers, communities, and the planet—creating 
+              a healthier future with every bag you enjoy.
             </p>
           </div>
 

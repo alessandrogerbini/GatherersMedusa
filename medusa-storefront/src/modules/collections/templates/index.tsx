@@ -1,4 +1,5 @@
 import { Suspense } from "react"
+import Image from "next/image"
 
 import SkeletonProductGrid from "@modules/skeletons/templates/skeleton-product-grid"
 import RefinementList from "@modules/store/components/refinement-list"
@@ -19,14 +20,31 @@ export default function CollectionTemplate({
 }) {
   const pageNumber = page ? parseInt(page) : 1
   const sort = sortBy || "created_at"
+  const isNYBS = collection.handle === "NYBS" || collection.title?.toLowerCase() === "nybs"
 
   return (
     <div className="flex flex-col small:flex-row small:items-start py-6 content-container">
       <RefinementList sortBy={sort} />
       <div className="w-full">
-        <div className="mb-8 text-2xl-semi">
-          <h1>{collection.title}</h1>
-        </div>
+        {/* NYBS Logo Header */}
+        {isNYBS ? (
+          <div className="mb-8 flex justify-center">
+            <div className="relative w-full max-w-3xl">
+              <Image
+                src="/images/brand/nybs/NYBS header.png"
+                alt={collection.title || "NYBS - New York's Best Snacks"}
+                width={800}
+                height={200}
+                className="w-full h-auto"
+                priority
+              />
+            </div>
+          </div>
+        ) : (
+          <div className="mb-8 text-2xl-semi">
+            <h1>{collection.title}</h1>
+          </div>
+        )}
         <Suspense
           fallback={
             <SkeletonProductGrid

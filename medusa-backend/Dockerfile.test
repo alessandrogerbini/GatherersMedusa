@@ -1,0 +1,22 @@
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies
+RUN npm ci
+
+# Copy source code
+COPY . .
+
+# Set environment variables for tests
+ENV NODE_ENV=test
+ENV TEST_TYPE=integration:http
+ENV NODE_OPTIONS=--experimental-vm-modules --dns-result-order=ipv4first
+ENV DATABASE_URL=postgres://postgres@postgres-test:5432/postgres
+
+# Default command (can be overridden)
+CMD ["npm", "run", "test:integration:http"]
+

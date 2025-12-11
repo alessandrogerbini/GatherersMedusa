@@ -98,7 +98,7 @@ export async function signup(_currentState: unknown, formData: FormData) {
 
     await transferCart()
 
-    return createdCustomer
+    return null
   } catch (error: any) {
     return error.toString()
   }

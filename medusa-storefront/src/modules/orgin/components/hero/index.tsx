@@ -32,12 +32,13 @@ const OrginHero = () => {
             </div>
 
             <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-xl">
-              Experience the pure taste of USDA-certified organic nuts, sustainably sourced 
-              and thoughtfully crafted for those who care about what they eat and where it comes from.
+              Experience the pure, rich taste of USDA-certified organic nuts—sustainably sourced 
+              and thoughtfully crafted. Every bite nourishes you while supporting the earth and 
+              the farmers who care for it.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <LocalizedClientLink href="/store">
+              <LocalizedClientLink href="/orgin/store">
                 <button className="px-8 py-4 bg-white text-orgin-green font-bold text-lg rounded-lg hover:bg-orgin-earth-cream transition-colors shadow-lg">
                   Discover Our Organic Nuts
                 </button>
@@ -70,7 +71,7 @@ const OrginHero = () => {
               <div className="relative z-10 bg-white rounded-3xl p-8 shadow-2xl">
                 <Image
                   src="/images/brand/orgin/Orgin Logo Green.png"
-                  alt="Orgin Organics"
+                  alt="Orgin Organics - Premium USDA Organic Nuts - Organic Roots Grown In Nature"
                   width={500}
                   height={500}
                   className="w-full h-full object-contain"

@@ -78,7 +78,8 @@ const ProductShowcase = () => {
           <h2 className="orgin-heading-section">Our Organic Collection</h2>
           <p className="text-xl text-orgin-earth-brown max-w-3xl mx-auto">
             Explore our range of USDA-certified organic nuts, each carefully roasted 
-            and flavored with premium, all-natural ingredients.
+            and flavored with premium, all-natural ingredients. Every variety delivers 
+            rich, satisfying flavor while supporting sustainable agriculture.
           </p>
         </div>
 
@@ -109,9 +110,10 @@ const ProductShowcase = () => {
               <div className="relative aspect-square overflow-hidden bg-orgin-earth-cream">
                 <Image
                   src={product.image}
-                  alt={product.name}
+                  alt={`${product.name} - USDA Certified Organic Nuts from Orgin Organics`}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-300"
+                  loading="lazy"
                 />
                 {/* Organic badge */}
                 <div className="absolute top-3 right-3 bg-orgin-green text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
@@ -125,7 +127,7 @@ const ProductShowcase = () => {
                 <p className="text-sm text-orgin-earth-brown mb-4">
                   {product.description}
                 </p>
-                <LocalizedClientLink href="/store">
+                <LocalizedClientLink href="/orgin/store">
                   <button className="w-full btn-orgin-secondary text-sm py-2">
                     View Details
                   </button>
@@ -137,7 +139,7 @@ const ProductShowcase = () => {
 
         {/* CTA */}
         <div className="text-center mt-12">
-          <LocalizedClientLink href="/store">
+          <LocalizedClientLink href="/categories/orgin-organics">
             <button className="btn-orgin-primary text-lg">
               Shop All Organic Nuts
             </button>

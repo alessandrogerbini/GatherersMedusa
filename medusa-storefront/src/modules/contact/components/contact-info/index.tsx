@@ -34,25 +34,22 @@ const ContactInfo = () => {
         <h4 className="font-semibold text-gatherers-brown mb-3">Follow Us</h4>
         <div className="flex gap-4">
           <a
-            href="#"
+            href="https://www.gatherersgranola.com/website/social/facebook"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-10 h-10 bg-gatherers-orange rounded-full flex items-center justify-center text-white hover:bg-gatherers-orange-dark transition-colors"
             aria-label="Facebook"
           >
             <span className="text-xl">f</span>
           </a>
           <a
-            href="#"
+            href="https://www.gatherersgranola.com/website/social/instagram"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-10 h-10 bg-gatherers-orange rounded-full flex items-center justify-center text-white hover:bg-gatherers-orange-dark transition-colors"
             aria-label="Instagram"
           >
             <span className="text-xl">📷</span>
-          </a>
-          <a
-            href="#"
-            className="w-10 h-10 bg-gatherers-orange rounded-full flex items-center justify-center text-white hover:bg-gatherers-orange-dark transition-colors"
-            aria-label="Twitter"
-          >
-            <span className="text-xl">🐦</span>
           </a>
         </div>
       </div>

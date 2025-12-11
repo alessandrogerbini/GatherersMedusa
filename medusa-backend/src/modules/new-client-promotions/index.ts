@@ -6,3 +6,13 @@ export const NEW_CLIENT_PROMOTIONS_MODULE = "newClientPromotionsService"
 export default Module(NEW_CLIENT_PROMOTIONS_MODULE, {
   service: NewClientPromotionsService,
 })
+
+
+
+
+
+
+
+
+
+

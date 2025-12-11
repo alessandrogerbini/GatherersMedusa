@@ -64,26 +64,29 @@ export async function submitWholesaleApplication(
  * Get the current user's wholesale status
  */
 export async function getWholesaleStatus(): Promise<WholesaleStatus | null> {
-  try {
-    const headers = await getAuthHeaders()
+  const headers = await getAuthHeaders()
 
-    if (!headers || !("authorization" in headers)) {
-      return null
-    }
-
-    const response = await sdk.client.fetch<WholesaleStatus>(
-      "/store/wholesale/status",
-      {
-        method: "GET",
-        headers,
-      }
-    )
-
-    return response
-  } catch (error) {
-    console.error("Error fetching wholesale status:", error)
+  if (!headers || !("authorization" in headers)) {
     return null
   }
+
+  return await sdk.client
+    .fetch<WholesaleStatus>("/store/wholesale/status", {
+      method: "GET",
+      headers,
+    })
+    .then((response) => {
+      // Check if response is valid
+      if (!response || typeof response !== "object") {
+        return null
+      }
+      return response
+    })
+    .catch(() => {
+      // Silently handle all errors (401, 404, network errors, etc.)
+      // These are expected when user is not logged in, endpoint doesn't exist, or network issues
+      return null
+    })
 }
 
 /**

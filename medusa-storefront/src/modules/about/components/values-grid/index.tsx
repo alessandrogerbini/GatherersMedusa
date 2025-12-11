@@ -1,24 +1,29 @@
+import QualityBadgeIcon from "@modules/common/icons/quality-badge"
+import AuthenticityIcon from "@modules/common/icons/authenticity"
+import SustainabilityIcon from "@modules/common/icons/sustainability"
+import CommunityIcon from "@modules/common/icons/community"
+
 const ValuesGrid = () => {
   const coreValues = [
     {
+      Icon: QualityBadgeIcon,
       title: "Quality First",
       description: "We never compromise on ingredients or craftsmanship. Every batch meets our high standards before it reaches your table.",
-      icon: "⭐",
     },
     {
+      Icon: AuthenticityIcon,
       title: "Authenticity",
       description: "Real recipes, real ingredients, real people. We believe in being genuine in everything we do.",
-      icon: "🤝",
     },
     {
+      Icon: SustainabilityIcon,
       title: "Sustainability",
       description: "We care about our planet and work to minimize our environmental impact through responsible sourcing and packaging.",
-      icon: "🌍",
     },
     {
+      Icon: CommunityIcon,
       title: "Community",
       description: "We're more than a granola company—we're a community of people who care about good food and healthy living.",
-      icon: "💚",
     },
   ]
 
@@ -40,7 +45,9 @@ const ValuesGrid = () => {
                 key={index}
                 className="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-shadow duration-300"
               >
-                <div className="text-5xl mb-4">{value.icon}</div>
+                <div className="mb-4 text-gatherers-orange">
+                  <value.Icon size={56} />
+                </div>
                 <h3 className="text-2xl font-bold text-gatherers-brown mb-4">
                   {value.title}
                 </h3>

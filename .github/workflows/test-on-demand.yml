@@ -1,0 +1,84 @@
+name: Test On Demand
+
+on:
+  workflow_dispatch:
+    inputs:
+      test_type:
+        description: 'Type of tests to run'
+        required: true
+        type: choice
+        options:
+          - all
+          - unit
+          - integration:modules
+          - integration:http
+          - coverage
+
+jobs:
+  test:
+    name: Run ${{ inputs.test_type }} Tests
+    runs-on: ubuntu-latest
+    
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: medusa-backend-test
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: medusa-backend/package-lock.json
+
+      - name: Install dependencies
+        working-directory: medusa-backend
+        run: npm ci
+
+      - name: Run tests
+        working-directory: medusa-backend
+        env:
+          NODE_OPTIONS: --experimental-vm-modules
+          TEST_TYPE: ${{ inputs.test_type }}
+          DATABASE_URL: postgres://postgres:postgres@localhost:5432/medusa-backend-test
+        run: |
+          if [ "${{ inputs.test_type }}" == "all" ]; then
+            npm run test:all
+          elif [ "${{ inputs.test_type }}" == "coverage" ]; then
+            npm run test:coverage
+          elif [ "${{ inputs.test_type }}" == "unit" ]; then
+            npm run test:unit
+          elif [ "${{ inputs.test_type }}" == "integration:modules" ]; then
+            npm run test:integration:modules
+          else
+            npm run test:integration:http
+          fi
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results-${{ inputs.test_type }}
+          path: medusa-backend/coverage
+          retention-days: 7
+
+
+
+
+
+
+

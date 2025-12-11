@@ -1,0 +1,46 @@
+# Coverage ignore patterns
+# Files and directories to exclude from coverage reports
+
+# Dependencies
+node_modules/
+dist/
+.medusa/
+
+# Test files
+**/__tests__/**
+**/*.spec.ts
+**/*.test.ts
+**/*.spec.tsx
+**/*.test.tsx
+integration-tests/
+
+# Configuration files
+*.config.js
+*.config.ts
+jest.config.js
+medusa-config.ts
+
+# Type definitions
+**/*.d.ts
+
+# Build outputs
+build/
+out/
+
+# Documentation
+*.md
+README.md
+
+# Scripts (unless they contain business logic)
+scripts/seed.ts
+scripts/*.ts
+
+# Admin UI (if not testing admin functionality)
+src/admin/
+
+
+
+
+
+
+

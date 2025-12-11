@@ -13,12 +13,30 @@ const WholesaleRegister = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [success, setSuccess] = useState(false)
 
+  // Helper function to normalize URL - adds https:// if no protocol is present
+  const normalizeUrl = (url: string): string => {
+    if (!url || url.trim() === "") return url
+    const trimmed = url.trim()
+    // If it already has a protocol, return as is
+    if (/^https?:\/\//i.test(trimmed)) {
+      return trimmed
+    }
+    // Otherwise, add https://
+    return `https://${trimmed}`
+  }
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
     setMessage(null)
 
     const formData = new FormData(e.currentTarget)
+
+    // Normalize the website URL before processing
+    const websiteInput = formData.get("website") as string
+    if (websiteInput) {
+      formData.set("website", normalizeUrl(websiteInput))
+    }
 
     // First, create the account
     const signupResult = await signup(null, formData)
@@ -183,7 +201,8 @@ const WholesaleRegister = () => {
               label="Company Website"
               name="website"
               required
-              type="url"
+              type="text"
+              placeholder="example.com or https://example.com"
               data-testid="website-input"
             />
           </div>
