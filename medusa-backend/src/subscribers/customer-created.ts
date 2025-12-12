@@ -4,6 +4,7 @@ import type {
 } from "@medusajs/framework"
 import { NEW_CLIENT_PROMOTIONS_MODULE } from "../modules/new-client-promotions"
 import { Modules } from "@medusajs/framework/utils"
+import { NOTIFICATION_MODULE } from "../modules/notification"
 
 export default async function customerCreatedHandler({
   event: { data },
@@ -15,6 +16,8 @@ export default async function customerCreatedHandler({
     // Resolve services
     const customerModuleService = container.resolve(Modules.CUSTOMER)
     const newClientPromotionsService = container.resolve(NEW_CLIENT_PROMOTIONS_MODULE)
+    const promotionModuleService = container.resolve(Modules.PROMOTION)
+    const notificationService = container.resolve(NOTIFICATION_MODULE)
 
     // Retrieve customer details
     const customer = await customerModuleService.retrieveCustomer(customerId, {
@@ -29,17 +32,19 @@ export default async function customerCreatedHandler({
 
     console.log(`Processing welcome promotion for new customer: ${customer.email}`)
 
-    // Create the 5% off promotion code
+    // Create the 5% off promotion code (pass promotion service)
     const promotionCode = await newClientPromotionsService.createWelcomePromotion(
       customer.id,
-      customer.email
+      customer.email,
+      promotionModuleService
     )
 
-    // Send welcome email with the promotion code
+    // Send welcome email with the promotion code (pass notification service)
     await newClientPromotionsService.sendWelcomeEmail(
       customer.email,
       customer.first_name || null,
-      promotionCode
+      promotionCode,
+      notificationService
     )
 
     console.log(`Welcome promotion created and email sent for customer ${customer.email}`)
@@ -52,6 +57,7 @@ export default async function customerCreatedHandler({
 export const config: SubscriberConfig = {
   event: "customer.created",
 }
+
 
 
 

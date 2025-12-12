@@ -7,13 +7,18 @@ class NewClientPromotionsService extends MedusaService({}) {
    * Creates a 5% off promotion code for a new customer
    * @param customerId - The ID of the customer
    * @param customerEmail - The email of the customer
+   * @param promotionModuleService - Optional: Promotion service (resolved by caller if not provided)
    * @returns The created promotion code
    */
   async createWelcomePromotion(
     customerId: string,
-    customerEmail: string
+    customerEmail: string,
+    promotionModuleService?: any
   ): Promise<string> {
-    const promotionModuleService = this.container.resolve(Modules.PROMOTION)
+    // Service should be passed from subscriber, but we'll handle if not provided
+    if (!promotionModuleService) {
+      throw new Error("promotionModuleService must be provided")
+    }
 
     // Generate a unique promotion code based on customer email
     const code = `WELCOME5-${customerEmail.split("@")[0].toUpperCase().slice(0, 8)}-${Date.now().toString().slice(-6)}`
@@ -23,6 +28,7 @@ class NewClientPromotionsService extends MedusaService({}) {
         {
           code,
           type: "standard",
+          status: "active",
           application_method: {
             type: "percentage",
             target_type: "order",
@@ -51,13 +57,18 @@ class NewClientPromotionsService extends MedusaService({}) {
    * @param customerEmail - The email of the customer
    * @param customerFirstName - The first name of the customer
    * @param promotionCode - The promotion code to include in the email
+   * @param notificationService - Optional: Notification service (resolved by caller if not provided)
    */
   async sendWelcomeEmail(
     customerEmail: string,
     customerFirstName: string | null,
-    promotionCode: string
+    promotionCode: string,
+    notificationService?: any
   ): Promise<void> {
-    const notificationService = this.container.resolve(NOTIFICATION_MODULE)
+    // Service should be passed from subscriber, but we'll handle if not provided
+    if (!notificationService) {
+      throw new Error("notificationService must be provided")
+    }
 
     const emailHtml = `
       <!DOCTYPE html>

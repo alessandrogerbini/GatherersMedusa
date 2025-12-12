@@ -4,11 +4,30 @@ loadEnv(process.env.NODE_ENV || 'development', process.cwd())
 
 module.exports = defineConfig({
   projectConfig: {
-    // Use only databaseUrl - timeout should be in URL query parameters
-    // Format: postgresql://user:pass@host/db?sslmode=require&connect_timeout=120
+    // Provide databaseUrl for Medusa
     databaseUrl: process.env.DATABASE_URL,
-    // Removed databaseDriverOptions - Medusa v2 might not use them properly
-    // Timeout should be set via DATABASE_URL query parameter: &connect_timeout=120
+    // Configure Knex with explicit timeout settings (URL parameters don't work)
+    databaseDriverOptions: {
+      client: 'pg',
+      // Pool settings with 2-minute timeouts
+      pool: {
+        min: 0,
+        max: 10,
+        idleTimeoutMillis: 30000,
+        acquireTimeoutMillis: 120000, // 2 minutes - CRITICAL
+        createTimeoutMillis: 120000, // 2 minutes - CRITICAL
+      },
+      // Connection settings with explicit timeout
+      connection: {
+        // Use connectionString from DATABASE_URL
+        connectionString: process.env.DATABASE_URL,
+        ssl: process.env.NODE_ENV === 'production' ? {
+          rejectUnauthorized: false,
+        } : false,
+        // Explicit connection timeout (in milliseconds)
+        connectionTimeoutMillis: 120000, // 2 minutes - CRITICAL
+      },
+    },
     http: {
       storeCors: process.env.STORE_CORS!,
       adminCors: process.env.ADMIN_CORS!,
