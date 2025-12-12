@@ -52,12 +52,49 @@ function parseDatabaseUrl() {
 
 const dbConnectionConfig = parseDatabaseUrl()
 
+// Create databaseDriverOptions object
+// Based on Knex.js documentation: https://knexjs.org/guide/#configuration-options
+// Key finding: acquireConnectionTimeout is at root level, not in pool
+const databaseDriverOptions: any = {
+  client: 'pg',
+  // Reduced pool size to prevent exhaustion (max: 2)
+  // Failed connections won't fill up the pool as quickly
+  pool: {
+    min: 0,
+    max: 2, // Reduced from 10 to prevent pool exhaustion
+    idleTimeoutMillis: 30000,
+    acquireTimeoutMillis: 120000, // 2 minutes - Timeout when acquiring connection from pool
+    createTimeoutMillis: 120000, // 2 minutes - Timeout when creating new connection
+  },
+  // CRITICAL: acquireConnectionTimeout is at ROOT level, not in pool
+  // Default is 60000ms (60 seconds) - this is why we're seeing 60s timeouts!
+  // Reference: https://knexjs.org/guide/#configuration-options
+  acquireConnectionTimeout: 120000, // 2 minutes - ROOT LEVEL timeout
+  // Use individual connection parameters instead of connectionString
+  // This is more explicit and harder for Medusa to override
+  connection: dbConnectionConfig,
+}
+
 // Log final database driver options (without sensitive data)
 console.log('[DB Config] Database driver options configured:')
-console.log('[DB Config] Pool max:', 2)
-console.log('[DB Config] Pool min:', 0)
-console.log('[DB Config] Acquire timeout:', 120000, 'ms')
-console.log('[DB Config] Create timeout:', 120000, 'ms')
+console.log('[DB Config] Pool max:', databaseDriverOptions.pool.max)
+console.log('[DB Config] Pool min:', databaseDriverOptions.pool.min)
+console.log('[DB Config] Pool acquireTimeoutMillis:', databaseDriverOptions.pool.acquireTimeoutMillis, 'ms')
+console.log('[DB Config] Pool createTimeoutMillis:', databaseDriverOptions.pool.createTimeoutMillis, 'ms')
+console.log('[DB Config] Root acquireConnectionTimeout:', databaseDriverOptions.acquireConnectionTimeout, 'ms')
+
+// Enhanced logging: Show full Knex config structure (for debugging)
+const knexConfigForLogging = {
+  client: databaseDriverOptions.client,
+  pool: databaseDriverOptions.pool,
+  acquireConnectionTimeout: databaseDriverOptions.acquireConnectionTimeout,
+  connection: {
+    ...databaseDriverOptions.connection,
+    password: '***', // Mask password
+  }
+}
+console.log('[DB Config] Full Knex config structure being passed to Medusa:')
+console.log(JSON.stringify(knexConfigForLogging, null, 2))
 
 module.exports = defineConfig({
   projectConfig: {
@@ -65,21 +102,7 @@ module.exports = defineConfig({
     databaseUrl: process.env.DATABASE_URL,
     // Configure Knex with explicit timeout settings using individual parameters
     // This approach is more explicit and harder for Medusa to override
-    databaseDriverOptions: {
-      client: 'pg',
-      // Reduced pool size to prevent exhaustion (max: 2)
-      // Failed connections won't fill up the pool as quickly
-      pool: {
-        min: 0,
-        max: 2, // Reduced from 10 to prevent pool exhaustion
-        idleTimeoutMillis: 30000,
-        acquireTimeoutMillis: 120000, // 2 minutes - CRITICAL
-        createTimeoutMillis: 120000, // 2 minutes - CRITICAL
-      },
-      // Use individual connection parameters instead of connectionString
-      // This is more explicit and harder for Medusa to override
-      connection: dbConnectionConfig,
-    },
+    databaseDriverOptions: databaseDriverOptions,
     http: {
       storeCors: process.env.STORE_CORS!,
       adminCors: process.env.ADMIN_CORS!,
