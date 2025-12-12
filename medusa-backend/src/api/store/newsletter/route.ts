@@ -2,6 +2,7 @@ import type {
   MedusaRequest,
   MedusaResponse,
 } from "@medusajs/framework/http"
+import { NOTIFICATION_MODULE } from "../../../modules/notification"
 
 export async function POST(
   req: MedusaRequest,
@@ -27,7 +28,7 @@ export async function POST(
     // Resolve the notification service (may not be available in test environment)
     let notificationService
     try {
-      notificationService = req.scope.resolve("notificationModuleService")
+      notificationService = req.scope.resolve(NOTIFICATION_MODULE)
     } catch (error) {
       // Notification service not available - log and continue
       console.log("Notification service not available, skipping email sending")

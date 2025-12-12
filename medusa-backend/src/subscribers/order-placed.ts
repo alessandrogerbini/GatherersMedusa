@@ -2,6 +2,7 @@ import type {
   SubscriberArgs,
   SubscriberConfig,
 } from "@medusajs/framework"
+import { NOTIFICATION_MODULE } from "../modules/notification"
 
 export default async function orderPlacedHandler({
   event: { data },
@@ -10,7 +11,7 @@ export default async function orderPlacedHandler({
   const orderId = data.id
 
   // Resolve the notification service
-  const notificationService = container.resolve("notificationModuleService")
+  const notificationService = container.resolve(NOTIFICATION_MODULE)
   
   // Get order details
   const orderModuleService = container.resolve("order")

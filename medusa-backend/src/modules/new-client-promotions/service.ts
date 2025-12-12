@@ -1,5 +1,6 @@
 import { MedusaService } from "@medusajs/framework/utils"
 import { Modules } from "@medusajs/framework/utils"
+import { NOTIFICATION_MODULE } from "../notification"
 
 class NewClientPromotionsService extends MedusaService({}) {
   /**
@@ -56,7 +57,7 @@ class NewClientPromotionsService extends MedusaService({}) {
     customerFirstName: string | null,
     promotionCode: string
   ): Promise<void> {
-    const notificationService = this.container.resolve("notificationModuleService")
+    const notificationService = this.container.resolve(NOTIFICATION_MODULE)
 
     const emailHtml = `
       <!DOCTYPE html>

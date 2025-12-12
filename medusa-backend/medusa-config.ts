@@ -4,8 +4,9 @@ loadEnv(process.env.NODE_ENV || 'development', process.cwd())
 
 module.exports = defineConfig({
   projectConfig: {
-    // Use connectionString in connection object to ensure pool settings apply
+    // Use connection object only - remove databaseUrl to avoid conflicts
     databaseDriverOptions: {
+      client: 'pg',
       // Pool settings at root level for Knex (CRITICAL - must be at root)
       pool: {
         min: 0,
@@ -14,7 +15,7 @@ module.exports = defineConfig({
         acquireTimeoutMillis: 120000, // 2 minutes for Render network latency
         createTimeoutMillis: 120000, // 2 minutes for initial connection
       },
-      // Use connectionString instead of databaseUrl to ensure pool settings are applied
+      // Use connectionString - Medusa will use this instead of databaseUrl
       connection: {
         connectionString: process.env.DATABASE_URL,
         ssl: process.env.NODE_ENV === 'production' ? {
@@ -24,8 +25,7 @@ module.exports = defineConfig({
         connectionTimeoutMillis: 120000, // 2 minutes
       },
     },
-    // Keep databaseUrl for Medusa's internal use (but connectionString takes precedence)
-    databaseUrl: process.env.DATABASE_URL,
+    // REMOVED databaseUrl - let connection object handle it to ensure pool settings apply
     http: {
       storeCors: process.env.STORE_CORS!,
       adminCors: process.env.ADMIN_CORS!,
