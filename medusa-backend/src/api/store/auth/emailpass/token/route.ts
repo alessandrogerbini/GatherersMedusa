@@ -26,26 +26,17 @@ export async function POST(
     const customerModuleService = req.scope.resolve(Modules.CUSTOMER)
 
     // Find customer by email
-    // In Medusa V2, use listCustomers (plural) method
-    // Note: listCustomers returns { customers: [...] } or the method signature may vary
-    let customers: any[]
+    // In Medusa V2, listCustomers returns CustomerDTO[] directly
+    let customers: any[] = []
     try {
       const result = await customerModuleService.listCustomers({
         email,
       })
-      // Handle both { customers: [...] } and direct array return
-      customers = result.customers || result || []
+      // listCustomers returns CustomerDTO[] directly
+      customers = Array.isArray(result) ? result : []
     } catch (error) {
-      // If listCustomers doesn't work, try alternative method
-      try {
-        const result = await customerModuleService.list({
-          email,
-        })
-        customers = Array.isArray(result) ? result : (result?.customers || [])
-      } catch (listError) {
-        // If both methods fail, treat as no customer found
-        customers = []
-      }
+      // If lookup fails, treat as no customer found
+      customers = []
     }
 
     // Reject non-existent user - return 401 (Unauthorized) as per test expectation

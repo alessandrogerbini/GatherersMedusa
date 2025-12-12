@@ -56,19 +56,11 @@ export async function GET(
       const result = await orderModuleService.listOrders({
         customer_id: customerId,
       })
-      // Handle different return types
-      orders = result.orders || result || []
+      // listOrders returns OrderDTO[] directly
+      orders = Array.isArray(result) ? result : []
     } catch (error: any) {
-      // If listOrders doesn't work, try alternative
-      try {
-        const result = await orderModuleService.list({
-          customer_id: customerId,
-        })
-        orders = Array.isArray(result) ? result : (result?.orders || [])
-      } catch (listError) {
-        // If no orders found or method doesn't exist, return empty array
-        orders = []
-      }
+      // If no orders found or method doesn't exist, return empty array
+      orders = []
     }
 
     res.status(200).json({

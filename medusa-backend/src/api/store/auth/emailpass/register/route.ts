@@ -42,11 +42,11 @@ export async function POST(
 
     // Check if customer already exists
     try {
-      const { customers: existingCustomers } = await customerModuleService.listCustomers({
+      const existingCustomers = await customerModuleService.listCustomers({
         email,
       })
 
-      if (existingCustomers && existingCustomers.length > 0) {
+      if (Array.isArray(existingCustomers) && existingCustomers.length > 0) {
         res.status(400).json({
           message: "Customer with this email already exists",
         })

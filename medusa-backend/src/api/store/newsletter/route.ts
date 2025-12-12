@@ -9,7 +9,8 @@ export async function POST(
   res: MedusaResponse
 ) {
   try {
-    const { email } = req.body
+    const body = req.body as { email?: string }
+    const { email } = body
 
     // Validate input
     if (!email) {

@@ -58,7 +58,7 @@ export async function GET(
     // Retrieve customer by ID
     let customer
     try {
-      customer = await customerModuleService.retrieve(customerId)
+      customer = await customerModuleService.retrieveCustomer(customerId)
     } catch (error: any) {
       res.status(404).json({
         message: "Customer not found",
@@ -157,7 +157,8 @@ export async function POST(
       return
     }
 
-    const customer = await customerModuleService.update(customerId, updateData)
+    const updatedCustomers = await customerModuleService.updateCustomers([customerId], updateData)
+    const customer = updatedCustomers[0]
 
     res.status(200).json({
       customer: {

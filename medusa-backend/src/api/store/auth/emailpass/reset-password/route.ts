@@ -37,7 +37,7 @@ export async function POST(
       const result = await customerModuleService.listCustomers({
         email,
       })
-      const customers = result.customers || result || []
+      const customers = Array.isArray(result) ? result : []
       
       // If customer doesn't exist, we still return success for security reasons
       // (don't reveal which emails are registered)

@@ -29,7 +29,7 @@ export async function POST(
     }
 
     // Update wholesale status to approved
-    const updatedCustomer = await customerModuleService.updateCustomers(customerId, {
+    const updatedCustomers = await customerModuleService.updateCustomers([customerId], {
       metadata: {
         ...customer.metadata,
         wholesale_status: "approved",
@@ -39,7 +39,7 @@ export async function POST(
 
     return res.status(200).json({
       message: "Wholesale application approved successfully.",
-      customer: updatedCustomer,
+      customer: updatedCustomers[0],
     })
   } catch (error: any) {
     return res.status(500).json({

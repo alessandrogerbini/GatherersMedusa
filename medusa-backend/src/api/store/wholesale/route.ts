@@ -48,7 +48,7 @@ export async function POST(
     let customer
     try {
       const existingCustomers = await customerModuleService.listCustomers({ email })
-      const customers = existingCustomers.customers || existingCustomers || []
+      const customers = Array.isArray(existingCustomers) ? existingCustomers : []
       
       if (customers.length > 0) {
         customer = customers[0]
@@ -70,7 +70,7 @@ export async function POST(
     // Update customer metadata with wholesale application if customer exists
     if (customer) {
       try {
-        await customerModuleService.update(customer.id, {
+        await customerModuleService.updateCustomers([customer.id], {
           metadata: {
             wholesale_status: "pending",
             wholesale_application: {
@@ -120,7 +120,26 @@ export async function GET(
 ) {
   try {
     const customerModuleService = req.scope.resolve(Modules.CUSTOMER)
-    const customerId = req.auth_context?.actor_id
+    // Extract customer ID from auth token or headers
+    const authHeader = req.headers.authorization
+    if (!authHeader || !authHeader.startsWith("Bearer ")) {
+      return res.status(401).json({
+        message: "Unauthorized",
+      })
+    }
+    
+    const token = authHeader.substring(7)
+    const tokenParts = token.split("_")
+    if (tokenParts.length < 3 || tokenParts[0] !== "customer" || tokenParts[1] !== "token") {
+      return res.status(401).json({
+        message: "Unauthorized",
+      })
+    }
+    
+    const lastPart = tokenParts[tokenParts.length - 1]
+    const customerId = /^\d+$/.test(lastPart) && tokenParts.length > 3
+      ? tokenParts.slice(2, -1).join("_")
+      : tokenParts.slice(2).join("_")
 
     if (!customerId) {
       return res.status(401).json({
@@ -128,7 +147,7 @@ export async function GET(
       })
     }
 
-    const customer = await customerModuleService.retrieve(customerId)
+    const customer = await customerModuleService.retrieveCustomer(customerId)
 
     const wholesaleStatus = customer.metadata?.wholesale_status || "none"
     const wholesaleApplication = customer.metadata?.wholesale_application || null

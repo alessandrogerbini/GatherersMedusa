@@ -12,7 +12,8 @@ export async function POST(
   try {
     const customerModuleService = req.scope.resolve(Modules.CUSTOMER)
     const customerId = req.params.id
-    const { reason } = req.body
+    const body = req.body as { reason?: string }
+    const { reason } = body
 
     if (!customerId) {
       return res.status(400).json({
@@ -30,7 +31,7 @@ export async function POST(
     }
 
     // Update wholesale status to rejected
-    const updatedCustomer = await customerModuleService.updateCustomers(customerId, {
+    const updatedCustomers = await customerModuleService.updateCustomers([customerId], {
       metadata: {
         ...customer.metadata,
         wholesale_status: "rejected",
@@ -41,7 +42,7 @@ export async function POST(
 
     return res.status(200).json({
       message: "Wholesale application rejected.",
-      customer: updatedCustomer,
+      customer: updatedCustomers[0],
     })
   } catch (error: any) {
     return res.status(500).json({

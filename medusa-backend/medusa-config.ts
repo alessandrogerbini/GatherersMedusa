@@ -20,7 +20,7 @@ function parseDatabaseUrl() {
       port: parseInt(url.port || '5432', 10),
       database: url.pathname.slice(1), // Remove leading '/'
       user: url.username,
-      password: url.password,
+      password: url.password ? '***' : undefined, // Mask password in logs
       ssl: process.env.NODE_ENV === 'production' ? {
         rejectUnauthorized: false,
       } : false,
@@ -28,10 +28,19 @@ function parseDatabaseUrl() {
       connectionTimeoutMillis: 120000,
     }
 
+    // Log connection config (without password) for diagnostics
+    console.log('[DB Config] Parsed DATABASE_URL successfully')
+    console.log('[DB Config] Host:', config.host)
+    console.log('[DB Config] Port:', config.port)
+    console.log('[DB Config] Database:', config.database)
+    console.log('[DB Config] User:', config.user)
+    console.log('[DB Config] SSL:', config.ssl)
+    console.log('[DB Config] Connection Timeout:', config.connectionTimeoutMillis, 'ms')
+
     return config
   } catch (error) {
     // Fallback: if URL parsing fails, use connectionString
-    console.warn('Failed to parse DATABASE_URL, using connectionString fallback:', error)
+    console.warn('[DB Config] Failed to parse DATABASE_URL, using connectionString fallback:', error)
     return {
       connectionString: databaseUrl,
       ssl: process.env.NODE_ENV === 'production' ? {
@@ -43,6 +52,13 @@ function parseDatabaseUrl() {
 }
 
 const dbConnectionConfig = parseDatabaseUrl()
+
+// Log final database driver options (without sensitive data)
+console.log('[DB Config] Database driver options configured:')
+console.log('[DB Config] Pool max:', 2)
+console.log('[DB Config] Pool min:', 0)
+console.log('[DB Config] Acquire timeout:', 120000, 'ms')
+console.log('[DB Config] Create timeout:', 120000, 'ms')
 
 module.exports = defineConfig({
   projectConfig: {

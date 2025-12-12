@@ -32,6 +32,9 @@
     ".medusa/admin",
     ".cache",
     "src/scripts/**/*",
-    "src/subscribers/**/*"
+    "src/subscribers/**/*",
+    "**/__tests__/**/*",
+    "**/*.spec.ts",
+    "**/*.test.ts"
   ]
 }
