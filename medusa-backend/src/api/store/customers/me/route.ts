@@ -139,7 +139,7 @@ export async function POST(
       }
     }
 
-    const body = req.body || {}
+    const body = (req.body as { first_name?: string; last_name?: string; phone?: string }) || {}
     const { first_name, last_name, phone } = body
 
     const customerModuleService = req.scope.resolve(Modules.CUSTOMER)

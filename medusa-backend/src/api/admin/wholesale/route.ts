@@ -32,12 +32,12 @@ export async function GET(
             {}, // empty filter
             { take: 1000 } // pagination options
           )
-          customers = result?.customers || (Array.isArray(result) ? result : [])
+          customers = Array.isArray(result) ? result : []
         } catch (paginationError) {
           // Try without pagination options
           try {
             const result = await customerModuleService.listCustomers({})
-            customers = result?.customers || (Array.isArray(result) ? result : [])
+            customers = Array.isArray(result) ? result : []
           } catch (emptyFilterError) {
             console.warn("listCustomers failed with both pagination and empty filter")
             customers = []
@@ -49,7 +49,7 @@ export async function GET(
         const result = await (customerModuleService as any).list({}, {
           take: 1000,
         })
-        customers = Array.isArray(result) ? result : (result?.customers || [])
+        customers = Array.isArray(result) ? result : []
       } else {
         console.warn("No suitable method found to list customers")
         customers = []

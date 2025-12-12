@@ -10,7 +10,22 @@ export async function POST(
   res: MedusaResponse
 ) {
   try {
-    const body = req.body || {}
+    const body = (req.body as {
+      business_name?: string;
+      contact_name?: string;
+      email?: string;
+      phone?: string;
+      website?: string;
+      tax_id?: string;
+      address?: string;
+      city?: string;
+      state?: string;
+      zip?: string;
+      country?: string;
+      annual_volume?: string;
+      product_interests?: string;
+      additional_info?: string;
+    }) || {}
     const {
       business_name,
       contact_name,

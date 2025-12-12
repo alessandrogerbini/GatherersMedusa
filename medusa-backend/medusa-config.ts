@@ -24,8 +24,7 @@ function parseDatabaseUrl() {
       ssl: process.env.NODE_ENV === 'production' ? {
         rejectUnauthorized: false,
       } : false,
-      // Explicit connection timeout (in milliseconds) - 2 minutes
-      connectionTimeoutMillis: 120000,
+      // Note: connectionTimeoutMillis removed - relying on createTimeoutMillis in pool config
     }
 
     // Log connection config (without password) for diagnostics
@@ -35,7 +34,7 @@ function parseDatabaseUrl() {
     console.log('[DB Config] Database:', config.database)
     console.log('[DB Config] User:', config.user)
     console.log('[DB Config] SSL:', config.ssl)
-    console.log('[DB Config] Connection Timeout:', config.connectionTimeoutMillis, 'ms')
+    console.log('[DB Config] Connection timeout handled by pool.createTimeoutMillis')
 
     return config
   } catch (error) {
@@ -46,7 +45,7 @@ function parseDatabaseUrl() {
       ssl: process.env.NODE_ENV === 'production' ? {
         rejectUnauthorized: false,
       } : false,
-      connectionTimeoutMillis: 120000,
+      // Note: connectionTimeoutMillis removed - relying on createTimeoutMillis in pool config
     }
   }
 }

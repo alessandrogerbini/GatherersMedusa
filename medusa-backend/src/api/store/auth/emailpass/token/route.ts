@@ -12,7 +12,7 @@ export async function POST(
   try {
     // Ensure body is parsed correctly
     // In Medusa V2, req.body should be automatically parsed for JSON requests
-    const body = req.body || {}
+    const body = (req.body as { email?: string; password?: string }) || {}
     const { email, password } = body
 
     // Validate required fields

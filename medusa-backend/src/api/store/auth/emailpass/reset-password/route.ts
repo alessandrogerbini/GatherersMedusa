@@ -11,7 +11,7 @@ export async function POST(
 ): Promise<void> {
   try {
     // Ensure body is parsed correctly
-    const body = req.body || {}
+    const body = (req.body as { email?: string }) || {}
     const { email } = body
 
     if (!email) {
