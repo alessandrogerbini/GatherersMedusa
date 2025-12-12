@@ -1,6 +1,6 @@
 import { MedusaService } from "@medusajs/framework/utils"
 import { Modules } from "@medusajs/framework/utils"
-import { NOTIFICATION_MODULE } from "../modules/notification"
+import { NOTIFICATION_MODULE } from "../notification"
 
 class NewClientPromotionsService extends MedusaService({}) {
   /**
