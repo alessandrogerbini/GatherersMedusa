@@ -4,32 +4,25 @@ loadEnv(process.env.NODE_ENV || 'development', process.cwd())
 
 module.exports = defineConfig({
   projectConfig: {
-    // Use connection object instead of URL for better control
+    databaseUrl: process.env.DATABASE_URL,
     databaseDriverOptions: {
-      client: 'pg',
-      connection: process.env.DATABASE_URL ? undefined : {
-        host: process.env.DB_HOST || 'dpg-d4tgtpemcj7s73bsdaig-a',
-        port: parseInt(process.env.DB_PORT || '5432'),
-        database: process.env.DB_NAME || 'medusabackend',
-        user: process.env.DB_USER || 'medusabackend_user',
-        password: process.env.DB_PASSWORD,
-        ssl: process.env.NODE_ENV === 'production' ? {
-          rejectUnauthorized: false,
-        } : false,
-      },
-      // Pool settings at root level (not in connection)
+      // Pool settings at root level for Knex
       pool: {
         min: 0,
         max: 10,
         idleTimeoutMillis: 30000,
-        acquireTimeoutMillis: 120000, // 2 minutes for Render
+        acquireTimeoutMillis: 120000, // 2 minutes for Render network latency
         createTimeoutMillis: 120000, // 2 minutes for initial connection
       },
-      // Connection timeout
-      connectionTimeoutMillis: 120000, // 2 minutes
+      // Connection-level settings
+      connection: {
+        ssl: process.env.NODE_ENV === 'production' ? {
+          rejectUnauthorized: false,
+        } : false,
+        // Connection timeout (in milliseconds)
+        connectionTimeoutMillis: 120000, // 2 minutes
+      },
     },
-    // Still provide databaseUrl for Medusa to parse
-    databaseUrl: process.env.DATABASE_URL,
     http: {
       storeCors: process.env.STORE_CORS!,
       adminCors: process.env.ADMIN_CORS!,
