@@ -70,6 +70,9 @@ console.log('[DB Config] Full Knex config structure being passed to Medusa:')
 console.log(JSON.stringify(knexConfigForLogging, null, 2))
 
 module.exports = defineConfig({
+  admin: {
+    disable: true, // Disable admin dashboard in production
+  },
   projectConfig: {
     // Provide databaseUrl for Medusa
     databaseUrl: process.env.DATABASE_URL,
